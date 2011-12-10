@@ -6,3 +6,9 @@ C:\Projects\Armor\Armor.Web\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.dll
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.pdb
 C:\Projects\Armor\Armor.Web\bin\SubSonic.Core.dll
+C:\Projects\Armor\Armor.Web\bin\AutoMapper.dll
+C:\Projects\Armor\Armor.Web\bin\DataAnnotationsExtensions.ClientValidation.dll
+C:\Projects\Armor\Armor.Web\bin\DataAnnotationsExtensions.dll
+C:\Projects\Armor\Armor.Web\bin\DevOne.Security.Cryptography.BCrypt.dll
+C:\Projects\Armor\Armor.Web\bin\WebActivator.dll
+C:\Projects\Armor\Armor.Web\bin\AutoMapper.xml

@@ -6,50 +6,88 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Armor.Web.Models;
+using Armor.Data;
+using DevOne.Security.Cryptography.BCrypt;
+using AutoMapper;
 
 namespace Armor.Web.Controllers
 {
     public class AccountController : Controller
     {
+        UserService service;
 
-        //
-        // GET: /Account/LogOn
-
-        public ActionResult LogOn()
+        protected override void Initialize(System.Web.Routing.RequestContext requestContext)
         {
-            return View();
+            if (service == null) service = new UserService();
+            base.Initialize(requestContext);
         }
 
-        //
-        // POST: /Account/LogOn
+
+        public ActionResult Login()
+        {
+            // store this here so that we can redirect the user back later.
+            if (Request.QueryString["returnUrl"] != null)
+                TempData["returnUrl"] = Request.QueryString["returnUrl"];
+
+            return View(new LoginModel());
+        }
+
 
         [HttpPost]
-        public ActionResult LogOn(LogOnModel model, string returnUrl)
+        public ActionResult Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+
+                User user = service.GetUserByUsername(model.Username);
+
+                // the user is a valid user but they need to update there password.
+                if (user != null && user.Password == string.Empty)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
+                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString());
+                    return RedirectToAction("UpdatePassword");
+                }
+
+                user = service.GetUserByUsername(model.Username);
+                if (!BCryptHelper.CheckPassword(model.Password, user.Password))
+                {
+                    //this.StoreError("The password you entered does not match the password for your account");
+                    return View(model);
+                }
+
+                if (user.IsActive == false)
+                {
+                    //this.StoreError("Your account has not been activated yet, please click the link in the verification email that was sent to you.");
+                    return RedirectToAction("login");
+                }
+
+                if (user == null)
+                {
+                    //this.StoreError("Login failed");
+                    return View(model);
+                }
+
+                // write the login cookie, redirect. 
+                if (model.RememberMe)
+                {
+                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString(), DateTime.Now.AddDays(30));
+                    //CookieHelpers.WriteCookie("lc", "tz", user.TimeZoneOffSet.ToString(), DateTime.Now.AddDays(30));
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString());
+                    //CookieHelpers.WriteCookie("lc", "tz", user.TimeZoneOffSet.ToString());
                 }
+
+                //if (TempData["returnUrl"] != null)
+                //    return Redirect(TempData["returnUrl"].ToString());
+
+                return RedirectToAction("index", "home");
             }
 
-            // If we got this far, something failed, redisplay form
             return View(model);
         }
+
 
         //
         // GET: /Account/LogOff
@@ -61,133 +99,53 @@ namespace Armor.Web.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //
-        // GET: /Account/Register
 
-        public ActionResult Register()
+        [HttpGet]
+        public ActionResult Create()
         {
-            return View();
+            return View(new CreateAccountModel());
         }
 
-        //
-        // POST: /Account/Register
-
         [HttpPost]
-        public ActionResult Register(RegisterModel model)
+        public ActionResult Create(CreateAccountModel model)
         {
             if (ModelState.IsValid)
             {
-                // Attempt to register the user
-                MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, null, null, true, null, out createStatus);
-
-                if (createStatus == MembershipCreateStatus.Success)
-                {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
-                }
-            }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
-
-        //
-        // GET: /Account/ChangePassword
-
-        [Authorize]
-        public ActionResult ChangePassword()
-        {
-            return View();
-        }
-
-        //
-        // POST: /Account/ChangePassword
-
-        [Authorize]
-        [HttpPost]
-        public ActionResult ChangePassword(ChangePasswordModel model)
-        {
-            if (ModelState.IsValid)
-            {
-
-                // ChangePassword will throw an exception rather
-                // than return false in certain failure scenarios.
-                bool changePasswordSucceeded;
+                
                 try
                 {
-                    MembershipUser currentUser = Membership.GetUser(User.Identity.Name, true /* userIsOnline */);
-                    changePasswordSucceeded = currentUser.ChangePassword(model.OldPassword, model.NewPassword);
-                }
-                catch (Exception)
-                {
-                    changePasswordSucceeded = false;
-                }
+                    User user = Mapper.Map<CreateAccountModel, User>(model);
+                    user.IsActive = false; // ensure this is set.
+                    service.Save(user);
 
-                if (changePasswordSucceeded)
-                {
-                    return RedirectToAction("ChangePasswordSuccess");
+                    // build a message to send to the user.
+                    //string validateUrl = string.Format("{0}account/validate/{1}", App.BaseUrl, Helpers.base64Encode(user.EmailAddress));
+
+                    //TemplateParser parser = new TemplateParser();
+                    //Dictionary<string, string> replacements = new Dictionary<string, string>();
+                    //replacements.Add("[BASE_URL]", App.BaseUrl);
+                    //replacements.Add("[FIRST_NAME]", user.EmailAddress);
+                    //replacements.Add("[VALIDATE_ACCOUNT_URL]", validateUrl);
+
+                    //string message = parser.Replace(AccountEmails.ValidateAccount, replacements);
+
+                    //EmailSender sender = new EmailSender();
+                    //sender.Send(App.MailConfiguration, model.EmailAddress, "", "Thank you for registering on epilogger.com", message);
+
+                    //this.StoreSuccess("Your account was created successfully<br /><br/>Please check your inbox for our validation message, your account will be inaccessable until you validate it.");
+
+                    return RedirectToAction("login", "account");
                 }
-                else
+                catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "The current password is incorrect or the new password is invalid.");
+                    //this.StoreError("There was a problem creating your account");
+                    return View(model);
                 }
             }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
+            else
+                return View(model);
         }
 
-        //
-        // GET: /Account/ChangePasswordSuccess
 
-        public ActionResult ChangePasswordSuccess()
-        {
-            return View();
-        }
-
-        #region Status Codes
-        private static string ErrorCodeToString(MembershipCreateStatus createStatus)
-        {
-            // See http://go.microsoft.com/fwlink/?LinkID=177550 for
-            // a full list of status codes.
-            switch (createStatus)
-            {
-                case MembershipCreateStatus.DuplicateUserName:
-                    return "User name already exists. Please enter a different user name.";
-
-                case MembershipCreateStatus.DuplicateEmail:
-                    return "A user name for that e-mail address already exists. Please enter a different e-mail address.";
-
-                case MembershipCreateStatus.InvalidPassword:
-                    return "The password provided is invalid. Please enter a valid password value.";
-
-                case MembershipCreateStatus.InvalidEmail:
-                    return "The e-mail address provided is invalid. Please check the value and try again.";
-
-                case MembershipCreateStatus.InvalidAnswer:
-                    return "The password retrieval answer provided is invalid. Please check the value and try again.";
-
-                case MembershipCreateStatus.InvalidQuestion:
-                    return "The password retrieval question provided is invalid. Please check the value and try again.";
-
-                case MembershipCreateStatus.InvalidUserName:
-                    return "The user name provided is invalid. Please check the value and try again.";
-
-                case MembershipCreateStatus.ProviderError:
-                    return "The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
-
-                case MembershipCreateStatus.UserRejected:
-                    return "The user creation request has been canceled. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
-
-                default:
-                    return "An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator.";
-            }
-        }
-        #endregion
     }
 }

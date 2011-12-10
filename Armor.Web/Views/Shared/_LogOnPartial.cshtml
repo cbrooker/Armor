@@ -1,7 +1,13 @@
 ﻿@if(Request.IsAuthenticated) {
     <text>Welcome <strong>@User.Identity.Name</strong>!
-    [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
+    @Html.ActionLink("Sign Out", "LogOff", "Account", null, new { @class = "blue-action-button" })</text>
 }
 else {
-    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+    <h2>Already have an account?</h2>
+    @Html.ActionLink("Sign In", "Login", "Account", null, new { @class = "blue-action-button fleft" })
+    <div id="forgotPasswordText">
+        <strong>Forgot your password?</strong><br />
+        If you have forgotten your password, click here and your password will be emailed to you
+    </div>
+    <br class="clear" />
 }

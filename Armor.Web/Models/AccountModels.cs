@@ -1,67 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Globalization;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Web.Mvc;
-using System.Web.Security;
+using DataAnnotationsExtensions;
+using System.ComponentModel.DataAnnotations;
 
 namespace Armor.Web.Models
 {
-
-    public class ChangePasswordModel
+    public class AccountModel
     {
         [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
-        public string OldPassword { get; set; }
+        [DisplayName("First name")]
+        public string FirstName { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "New password")]
-        public string NewPassword { get; set; }
-
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
-    }
-
-    public class LogOnModel
-    {
-        [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [DisplayName("Last name")]
+        public string LastName { get; set; }
 
         [Required]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        public string Password { get; set; }
-
-        [Display(Name = "Remember me?")]
-        public bool RememberMe { get; set; }
-    }
-
-    public class RegisterModel
-    {
-        [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
-
-        [Required]
+        [DataAnnotationsExtensions.Email()]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email address")]
-        public string Email { get; set; }
+        [DisplayName("Email Address")]
+        public string EmailAddress { get; set; }
+
+
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; }
+
+        [DataType(DataType.PhoneNumber)]
+        public string Fax { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        public string Password { get; set; }
+        [DisplayName("Street Address")]
+        public string Address { get; set; }
 
-        [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
+        [Required]
+        public string City { get; set; }
+
+
+        [DisplayName("Province")]
+        public int Province { get; set; }
+        public IEnumerable<SelectListItem> Provinces { get; set; }
+
+        [Required]
+        public string PostalCode { get; set; }
+
+
+        public string GSTInformation { get; set; }
+
     }
 }
