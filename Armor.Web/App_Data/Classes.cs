@@ -508,96 +508,6 @@ namespace Armor.Data
     
     
     /// <summary>
-    /// A class which represents the UserRole table in the Armor Database.
-    /// This class is queryable through ArmorDB.UserRole 
-    /// </summary>
-
-	public partial class UserRole: INotifyPropertyChanging, INotifyPropertyChanged
-	{
-        partial void OnLoaded();
-        partial void OnValidate(System.Data.Linq.ChangeAction action);
-        partial void OnCreated();
-	    
-	    public UserRole(){
-	        OnCreated();
-	    }
-	    
-	    #region Properties
-	    
-        partial void OnIDChanging(int value);
-        partial void OnIDChanged();
-		
-		private int _ID;
-		public int ID { 
-		    get{
-		        return _ID;
-		    } 
-		    set{
-		        this.OnIDChanging(value);
-                this.SendPropertyChanging();
-                this._ID = value;
-                this.SendPropertyChanged("ID");
-                this.OnIDChanged();
-		    }
-		}
-		
-        partial void OnNameChanging(string value);
-        partial void OnNameChanged();
-		
-		private string _Name;
-		public string Name { 
-		    get{
-		        return _Name;
-		    } 
-		    set{
-		        this.OnNameChanging(value);
-                this.SendPropertyChanging();
-                this._Name = value;
-                this.SendPropertyChanged("Name");
-                this.OnNameChanged();
-		    }
-		}
-		
-
-        #endregion
-
-        #region Foreign Keys
-        public IQueryable<User> Users
-        {
-            get
-            {
-                  var db=new Armor.Data.ArmorDB();
-                  return from items in db.Users
-                       where items.RoleID == _ID
-                       select items;
-            }
-        }
-
-        #endregion
-
-
-        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-        public event PropertyChangingEventHandler PropertyChanging;
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void SendPropertyChanging()
-        {
-            var handler = PropertyChanging;
-            if (handler != null)
-               handler(this, emptyChangingEventArgs);
-        }
-
-        protected virtual void SendPropertyChanged(String propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-	}
-	
-    
-    
-    /// <summary>
     /// A class which represents the User table in the Armor Database.
     /// This class is queryable through ArmorDB.User 
     /// </summary>
@@ -631,11 +541,28 @@ namespace Armor.Data
 		    }
 		}
 		
-        partial void OnRoleIDChanging(int value);
+        partial void OnCreatedDateChanging(DateTime value);
+        partial void OnCreatedDateChanged();
+		
+		private DateTime _CreatedDate;
+		public DateTime CreatedDate { 
+		    get{
+		        return _CreatedDate;
+		    } 
+		    set{
+		        this.OnCreatedDateChanging(value);
+                this.SendPropertyChanging();
+                this._CreatedDate = value;
+                this.SendPropertyChanged("CreatedDate");
+                this.OnCreatedDateChanged();
+		    }
+		}
+		
+        partial void OnRoleIDChanging(int? value);
         partial void OnRoleIDChanged();
 		
-		private int _RoleID;
-		public int RoleID { 
+		private int? _RoleID;
+		public int? RoleID { 
 		    get{
 		        return _RoleID;
 		    } 
@@ -645,23 +572,6 @@ namespace Armor.Data
                 this._RoleID = value;
                 this.SendPropertyChanged("RoleID");
                 this.OnRoleIDChanged();
-		    }
-		}
-		
-        partial void OnUsernameChanging(string value);
-        partial void OnUsernameChanged();
-		
-		private string _Username;
-		public string Username { 
-		    get{
-		        return _Username;
-		    } 
-		    set{
-		        this.OnUsernameChanging(value);
-                this.SendPropertyChanging();
-                this._Username = value;
-                this.SendPropertyChanged("Username");
-                this.OnUsernameChanged();
 		    }
 		}
 		
@@ -733,37 +643,122 @@ namespace Armor.Data
 		    }
 		}
 		
-        partial void OnCreatedDateChanging(DateTime value);
-        partial void OnCreatedDateChanged();
+        partial void OnPhoneNumberChanging(string value);
+        partial void OnPhoneNumberChanged();
 		
-		private DateTime _CreatedDate;
-		public DateTime CreatedDate { 
+		private string _PhoneNumber;
+		public string PhoneNumber { 
 		    get{
-		        return _CreatedDate;
+		        return _PhoneNumber;
 		    } 
 		    set{
-		        this.OnCreatedDateChanging(value);
+		        this.OnPhoneNumberChanging(value);
                 this.SendPropertyChanging();
-                this._CreatedDate = value;
-                this.SendPropertyChanged("CreatedDate");
-                this.OnCreatedDateChanged();
+                this._PhoneNumber = value;
+                this.SendPropertyChanged("PhoneNumber");
+                this.OnPhoneNumberChanged();
 		    }
 		}
 		
-        partial void OnDateOfBirthChanging(DateTime? value);
-        partial void OnDateOfBirthChanged();
+        partial void OnFaxNumberChanging(string value);
+        partial void OnFaxNumberChanged();
 		
-		private DateTime? _DateOfBirth;
-		public DateTime? DateOfBirth { 
+		private string _FaxNumber;
+		public string FaxNumber { 
 		    get{
-		        return _DateOfBirth;
+		        return _FaxNumber;
 		    } 
 		    set{
-		        this.OnDateOfBirthChanging(value);
+		        this.OnFaxNumberChanging(value);
                 this.SendPropertyChanging();
-                this._DateOfBirth = value;
-                this.SendPropertyChanged("DateOfBirth");
-                this.OnDateOfBirthChanged();
+                this._FaxNumber = value;
+                this.SendPropertyChanged("FaxNumber");
+                this.OnFaxNumberChanged();
+		    }
+		}
+		
+        partial void OnAddressChanging(string value);
+        partial void OnAddressChanged();
+		
+		private string _Address;
+		public string Address { 
+		    get{
+		        return _Address;
+		    } 
+		    set{
+		        this.OnAddressChanging(value);
+                this.SendPropertyChanging();
+                this._Address = value;
+                this.SendPropertyChanged("Address");
+                this.OnAddressChanged();
+		    }
+		}
+		
+        partial void OnCityChanging(string value);
+        partial void OnCityChanged();
+		
+		private string _City;
+		public string City { 
+		    get{
+		        return _City;
+		    } 
+		    set{
+		        this.OnCityChanging(value);
+                this.SendPropertyChanging();
+                this._City = value;
+                this.SendPropertyChanged("City");
+                this.OnCityChanged();
+		    }
+		}
+		
+        partial void OnProvinceChanging(string value);
+        partial void OnProvinceChanged();
+		
+		private string _Province;
+		public string Province { 
+		    get{
+		        return _Province;
+		    } 
+		    set{
+		        this.OnProvinceChanging(value);
+                this.SendPropertyChanging();
+                this._Province = value;
+                this.SendPropertyChanged("Province");
+                this.OnProvinceChanged();
+		    }
+		}
+		
+        partial void OnPostalCodeChanging(string value);
+        partial void OnPostalCodeChanged();
+		
+		private string _PostalCode;
+		public string PostalCode { 
+		    get{
+		        return _PostalCode;
+		    } 
+		    set{
+		        this.OnPostalCodeChanging(value);
+                this.SendPropertyChanging();
+                this._PostalCode = value;
+                this.SendPropertyChanged("PostalCode");
+                this.OnPostalCodeChanged();
+		    }
+		}
+		
+        partial void OnGSTInformationChanging(string value);
+        partial void OnGSTInformationChanged();
+		
+		private string _GSTInformation;
+		public string GSTInformation { 
+		    get{
+		        return _GSTInformation;
+		    } 
+		    set{
+		        this.OnGSTInformationChanging(value);
+                this.SendPropertyChanging();
+                this._GSTInformation = value;
+                this.SendPropertyChanged("GSTInformation");
+                this.OnGSTInformationChanged();
 		    }
 		}
 		
@@ -781,40 +776,6 @@ namespace Armor.Data
                 this._ForgotPasswordHash = value;
                 this.SendPropertyChanged("ForgotPasswordHash");
                 this.OnForgotPasswordHashChanged();
-		    }
-		}
-		
-        partial void OnProfilePictureChanging(string value);
-        partial void OnProfilePictureChanged();
-		
-		private string _ProfilePicture;
-		public string ProfilePicture { 
-		    get{
-		        return _ProfilePicture;
-		    } 
-		    set{
-		        this.OnProfilePictureChanging(value);
-                this.SendPropertyChanging();
-                this._ProfilePicture = value;
-                this.SendPropertyChanged("ProfilePicture");
-                this.OnProfilePictureChanged();
-		    }
-		}
-		
-        partial void OnTimeZoneOffSetChanging(int value);
-        partial void OnTimeZoneOffSetChanged();
-		
-		private int _TimeZoneOffSet;
-		public int TimeZoneOffSet { 
-		    get{
-		        return _TimeZoneOffSet;
-		    } 
-		    set{
-		        this.OnTimeZoneOffSetChanging(value);
-                this.SendPropertyChanging();
-                this._TimeZoneOffSet = value;
-                this.SendPropertyChanged("TimeZoneOffSet");
-                this.OnTimeZoneOffSetChanged();
 		    }
 		}
 		
@@ -868,6 +829,96 @@ namespace Armor.Data
                   var db=new Armor.Data.ArmorDB();
                   return from items in db.UserRoles
                        where items.ID == _RoleID
+                       select items;
+            }
+        }
+
+        #endregion
+
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+        public event PropertyChangingEventHandler PropertyChanging;
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void SendPropertyChanging()
+        {
+            var handler = PropertyChanging;
+            if (handler != null)
+               handler(this, emptyChangingEventArgs);
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+	}
+	
+    
+    
+    /// <summary>
+    /// A class which represents the UserRole table in the Armor Database.
+    /// This class is queryable through ArmorDB.UserRole 
+    /// </summary>
+
+	public partial class UserRole: INotifyPropertyChanging, INotifyPropertyChanged
+	{
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+	    
+	    public UserRole(){
+	        OnCreated();
+	    }
+	    
+	    #region Properties
+	    
+        partial void OnIDChanging(int value);
+        partial void OnIDChanged();
+		
+		private int _ID;
+		public int ID { 
+		    get{
+		        return _ID;
+		    } 
+		    set{
+		        this.OnIDChanging(value);
+                this.SendPropertyChanging();
+                this._ID = value;
+                this.SendPropertyChanged("ID");
+                this.OnIDChanged();
+		    }
+		}
+		
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+		
+		private string _Name;
+		public string Name { 
+		    get{
+		        return _Name;
+		    } 
+		    set{
+		        this.OnNameChanging(value);
+                this.SendPropertyChanging();
+                this._Name = value;
+                this.SendPropertyChanged("Name");
+                this.OnNameChanged();
+		    }
+		}
+		
+
+        #endregion
+
+        #region Foreign Keys
+        public IQueryable<User> Users
+        {
+            get
+            {
+                  var db=new Armor.Data.ArmorDB();
+                  return from items in db.Users
+                       where items.RoleID == _ID
                        select items;
             }
         }

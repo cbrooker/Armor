@@ -39,7 +39,7 @@ namespace Armor.Web.Controllers
             if (ModelState.IsValid)
             {
 
-                User user = service.GetUserByUsername(model.Username);
+                User user = service.GetUserByEmail(model.EmailAddress);
 
                 // the user is a valid user but they need to update there password.
                 if (user != null && user.Password == string.Empty)
@@ -48,7 +48,7 @@ namespace Armor.Web.Controllers
                     return RedirectToAction("UpdatePassword");
                 }
 
-                user = service.GetUserByUsername(model.Username);
+                user = service.GetUserByEmail(model.EmailAddress);
                 if (!BCryptHelper.CheckPassword(model.Password, user.Password))
                 {
                     //this.StoreError("The password you entered does not match the password for your account");
@@ -114,9 +114,25 @@ namespace Armor.Web.Controllers
                 
                 try
                 {
-                    User user = Mapper.Map<CreateAccountModel, User>(model);
-                    user.IsActive = false; // ensure this is set.
-                    service.Save(user);
+                    //Armor.Data.User user = Mapper.Map<CreateAccountModel, Armor.Data.User>(model);
+
+                    User Newuser = new User();
+
+                    Newuser.Address = model.Address;
+                    Newuser.City = model.City;
+                    Newuser.CreatedDate = DateTime.UtcNow;
+                    Newuser.EmailAddress = model.EmailAddress;
+                    Newuser.FaxNumber = model.Fax;
+                    Newuser.FirstName = model.FirstName;
+                    Newuser.ForgotPasswordHash = new Guid();
+                    Newuser.GSTInformation = model.GSTInformation;
+                    Newuser.IsActive = true;
+                    Newuser.LastName = model.LastName;
+                    
+                    Newuser.Password = "";
+                    
+                    service.Save(Newuser);
+
 
                     // build a message to send to the user.
                     //string validateUrl = string.Format("{0}account/validate/{1}", App.BaseUrl, Helpers.base64Encode(user.EmailAddress));

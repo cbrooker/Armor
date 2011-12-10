@@ -29,11 +29,6 @@ namespace Armor.Web {
             return GetData().Where(u => u.ID == id).FirstOrDefault();
         }
 
-        public User GetUserByUsername(string username) {
-            //This was case-sensative for usernames - CB
-            return GetData().Where(u => string.Equals(u.Username, username, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
-        }
-
         public User GetUserByEmail(string emailAddress) {
             return GetData().Where(u => u.EmailAddress == emailAddress).FirstOrDefault();
         }
@@ -42,8 +37,8 @@ namespace Armor.Web {
             return GetData().Where(u => u.ForgotPasswordHash == passwordResetHash).FirstOrDefault();
         }
 
-        public User ValidateLogin(string username, string password) {
-            return GetData().Where(u => u.Username == username && u.Password == password).FirstOrDefault();
+        public User ValidateLogin(string emailaddress, string password) {
+            return GetData().Where(u => u.EmailAddress == emailaddress && u.Password == password).FirstOrDefault();
         }
 
     }

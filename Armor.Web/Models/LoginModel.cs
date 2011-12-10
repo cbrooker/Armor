@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace Armor.Web.Models {
     public class LoginModel {
         [Required]
-        public string Username { get; set; }
+        public string EmailAddress { get; set; }
         
         [Required]
         public string Password { get; set; }

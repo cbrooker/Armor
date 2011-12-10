@@ -16,6 +16,7 @@ namespace Armor.Web.Models {
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Please enter your password")]
+        
         public string Password { get; set; }
 
         [DisplayName("Confirm Password"), Required(ErrorMessage = "Please enter your password again")]
@@ -63,6 +64,8 @@ namespace Armor.Web.Models {
                 return Provinces.Select(t => new SelectListItem() { Text = t.Value, Value = t.Key });
             }
         }
+        public string Province { get; set; }
+
 
         [Required]
         public string PostalCode { get; set; }

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using AutoMapper;
+using Armor.Web.Models;
+using Armor.Data;
 
 namespace Armor.Web
 {
@@ -36,5 +39,34 @@ namespace Armor.Web
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
+
+
+        private void RegisterAutomapperMappings()
+        {
+
+            Mapper.CreateMap<CreateAccountModel, Armor.Data.User>()
+                .ForMember(dest => dest.RoleID, opt => opt.UseValue(2))
+               
+                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => PasswordHelpers.EncryptPassword(src.Password)))
+                .ForMember(dest => dest.IsActive, opt => opt.UseValue(false))
+                .ForMember(dest => dest.CreatedDate, opt => opt.UseValue(DateTime.UtcNow));
+
+
+             //.ForMember(dest => dest.FirstName, opt => opt.Ignore())
+             //   .ForMember(dest => dest.LastName, opt => opt.Ignore())
+             //   .ForMember(dest => dest.ForgotPasswordHash, opt => opt.Ignore())
+             //   .ForMember(dest => dest.ID, opt => opt.Ignore())
+             //   .ForMember(dest => dest.PhoneNumber, opt => opt.Ignore())
+             //   .ForMember(dest => dest.PostalCode, opt => opt.Ignore())
+             //   .ForMember(dest => dest.Province, opt => opt.Ignore())
+             //   .ForMember(dest => dest.EmailAddress, opt => opt.Ignore())
+             //   .ForMember(dest => dest.GSTInformation, opt => opt.Ignore())
+             //   .ForMember(dest => dest.Address, opt => opt.Ignore())
+             //   .ForMember(dest => dest.City, opt => opt.Ignore())
+
+            Mapper.AssertConfigurationIsValid();
+        }
+
+
     }
 }

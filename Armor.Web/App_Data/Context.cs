@@ -124,8 +124,8 @@ namespace Armor.Data
         public Query<UserAuthenticationProfile> UserAuthenticationProfiles { get; set; }
         public Query<UserInRole> UserInRoles { get; set; }
         public Query<Role> Roles { get; set; }
-        public Query<UserRole> UserRoles { get; set; }
         public Query<User> Users { get; set; }
+        public Query<UserRole> UserRoles { get; set; }
 
 			
 
@@ -232,8 +232,8 @@ namespace Armor.Data
             UserAuthenticationProfiles = new Query<UserAuthenticationProfile>(provider);
             UserInRoles = new Query<UserInRole>(provider);
             Roles = new Query<Role>(provider);
-            UserRoles = new Query<UserRole>(provider);
             Users = new Query<User>(provider);
+            UserRoles = new Query<UserRole>(provider);
             #endregion
 
 
@@ -243,8 +243,8 @@ namespace Armor.Data
             	DataProvider.Schema.Tables.Add(new UserAuthenticationProfileTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new UserInRolesTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new RolesTable(DataProvider));
-            	DataProvider.Schema.Tables.Add(new UserRoleTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new UserTable(DataProvider));
+            	DataProvider.Schema.Tables.Add(new UserRoleTable(DataProvider));
             }
             #endregion
         }
