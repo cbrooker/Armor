@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Armor.Web.Models;
+using Epilogger.Web;
 
 namespace Armor.Web.Controllers
 {
@@ -11,9 +13,14 @@ namespace Armor.Web.Controllers
         //
         // GET: /Assessment/
 
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult Index()
         {
-            return View();
+            AssessmentChecklistViewModel model = new AssessmentChecklistViewModel();
+
+            model.user = CurrentUser;
+
+            return View(model);
         }
 
         //

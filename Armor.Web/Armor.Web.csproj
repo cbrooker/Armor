@@ -111,6 +111,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Core\AuthenticationServices.cs" />
+    <Compile Include="Core\Filters\RequiresAuthentication.cs" />
     <Compile Include="Core\Helpers\PasswordHelpers.cs" />
     <Compile Include="Core\Services\ServiceBase.cs" />
     <Compile Include="Core\Services\UserAuthenticationProfileService.cs" />
@@ -218,6 +219,7 @@
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Assessment\index.cshtml" />
     <Content Include="Views\Shared\_SlidingPanel.cshtml" />
+    <Content Include="Views\Shared\_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
