@@ -9,10 +9,11 @@ using Armor.Web.Models;
 using Armor.Data;
 using DevOne.Security.Cryptography.BCrypt;
 using AutoMapper;
+using RichmondDay.Helpers;
 
 namespace Armor.Web.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         UserService service;
 
@@ -21,6 +22,34 @@ namespace Armor.Web.Controllers
             if (service == null) service = new UserService();
             base.Initialize(requestContext);
         }
+
+
+        [ChildActionOnly]
+        public ActionResult _LogOnPartial()
+        {
+            LogOnPartialModel model = new LogOnPartialModel { UserLoggedIn = CurrentUserID != Guid.Empty ? true : false };
+            if (CurrentUser != null)
+            {
+                model.user = CurrentUser;
+            }
+            model.CurrentUserRole = CurrentUserRole;
+
+            return PartialView("_LogOnPartial", model);
+        }
+
+        [ChildActionOnly]
+        public ActionResult _AccountPanel()
+        {
+            //LogOnPartialModel model = new LogOnPartialModel { UserLoggedIn = CurrentUserID != Guid.Empty ? true : false };
+            //if (CurrentUser != null)
+            //{
+            //    model.user = CurrentUser;
+            //}
+            //model.CurrentUserRole = CurrentUserRole;
+
+            return PartialView("_AccountPanel");
+        }
+        
 
 
         public ActionResult Login()
@@ -40,47 +69,39 @@ namespace Armor.Web.Controllers
             {
 
                 User user = service.GetUserByEmail(model.EmailAddress);
-
-                // the user is a valid user but they need to update there password.
-                if (user != null && user.Password == string.Empty)
+                
+                if (user == null)
                 {
-                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString());
-                    return RedirectToAction("UpdatePassword");
+                    ModelState.AddModelError("", "Login failed");
+                    return View(model);
                 }
 
-                user = service.GetUserByEmail(model.EmailAddress);
                 if (!BCryptHelper.CheckPassword(model.Password, user.Password))
                 {
-                    //this.StoreError("The password you entered does not match the password for your account");
+                    ModelState.AddModelError("", "The password you entered does not match the password for your account");
                     return View(model);
                 }
 
                 if (user.IsActive == false)
                 {
-                    //this.StoreError("Your account has not been activated yet, please click the link in the verification email that was sent to you.");
+                    ModelState.AddModelError("", "Your account has not been activated yet, please click the link in the verification email that was sent to you.");
                     return RedirectToAction("login");
                 }
 
-                if (user == null)
-                {
-                    //this.StoreError("Login failed");
-                    return View(model);
-                }
-
+                 
                 // write the login cookie, redirect. 
                 if (model.RememberMe)
                 {
-                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString(), DateTime.Now.AddDays(30));
-                    //CookieHelpers.WriteCookie("lc", "tz", user.TimeZoneOffSet.ToString(), DateTime.Now.AddDays(30));
+                    CookieHelpers.WriteCookie("Amorlc", "uid", user.ID.ToString(), DateTime.Now.AddDays(30));
                 }
                 else
                 {
-                    //CookieHelpers.WriteCookie("lc", "uid", user.ID.ToString());
-                    //CookieHelpers.WriteCookie("lc", "tz", user.TimeZoneOffSet.ToString());
+                    CookieHelpers.WriteCookie("Amorlc", "uid", user.ID.ToString());
                 }
 
-                //if (TempData["returnUrl"] != null)
-                //    return Redirect(TempData["returnUrl"].ToString());
+                if (TempData["returnUrl"] != null)
+                    return Redirect(TempData["returnUrl"].ToString());
+
 
                 return RedirectToAction("index", "home");
             }
@@ -94,8 +115,7 @@ namespace Armor.Web.Controllers
 
         public ActionResult LogOff()
         {
-            FormsAuthentication.SignOut();
-
+            RichmondDay.Helpers.CookieHelpers.DestroyCookie("Amorlc");
             return RedirectToAction("Index", "Home");
         }
 
@@ -128,8 +148,11 @@ namespace Armor.Web.Controllers
                     Newuser.GSTInformation = model.GSTInformation;
                     Newuser.IsActive = true;
                     Newuser.LastName = model.LastName;
-                    
-                    Newuser.Password = "";
+                    Newuser.Password = PasswordHelpers.EncryptPassword(model.Password);
+                    Newuser.PhoneNumber = model.Phone;
+                    Newuser.PostalCode = model.PostalCode;
+                    Newuser.Province = model.Province;
+                    Newuser.RoleID = 2;
                     
                     service.Save(Newuser);
 
@@ -154,7 +177,7 @@ namespace Armor.Web.Controllers
                 }
                 catch (Exception ex)
                 {
-                    //this.StoreError("There was a problem creating your account");
+                    ModelState.AddModelError("", "There was a problem creating your account");
                     return View(model);
                 }
             }

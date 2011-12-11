@@ -1,0 +1,16 @@
+﻿@model Armor.Web.Models.AssessmentChecklistViewModel
+
+@{
+    ViewBag.Title = "Assessment Checklist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section slidingPanel {
+    @Html.Partial("_Login", new Armor.Web.Models.LoginModel())
+}
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" class="blue-action-button" />
+</div>
+
+<h2>index</h2>

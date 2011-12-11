@@ -1,5 +1,7 @@
-﻿@if(Request.IsAuthenticated) {
-    <text>Welcome <strong>@User.Identity.Name</strong>!
+﻿@model Armor.Web.Models.LogOnPartialModel
+
+@if(Model.UserLoggedIn) {
+    <text>Welcome <strong>@Model.user.FirstName @Model.user.LastName</strong>
     @Html.ActionLink("Sign Out", "LogOff", "Account", null, new { @class = "blue-action-button" })</text>
 }
 else {

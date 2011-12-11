@@ -1,15 +1,20 @@
-﻿
+﻿@{
+    
+    var controller = ViewContext.RouteData.Values["controller"] as string ?? "";
+    var action = ViewContext.RouteData.Values["action"] as string ?? "";
+}
+
+@if (controller == "Account" && action == "Login")
+{
+    @Html.Partial("_Login", new Armor.Web.Models.LoginModel())
+}
+else
+{
+    @Html.Partial("_Create", new Armor.Web.Models.CreateAccountModel())
+}
 
 
 
 
-<div id="slidingPanel">
-    @Html.RenderPartial("_Create", new Armor.Web.Models.CreateAccountModel())
-</div>
 
-
-@*Change depending on if there is a user logged in or not*@
-<div id="registationProfileButton">
-    <input type="button" value="Registration" class="blue-action-button" />
-</div>
 

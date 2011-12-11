@@ -50,6 +50,10 @@
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RichmondDay.Helpers, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RichmondDay.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="SubSonic.Core">
       <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>
     </Reference>
@@ -103,6 +107,8 @@
     </Compile>
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AssessmentController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Core\AuthenticationServices.cs" />
     <Compile Include="Core\Helpers\PasswordHelpers.cs" />
@@ -114,8 +120,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AssessmentChecklistViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\LogOnPartialModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +215,9 @@
     <Content Include="Views\Shared\_Create.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_AccountPanel.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Views\Assessment\index.cshtml" />
+    <Content Include="Views\Shared\_SlidingPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

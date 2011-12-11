@@ -6,11 +6,14 @@ using System.Web.Mvc;
 
 namespace Armor.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
-
+            if (CurrentUser != null)
+            {
+                return RedirectToAction("Index", "Assessment");
+            }
             return View();
         }
 

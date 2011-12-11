@@ -11,7 +11,7 @@
     <div class="page">
         <header>
             <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
+                @Html.Action("_LogOnPartial", "Account", new { Area = "" })
             </div>
             <div id="title">
                 <h1>@Html.ActionLink("ARMOR", "index", "home")</h1>
