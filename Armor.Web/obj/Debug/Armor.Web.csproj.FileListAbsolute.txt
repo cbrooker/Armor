@@ -12,3 +12,6 @@ C:\Projects\Armor\Armor.Web\bin\DataAnnotationsExtensions.dll
 C:\Projects\Armor\Armor.Web\bin\DevOne.Security.Cryptography.BCrypt.dll
 C:\Projects\Armor\Armor.Web\bin\WebActivator.dll
 C:\Projects\Armor\Armor.Web\bin\AutoMapper.xml
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Views.Emails.AccountEmails.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Projects\Armor\Armor.Web\obj\Debug\GenerateResource.write.1.tlog

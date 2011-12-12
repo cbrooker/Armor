@@ -10,6 +10,8 @@ using Armor.Data;
 using DevOne.Security.Cryptography.BCrypt;
 using AutoMapper;
 using RichmondDay.Helpers;
+using Armor.Web.Core.Email;
+using Epilogger.Web.Views.Emails;
 
 namespace Armor.Web.Controllers
 {
@@ -185,6 +187,94 @@ namespace Armor.Web.Controllers
                 return View(model);
         }
 
+
+
+        [HttpGet]
+        public ActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult ForgotPassword(ForgotPasswordViewModel model)
+        {
+            try
+            {
+                Guid passwordResetHash = Guid.NewGuid();
+                User user = service.GetUserByEmail(model.EmailAddress.Trim());
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "There is no account that uses that email address");
+                    return View();
+                }
+
+                user.ForgotPasswordHash = passwordResetHash;
+                service.Save(user);
+
+                string resetPasswordUrl = string.Format("{0}account/resetpassword?hash={1}", App.BaseUrl, passwordResetHash);
+
+                //TODO: When I get content
+                TemplateParser parser = new TemplateParser();
+                Dictionary<string, string> replacements = new Dictionary<string, string>();
+                replacements.Add("[BASE_URL]", App.BaseUrl);
+                replacements.Add("[EMAILADDRESS]", user.EmailAddress);
+                replacements.Add("[USER_EMAIL]", user.EmailAddress);
+                replacements.Add("[RESET_PASSWORD_URL]", resetPasswordUrl);
+
+                string message = parser.Replace(AccountEmails.ForgotPassword, replacements);
+
+                EmailSender sender = new EmailSender();
+                sender.Send(App.MailConfiguration, model.EmailAddress, "", "Reset your password on epilogger.com", message);
+
+                //this.StoreSuccess("We\\'ve emailed you instructions on how to reset your password.");
+            }
+            catch (Exception ex)
+            {
+                //this.StoreError("There was a problem sending you instructions to reset your password");
+            }
+
+            return View();
+        }
+
+
+        [HttpGet]
+        public ActionResult ResetPassword()
+        {
+            Guid passwordResetHash = Guid.Parse(Request.QueryString["hash"].ToString());
+            User user = service.GetUserByResetHash(passwordResetHash);
+            if (user == null)
+            {
+                //this.StoreWarning("Something isn't right, the user didn't request this action?");
+                return View();
+            }
+
+            ResetPasswordViewModel model = new ResetPasswordViewModel();
+            model.UserID = user.ID.ToString();
+
+            return View(model);
+        }
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult ResetPassword(ResetPasswordViewModel model)
+        {
+            try
+            {
+                User user = service.GetUserByID(Guid.Parse(model.UserID));
+                user.Password = PasswordHelpers.EncryptPassword(model.NewPassword);
+                user.ForgotPasswordHash = null;
+
+                service.Save(user);
+
+                //this.StoreSuccess("Your password has been updated, you can now login!");
+
+                return RedirectToAction("login");
+            }
+            catch (Exception ex)
+            {
+                //this.StoreError("There was a problem updating your password");
+                return View();
+            }
+        }
 
     }
 }
