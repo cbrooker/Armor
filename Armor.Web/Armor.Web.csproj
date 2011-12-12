@@ -131,6 +131,7 @@
     <Compile Include="Models\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\LogOnPartialModel.cs" />
+    <Compile Include="Models\ProgramEvaluator1ViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\SlidingPanelViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +233,7 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

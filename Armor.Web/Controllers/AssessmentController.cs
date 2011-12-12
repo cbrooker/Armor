@@ -57,56 +57,31 @@ namespace Armor.Web.Controllers
             }
         }
         
-        //
-        // GET: /Assessment/Edit/5
+        
  
-        public ActionResult Edit(int id)
+        public ActionResult ProgramEvaluatorStage1()
         {
-            return View();
+            ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
+            return View(model);
         }
 
-        //
-        // POST: /Assessment/Edit/5
+       
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult ProgramEvaluatorStage1(ProgramEvaluator1ViewModel model)
         {
             try
             {
                 // TODO: Add update logic here
- 
+                
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(model);
             }
         }
 
-        //
-        // GET: /Assessment/Delete/5
- 
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Assessment/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+       
     }
 }
