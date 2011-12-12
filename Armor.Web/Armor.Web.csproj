@@ -234,6 +234,7 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage1.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\OneToTenInt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

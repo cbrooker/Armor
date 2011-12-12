@@ -10,29 +10,29 @@ namespace Armor.Web.Models
     public class ProgramEvaluator1ViewModel
     {
 
-        [DisplayName("The LOGICA study (Lanas et al 2010)")]
+        [DisplayName("1. The LOGICA study (Lanas et al 2010)")]
         public int Question1 { get; set; }
-        [DisplayName("Screening for GI risk factors in patients with OA")]
+        [DisplayName("2. Screening for GI risk factors in patients with OA")]
         public int Question2 { get; set; }
-        [DisplayName("Treatment options for patients with OA who are at increased risk of GI adverse events associated with NSAID use")]
+        [DisplayName("3. Treatment options for patients with OA who are at increased risk of GI adverse events associated with NSAID use")]
         public int Question3 { get; set; }
 
 
-        [DisplayName("Age 60 years or older")]
+        [DisplayName("4. Age 60 years or older")]
         public int Question4 { get; set; }
-        [DisplayName("History of dyspepsia")]
+        [DisplayName("5. History of dyspepsia")]
         public int Question5 { get; set; }
-        [DisplayName("High NSAID dose")]
+        [DisplayName("6. High NSAID dose")]
         public int Question6 { get; set; }
-        [DisplayName("Concomitant use of ASA")]
+        [DisplayName("7. Concomitant use of ASA")]
         public int Question7 { get; set; }
-        [DisplayName("History of uncomplicated peptic ulcer")]
+        [DisplayName("8. History of uncomplicated peptic ulcer")]
         public int Question8 { get; set; }
-        [DisplayName("Concomitant use of corticosteroids")]
+        [DisplayName("9. Concomitant use of corticosteroids")]
         public int Question9 { get; set; }
-        [DisplayName("Concomitant use of oral anticoagulants")]
+        [DisplayName("10. Concomitant use of oral anticoagulants")]
         public int Question10 { get; set; }
-        [DisplayName("History of bleeding peptic ulcer")]
+        [DisplayName("11. History of bleeding peptic ulcer")]
         public int Question11 { get; set; }
 
         
