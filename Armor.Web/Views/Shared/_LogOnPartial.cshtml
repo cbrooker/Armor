@@ -1,15 +1,15 @@
 ﻿@model Armor.Web.Models.LogOnPartialModel
 
 @if(Model.UserLoggedIn) {
-    <text>Welcome <strong>@Model.user.FirstName @Model.user.LastName</strong>
-    @Html.ActionLink("Sign Out", "LogOff", "Account", null, new { @class = "blue-action-button" })</text>
+    @*<text>Welcome <strong>@Model.user.FirstName @Model.user.LastName</strong>*@
+    @Html.ActionLink("Sign Out", "LogOff", "Account", null, new { @class = "blue-action-button" })
 }
 else {
     <h2>Already have an account?</h2>
     @Html.ActionLink("Sign In", "Login", "Account", null, new { @class = "blue-action-button fleft" })
     <div id="forgotPasswordText">
         <strong>Forgot your password?</strong><br />
-        If you have forgotten your password, click here and your password will be emailed to you
+        If you have forgotten your password, @Html.ActionLink("Click here", "ForgotPassword", "Account") and your password will be emailed to you
     </div>
     <br class="clear" />
 }

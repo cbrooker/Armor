@@ -30,7 +30,7 @@ namespace Armor.Web {
         }
 
         public User GetUserByEmail(string emailAddress) {
-            return GetData().Where(u => u.EmailAddress == emailAddress).FirstOrDefault();
+            return GetData().Where(u => u.EmailAddress.ToLower() == emailAddress.ToLower()).FirstOrDefault();
         }
 
         public User GetUserByResetHash(Guid passwordResetHash) {

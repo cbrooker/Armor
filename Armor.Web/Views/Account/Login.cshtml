@@ -2,7 +2,16 @@
     ViewBag.Title = "Login";
 }
 
+<div id="registationProfileButton">
+    <input type="button" value="Registration" id="RegistrationButton" class="blue-action-button" />
+</div>
 
-    @Html.Partial("_Login", new Armor.Web.Models.LoginModel())
+@Html.Partial("_Login", new Armor.Web.Models.LoginModel())
 
+    <script language="javascript" type="text/javascript">
 
+        $(function () {
+            $("#slidingPanel").slideUp();
+        });
+
+    </script>
