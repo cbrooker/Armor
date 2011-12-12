@@ -39,19 +39,23 @@ namespace Armor.Web.Controllers
             return PartialView("_LogOnPartial", model);
         }
 
-        [ChildActionOnly]
-        public ActionResult _AccountPanel()
-        {
-            //LogOnPartialModel model = new LogOnPartialModel { UserLoggedIn = CurrentUserID != Guid.Empty ? true : false };
-            //if (CurrentUser != null)
-            //{
-            //    model.user = CurrentUser;
-            //}
-            //model.CurrentUserRole = CurrentUserRole;
 
-            return PartialView("_AccountPanel");
+        [ChildActionOnly]
+        public ActionResult _SlidingPanel()
+        {
+            SlidingPanelViewModel model = new SlidingPanelViewModel();
+            if (CurrentUser != null)
+            {
+                model.EditUserModel = Mapper.Map<User, EditAccountViewModel>(CurrentUser);
+                return PartialView(model);
+            }
+
+            return PartialView(model);
         }
         
+
+
+
 
 
         public ActionResult Login()
@@ -187,6 +191,38 @@ namespace Armor.Web.Controllers
                 return View(model);
         }
 
+
+        [HttpPost]
+        public ActionResult Edit(EditAccountViewModel model)
+        {
+            
+                try
+                {
+                    User Theuser = service.GetUserByID(CurrentUserID);
+
+                    Theuser.FirstName = model.FirstName;
+                    Theuser.LastName = model.LastName;
+                    Theuser.Address = model.Address;
+                    Theuser.City = model.City;
+                    Theuser.EmailAddress = model.EmailAddress;
+                    Theuser.FaxNumber = model.FaxNumber;
+                    Theuser.GSTInformation = model.GSTInformation;
+                    Theuser.PhoneNumber = model.PhoneNumber;
+                    Theuser.PostalCode = model.PostalCode;
+                    Theuser.Province = model.Province;
+
+                    service.Save(Theuser);
+                    model = Mapper.Map<User, EditAccountViewModel>(Theuser);
+                    return RedirectToAction("Index", "Assessment");
+                }
+                catch (Exception)
+                {
+                    ModelState.AddModelError("", "There was a problem creating your account");
+                    return PartialView(model);
+                }
+           
+
+        }
 
 
         [HttpGet]

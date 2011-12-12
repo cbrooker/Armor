@@ -26,7 +26,7 @@ namespace Armor.Web {
         
 
         public User GetUserByID(Guid id) {
-            return GetData().Where(u => u.ID == id).FirstOrDefault();
+            return db.Users.Where(u => u.ID == id).FirstOrDefault();
         }
 
         public User GetUserByEmail(string emailAddress) {

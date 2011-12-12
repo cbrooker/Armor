@@ -2,11 +2,7 @@
     ViewBag.Title = "Login";
 }
 
-@section slidingPanel {
-    @Html.Partial("_Login", new Armor.Web.Models.LoginModel())
-}
 
-@*Change depending on if there is a user logged in or not*@
-<div id="registationProfileButton">
-    <input type="button" value="Registration" class="blue-action-button" />
-</div>
+    @Html.Partial("_Login", new Armor.Web.Models.LoginModel())
+
+

@@ -85,6 +85,7 @@ namespace Armor.Web
         {
             AreaRegistration.RegisterAllAreas();
 
+            RegisterAutomapperMappings();
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
@@ -93,12 +94,12 @@ namespace Armor.Web
         private void RegisterAutomapperMappings()
         {
 
-            Mapper.CreateMap<CreateAccountModel, Armor.Data.User>()
-                .ForMember(dest => dest.RoleID, opt => opt.UseValue(2))
+            //Mapper.CreateMap<CreateAccountModel, Armor.Data.User>()
+            //    .ForMember(dest => dest.RoleID, opt => opt.UseValue(2))
                
-                .ForMember(dest => dest.Password, opt => opt.MapFrom(src => PasswordHelpers.EncryptPassword(src.Password)))
-                .ForMember(dest => dest.IsActive, opt => opt.UseValue(false))
-                .ForMember(dest => dest.CreatedDate, opt => opt.UseValue(DateTime.UtcNow));
+            //    .ForMember(dest => dest.Password, opt => opt.MapFrom(src => PasswordHelpers.EncryptPassword(src.Password)))
+            //    .ForMember(dest => dest.IsActive, opt => opt.UseValue(false))
+            //    .ForMember(dest => dest.CreatedDate, opt => opt.UseValue(DateTime.UtcNow));
 
 
              //.ForMember(dest => dest.FirstName, opt => opt.Ignore())
@@ -113,6 +114,19 @@ namespace Armor.Web
              //   .ForMember(dest => dest.Address, opt => opt.Ignore())
              //   .ForMember(dest => dest.City, opt => opt.Ignore())
 
+            Mapper.CreateMap<Armor.Data.User, EditAccountViewModel>()
+                    .ForMember(dest => dest.ConfirmPassword, opt => opt.Ignore())
+                    .ForMember(dest => dest.Password, opt => opt.Ignore());
+
+            //Mapper.CreateMap<EditAccountViewModel, Armor.Data.User>()
+            //        .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
+            //        .ForMember(dest => dest.ForgotPasswordHash, opt => opt.Ignore())
+            //        .ForMember(dest => dest.ID, opt => opt.Ignore())
+            //        .ForMember(dest => dest.IsActive, opt => opt.Ignore())
+            //        .ForMember(dest => dest.Password, opt => opt.Ignore())
+            //        .ForMember(dest => dest.RoleID, opt => opt.Ignore());
+
+            
             Mapper.AssertConfigurationIsValid();
         }
 

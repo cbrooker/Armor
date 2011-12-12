@@ -20,7 +20,7 @@
             <div class="seperator"></div>
         </header>
         <div id="slidingPanel">
-            @RenderSection("slidingPanel")
+            @Html.Action("_SlidingPanel", "Account", new { Area = "" })
         </div>
         <section id="main">
             @RenderBody()

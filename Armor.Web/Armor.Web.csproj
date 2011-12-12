@@ -127,10 +127,12 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AssessmentChecklistViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
+    <Compile Include="Models\EditAccountViewModel.cs" />
     <Compile Include="Models\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\LogOnPartialModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\SlidingPanelViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Emails\AccountEmails.Designer.cs" />
   </ItemGroup>
@@ -220,15 +222,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Structs.cs</LastGenOutput>
     </None>
-    <Content Include="Views\Shared\_Create.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Shared\_AccountPanel.cshtml" />
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Assessment\index.cshtml" />
     <Content Include="Views\Shared\_SlidingPanel.cshtml" />
-    <Content Include="Views\Shared\_Edit.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
