@@ -128,6 +128,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\AssessmentChecklistViewModel.cs" />
+    <Compile Include="Models\PatientAssessmentViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
     <Compile Include="Models\EditAccountViewModel.cs" />
     <Compile Include="Models\ForgotPasswordViewModel.cs" />
@@ -140,6 +141,9 @@
     <Compile Include="Views\Emails\AccountEmails.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\base.css" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\skeleton.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -239,6 +243,7 @@
     <Content Include="Views\Shared\EditorTemplates\OneToTenInt.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\AnswerOptions.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\AnswerCheckboxes.cshtml" />
+    <Content Include="Views\Assessment\PatientAssessment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

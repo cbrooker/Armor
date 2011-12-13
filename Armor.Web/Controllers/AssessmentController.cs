@@ -137,6 +137,14 @@ namespace Armor.Web.Controllers
             }
         }
 
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult PatientAssessment()
+        {
+            PatienAssessmentViewModel model = new PatienAssessmentViewModel();
+            return View(model);
+        }
+
        
     }
 }

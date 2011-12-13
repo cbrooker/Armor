@@ -1,0 +1,219 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel;
+using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
+
+namespace Armor.Web.Models
+{
+    public class PatienAssessmentViewModel
+    {
+
+        [DisplayName("1. Age")]
+        public List<AnswerModel> Question1
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "18 - 40", Value = "18 - 40" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "41 - 50", Value = "41 - 50" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "51 - 60", Value = "51 - 60" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "61 - 65", Value = "61 - 65" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "66 - 70", Value = "66 - 70" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "71 - 75", Value = "71 - 75" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "76 - 80", Value = "76 - 80" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "81 - 85", Value = "81 - 85" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "86 - 90", Value = "86 - 90" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "> 90", Value = "> 90" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+        [DisplayName("2. Sex")]
+        public List<AnswerModel> Question2
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Female", Value = "Female" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Male", Value = "Male" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+
+        [DisplayName("3. Type of OA (select all that apply)")]
+        public List<AnswerModel> Question3
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Cervical", Value = "Cervical" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Dorsal", Value = "Dorsal" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Lumbar", Value = "Lumbar" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Dorsal", Value = "Dorsal" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Hand", Value = "Hand" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Hip", Value = "Hip" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Knee", Value = "Knee" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+
+
+
+        [DisplayName("4. Is this patient overweight (ie, BMI >25)")]
+        public List<AnswerModel> Question4
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Yes", Value = "Yes" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "No", Value = "No" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+
+
+        [DisplayName("5. Smoking status")]
+        public List<AnswerModel> Question5
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Active smoker", Value = "Active smoker" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Ex-smoker (within the past 10 years)", Value = "Ex-smoker (within the past 10 years)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Non-smoker", Value = "Non-smoker" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+        [DisplayName("6. Average number of alcoholic drinks per week")]
+        public int Question6 { get; set; }
+
+        [DisplayName("7. Does this patient use illicit/recreational drugs?")]
+        public List<AnswerModel> Question7
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Yes", Value = "Yes" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "No", Value = "No" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+
+        [DisplayName("8. History of")]
+        public List<AnswerModel> Question8
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Uncomplicated peptic ulcer", Value = "Uncomplicated peptic ulcer" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Dyspepsia", Value = "Dyspepsia" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "GERD", Value = "GERD" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Bleeding peptic ulcer", Value = "Bleeding peptic ulcer" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "H pylori infection", Value = "H pylori infection" };
+                TheList.Add(model);
+                //Some how add treated or UnTreated
+                return TheList;
+            }
+        }
+
+        //Big Question
+        [DisplayName("9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)")]
+        public int Question9 { get; set; }
+
+
+
+        [DisplayName("10. Which of the following other medication(s) is this patient currently taking? (Select all that apply)")]
+        public List<AnswerModel> Question10
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Misoprostol", Value = "Misoprostol" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Proton pump inhibitor (eg, omeprazole, pantoprazole)", Value = "Proton pump inhibitor (eg, omeprazole, pantoprazole)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "H2 receptor antagonist (eg, cimetadine, ranitidine)", Value = "H2 receptor antagonist (eg, cimetadine, ranitidine)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Low-dose ASA (<300 mg/day)", Value = "Low-dose ASA (<300 mg/day)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Selective serotonin reuptake inhibitor (citalopram, dapoxetine)", Value = "Selective serotonin reuptake inhibitor (citalopram, dapoxetine)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Anticoagulant (eg, warfarin)", Value = "Anticoagulant (eg, warfarin)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Corticosteroid (eg, prednisone)", Value = "Corticosteroid (eg, prednisone)" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Antiplatelet medication", Value = "Antiplatelet medication" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+
+
+        [DisplayName("11. How would you categorize this patient’s GI risk?")]
+        public List<AnswerModel> Question11
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "Low", Value = "Low" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Moderate", Value = "Moderate" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "High", Value = "High" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
+
+        //Done Programmatically
+        [DisplayName("12. Calculate your patient’s GI risk")]
+        public int Question12 { get; set; }
+
+
+
+        //Big Question
+        [DisplayName("13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)")]
+        public int Question13 { get; set; }
+       
+        
+    }
+}
