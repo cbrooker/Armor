@@ -115,7 +115,7 @@
             @Html.LabelFor(model => model.Question12)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question12)
+            @Html.EditorFor(model => model.Question12, "AnswerOptions")
             @Html.ValidationMessageFor(model => model.Question12)
         </div>
 
@@ -123,7 +123,7 @@
             @Html.LabelFor(model => model.Question13)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question13)
+            @Html.EditorFor(model => model.Question13, "AnswerOptions")
             @Html.ValidationMessageFor(model => model.Question13)
         </div>
 
@@ -131,39 +131,31 @@
             @Html.LabelFor(model => model.Question14)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question14)
+            @Html.EditorFor(model => model.Question14, "AnswerOptions")
+            @Html.EditorFor(model => model.Question14Other)
+            @Html.ValidationMessageFor(model => model.Question14Other)
             @Html.ValidationMessageFor(model => model.Question14)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Question14Other)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Question14Other)
-            @Html.ValidationMessageFor(model => model.Question14Other)
-        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Question15)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question15)
+            @Html.EditorFor(model => model.Question15, "AnswerOptions")
+            @Html.EditorFor(model => model.Question15Other)
+            @Html.ValidationMessageFor(model => model.Question15Other)
             @Html.ValidationMessageFor(model => model.Question15)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Question15Other)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Question15Other)
-            @Html.ValidationMessageFor(model => model.Question15Other)
-        </div>
-
+            
+        <h4>Patient Profiles</h4>
+    
         <div class="editor-label">
             @Html.LabelFor(model => model.Question16)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question16)
+            @Html.EditorFor(model => model.Question16, "AnswerOptions")
             @Html.ValidationMessageFor(model => model.Question16)
         </div>
 
@@ -171,23 +163,19 @@
             @Html.LabelFor(model => model.Question17)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question17)
+            @Html.EditorFor(model => model.Question17, "AnswerCheckboxes")
             @Html.ValidationMessageFor(model => model.Question17)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Question17Other)
-        </div>
-        <div class="editor-field">
             @Html.EditorFor(model => model.Question17Other)
             @Html.ValidationMessageFor(model => model.Question17Other)
         </div>
+
+        
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Question18)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question18)
+            @Html.EditorFor(model => model.Question18, "AnswerOptions")
             @Html.ValidationMessageFor(model => model.Question18)
         </div>
 
@@ -199,32 +187,32 @@
             @Html.ValidationMessageFor(model => model.Question18Other)
         </div>
 
+    
+        <h4>Based on your own practice:</h4>
+    
         <div class="editor-label">
             @Html.LabelFor(model => model.Question19)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question19)
+            @Html.EditorFor(model => model.Question19, "AnswerOptions")
             @Html.ValidationMessageFor(model => model.Question19)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Question20)
+            @Html.LabelFor(model => model.Question20Low)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Question20)
-            @Html.ValidationMessageFor(model => model.Question20)
+            Low @Html.EditorFor(model => model.Question20Low)
+            @Html.ValidationMessageFor(model => model.Question20Low)
+            Moderate @Html.EditorFor(model => model.Question20Moderate)
+            @Html.ValidationMessageFor(model => model.Question20Moderate)
+            High @Html.EditorFor(model => model.Question20High)
+            @Html.ValidationMessageFor(model => model.Question20High)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Question20Percent)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Question20Percent)
-            @Html.ValidationMessageFor(model => model.Question20Percent)
-        </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Submit" class="green-action-button" />
         </p>
 }
 

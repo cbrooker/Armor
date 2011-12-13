@@ -1,0 +1,16 @@
+﻿@using Armor.Web;
+@using Armor.Web.Models;
+
+@model List<AnswerModel>
+@{
+int i = 1;
+}
+<ul>
+
+@foreach (AnswerModel item in Model)
+{
+    <li><label>@Html.CheckBox("AnswerCheck" + i, false, new { @value = @item.Value })@item.Text</label></li>
+    i++;
+}
+</ul>
+

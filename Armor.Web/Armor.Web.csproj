@@ -125,6 +125,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\AssessmentChecklistViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
     <Compile Include="Models\EditAccountViewModel.cs" />
@@ -235,6 +236,8 @@
     <Content Include="Views\Account\Edit.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage1.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\OneToTenInt.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AnswerOptions.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AnswerCheckboxes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

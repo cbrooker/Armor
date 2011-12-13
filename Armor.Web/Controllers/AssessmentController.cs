@@ -56,23 +56,27 @@ namespace Armor.Web.Controllers
                 return View();
             }
         }
-        
-        
- 
+
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult ProgramEvaluatorStage1()
         {
             ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
             return View(model);
         }
 
-       
 
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         [HttpPost]
         public ActionResult ProgramEvaluatorStage1(ProgramEvaluator1ViewModel model)
         {
             try
             {
                 // TODO: Add update logic here
+
+
+
+
                 
                 return RedirectToAction("Index");
             }
