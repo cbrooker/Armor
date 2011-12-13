@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Armor.Web.Models
 {
@@ -157,7 +158,7 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Prescribe a gastroprotective agent", Value = "Prescribe a gastroprotective agent" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify" };
+                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
                 TheList.Add(model);
                 return TheList;
             }
