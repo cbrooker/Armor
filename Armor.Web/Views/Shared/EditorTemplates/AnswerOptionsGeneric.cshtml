@@ -1,0 +1,21 @@
+﻿@using Armor.Web;
+@using Armor.Web.Models;
+
+@model List<object>
+
+<ul>
+@foreach (object item in Model)
+{
+    if (item.GetType() == typeof(AnswerModel))
+    {
+        <li><label>@Html.RadioButton("AnswerOptions", ((AnswerModel)item).Value, false)@(((AnswerModel)item).Text)</label></li>
+    }
+    else if (item.GetType() == typeof(List<AnswerModel>))
+    {
+        foreach (AnswerModel item2 in (List<AnswerModel>)item)
+        {
+            <li class="subOptions"><label>@Html.RadioButton("SubAnswerOptions", item2.Value, false)@item2.Text</label></li>
+        }
+    }
+}
+</ul>

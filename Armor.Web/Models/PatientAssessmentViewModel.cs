@@ -134,11 +134,11 @@ namespace Armor.Web.Models
 
 
         [DisplayName("8. History of")]
-        public List<AnswerModel> Question8
+        public List<object> Question8
         {
             get
             {
-                List<AnswerModel> TheList = new List<AnswerModel>();
+                List<object> TheList = new List<object>();
                 AnswerModel model = new AnswerModel() { Text = "Uncomplicated peptic ulcer", Value = "Uncomplicated peptic ulcer" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Dyspepsia", Value = "Dyspepsia" };
@@ -150,6 +150,13 @@ namespace Armor.Web.Models
                 model = new AnswerModel() { Text = "H pylori infection", Value = "H pylori infection" };
                 TheList.Add(model);
                 //Some how add treated or UnTreated
+                List<AnswerModel> treatedlist = new List<AnswerModel>();
+                AnswerModel tr = new AnswerModel() { Text = "Treated", Value = "Treated" };
+                treatedlist.Add(tr);
+                tr = new AnswerModel() { Text = "Untreated", Value = "Untreated" };
+                treatedlist.Add(tr);
+                TheList.Add(treatedlist);
+
                 return TheList;
             }
         }

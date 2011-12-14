@@ -456,3 +456,11 @@ div#title {
 #registationProfileButton { position: relative; top: -32px; float: right; }
 #slidingPanel { background-color: #F3F3F3; padding: 10px; }
 
+.underline { text-decoration: underline; }
+.subOptions { margin-left: 30px; }
+
+/* Override some of the stuff in Base */
+label, legend {
+    float: none;
+}
+

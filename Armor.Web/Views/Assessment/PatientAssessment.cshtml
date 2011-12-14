@@ -84,7 +84,13 @@
         </div>
     
     
-    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question8, "AnswerOptionsGeneric")
+            @Html.ValidationMessageFor(model => model.Question8)
+        </div>
     
     
     

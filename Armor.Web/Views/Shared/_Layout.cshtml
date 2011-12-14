@@ -24,7 +24,7 @@
 </head>
 <body>
  <div class="container page">
-  	<div class="header sixteen columns row">
+  	<div class="header sixteen">
         <header>
             <div id="logindisplay">
                 @Html.Action("_LogOnPartial", "Account", new { Area = "" })
@@ -39,12 +39,12 @@
     <div id="slidingPanel">
             @Html.Action("_SlidingPanel", "Account", new { Area = "" })
     </div>
-        <section id="main">
-            @RenderBody()
-        </section>
-        <footer>
-        </footer>
-    </div>
+    <section id="main">
+        @RenderBody()
+    </section>
+    <footer>
+    </footer>
+</div>
 
 </body>
 </html>
