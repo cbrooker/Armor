@@ -161,7 +161,7 @@ namespace Armor.Web.Models
             }
         }
 
-        //Big Question
+        //Big Question - Has to be done in HTML
         [DisplayName("9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)")]
         public int Question9 { get; set; }
 
@@ -212,15 +212,25 @@ namespace Armor.Web.Models
         }
 
         //Done Programmatically
-        [DisplayName("12. Calculate your patient’s GI risk")]
-        public int Question12 { get; set; }
+        [DisplayName("12. Your patient’s GI risk")]
+        public string Question12 { get; set; }
 
 
 
         //Big Question
         [DisplayName("13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)")]
-        public int Question13 { get; set; }
-       
+        public List<AnswerModel> Question13
+        {
+            get
+            {
+                List<AnswerModel> TheList = new List<AnswerModel>();
+                AnswerModel model = new AnswerModel() { Text = "No changes", Value = "No changes" };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = "Switch to", Value = "Switch to" };
+                TheList.Add(model);
+                return TheList;
+            }
+        }
         
     }
 }
