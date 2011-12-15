@@ -14,16 +14,16 @@
 	background: #fff;
 	background:url(images/containerbackground.png) repeat-y;
 	position: relative;
-	height: 750px;
+	min-height: 750px;
 }
 .header {
-	background:url(../images/headerbackground.png) repeat-y center;
+	background:url(images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
 padding-top: 10px;}
 .registerForm {
 	margin-top: 0px;
-	background:url(/images/registrationbackground.png) no-repeat bottom center;
-	height: 580px;
+	background:url(images/registrationbackground.png) no-repeat bottom center;
+	min-height: 580px;
 }
 .padding {
 padding: 20px;	
