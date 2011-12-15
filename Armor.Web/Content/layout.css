@@ -12,12 +12,12 @@
 
 .container {
 	background: #fff;
-	background:url(/images/containerbackground.png) repeat-y;
+	background:url(images/containerbackground.png) repeat-y;
 	position: relative;
 	height: 750px;
 }
 .header {
-	background:url(/images/headerbackground.png) repeat-y center;
+	background:url(../images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
 padding-top: 10px;}
 .registerForm {
