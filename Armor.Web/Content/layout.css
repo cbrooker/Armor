@@ -23,7 +23,6 @@ padding-top: 10px;}
 .registerForm, #slidingPanel {
 	margin-top: 0px;
 	background:url(images/registrationbackground.png) no-repeat bottom center;
-	min-height: 580px;
 }
 .padding {
 padding: 20px;	
@@ -243,7 +242,9 @@ margin-right: 20px;
 /* Sliding Panel */
 #slidingPanel {
 padding: 20px;
+padding-top: 0;
 padding-bottom: 0;
+z-index: 5;
 }
 #slidingPanel legend {
 display: none;
@@ -253,11 +254,13 @@ display: none;
 width: 45%;
 float: left;
 padding-top: 20px;
+padding-bottom: 20px;
 }
 .rightColumn {
 width: 45%;
 float: right;
 padding-top: 20px;
+padding-bottom: 20px;
 }
 .descriptor {
 	font-size: 10px;
@@ -290,6 +293,9 @@ padding-top: 20px;
 #registationProfileButton{
 
 text-align: right;
+margin-top: -20px;
+margin-right: 10px;
+z-index: 1;
 }
 /* #Media Queries
 ================================================== */
