@@ -35,3 +35,6 @@ C:\ChrisProjects\Armor\Armor.Web\obj\Debug\Armor.Web.pdb
 C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.dll
 C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.pdb
 C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.xml
+C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.dll
+C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.pdb
+C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.xml
