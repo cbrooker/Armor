@@ -245,7 +245,14 @@ padding-bottom: 0;
 display: none;
 }
 /* Registration Form */
-
+.leftColumn {
+width: 45%;
+float: left;
+}
+.rightColumn {
+width: 45%;
+float: right;
+}
 .descriptor {
 	font-size: 10px;
 	color:#666;
