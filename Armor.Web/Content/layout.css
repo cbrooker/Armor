@@ -1,11 +1,3 @@
-/*
-* Skeleton V1.1
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 8/17/2011
-*/
 
 /* Table of Content
 ==================================================
@@ -20,17 +12,17 @@
 
 .container {
 	background: #fff;
-	background:url(../images/containerbackground.png) repeat-y;
+	background:url(/images/containerbackground.png) repeat-y;
 	position: relative;
 	height: 750px;
 }
 .header {
-	background:url(../images/headerbackground.png) repeat-y center;
+	background:url(/images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
 padding-top: 10px;}
 .registerForm {
 	margin-top: 0px;
-	background:url(../images/registrationbackground.png) no-repeat bottom center;
+	background:url(/images/registrationbackground.png) no-repeat bottom center;
 	height: 580px;
 }
 .padding {
@@ -39,6 +31,16 @@ padding: 20px;
 
 .fleft {
 float: left;
+}
+.field-validation-error {
+color: red;
+font-size: 10px;
+text-align: left;
+line-height: 100%;
+float: right;
+width: 222px;
+margin-right: 24px;
+margin-top: -17px;
 }
 /* #Custom Buttons
 ================================================== */
@@ -248,10 +250,12 @@ display: none;
 .leftColumn {
 width: 45%;
 float: left;
+padding-top: 20px;
 }
 .rightColumn {
 width: 45%;
 float: right;
+padding-top: 20px;
 }
 .descriptor {
 	font-size: 10px;
