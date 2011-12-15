@@ -50,6 +50,9 @@
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RichmondDay.Helpers, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\RichmondDay.Helpers.dll</HintPath>
@@ -117,6 +120,7 @@
     <Compile Include="Core\Email\TemplateParser.cs" />
     <Compile Include="Core\Filters\RequiresAuthentication.cs" />
     <Compile Include="Core\Helpers\PasswordHelpers.cs" />
+    <Compile Include="Core\Services\PatientAssessmentService.cs" />
     <Compile Include="Core\Services\Stage1Service.cs" />
     <Compile Include="Core\Services\ServiceBase.cs" />
     <Compile Include="Core\Services\UserAuthenticationProfileService.cs" />
@@ -128,6 +132,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\AssessmentChecklistViewModel.cs" />
+    <Compile Include="Models\OEMedicationMatrix.cs" />
     <Compile Include="Models\PatientAssessmentViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
     <Compile Include="Models\EditAccountViewModel.cs" />

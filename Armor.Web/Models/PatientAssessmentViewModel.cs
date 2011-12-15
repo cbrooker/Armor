@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Armor.Web.Models
 {
-    public class PatienAssessmentViewModel
+    public class PatientAssessmentViewModel
     {
 
         [DisplayName("1. Age")]

@@ -1294,6 +1294,323 @@ namespace Armor.Data
     
     
     /// <summary>
+    /// A class which represents the PatientAssessment table in the Armor Database.
+    /// This class is queryable through ArmorDB.PatientAssessment 
+    /// </summary>
+
+	public partial class PatientAssessment: INotifyPropertyChanging, INotifyPropertyChanged
+	{
+        partial void OnLoaded();
+        partial void OnValidate(System.Data.Linq.ChangeAction action);
+        partial void OnCreated();
+	    
+	    public PatientAssessment(){
+	        OnCreated();
+	    }
+	    
+	    #region Properties
+	    
+        partial void OnIDChanging(int value);
+        partial void OnIDChanged();
+		
+		private int _ID;
+		public int ID { 
+		    get{
+		        return _ID;
+		    } 
+		    set{
+		        this.OnIDChanging(value);
+                this.SendPropertyChanging();
+                this._ID = value;
+                this.SendPropertyChanged("ID");
+                this.OnIDChanged();
+		    }
+		}
+		
+        partial void OnUserIDChanging(Guid value);
+        partial void OnUserIDChanged();
+		
+		private Guid _UserID;
+		public Guid UserID { 
+		    get{
+		        return _UserID;
+		    } 
+		    set{
+		        this.OnUserIDChanging(value);
+                this.SendPropertyChanging();
+                this._UserID = value;
+                this.SendPropertyChanged("UserID");
+                this.OnUserIDChanged();
+		    }
+		}
+		
+        partial void OnDateTimeTakenUTCChanging(DateTime value);
+        partial void OnDateTimeTakenUTCChanged();
+		
+		private DateTime _DateTimeTakenUTC;
+		public DateTime DateTimeTakenUTC { 
+		    get{
+		        return _DateTimeTakenUTC;
+		    } 
+		    set{
+		        this.OnDateTimeTakenUTCChanging(value);
+                this.SendPropertyChanging();
+                this._DateTimeTakenUTC = value;
+                this.SendPropertyChanged("DateTimeTakenUTC");
+                this.OnDateTimeTakenUTCChanged();
+		    }
+		}
+		
+        partial void OnQuestion1Changing(string value);
+        partial void OnQuestion1Changed();
+		
+		private string _Question1;
+		public string Question1 { 
+		    get{
+		        return _Question1;
+		    } 
+		    set{
+		        this.OnQuestion1Changing(value);
+                this.SendPropertyChanging();
+                this._Question1 = value;
+                this.SendPropertyChanged("Question1");
+                this.OnQuestion1Changed();
+		    }
+		}
+		
+        partial void OnQuestion2Changing(string value);
+        partial void OnQuestion2Changed();
+		
+		private string _Question2;
+		public string Question2 { 
+		    get{
+		        return _Question2;
+		    } 
+		    set{
+		        this.OnQuestion2Changing(value);
+                this.SendPropertyChanging();
+                this._Question2 = value;
+                this.SendPropertyChanged("Question2");
+                this.OnQuestion2Changed();
+		    }
+		}
+		
+        partial void OnQuestion3Changing(string value);
+        partial void OnQuestion3Changed();
+		
+		private string _Question3;
+		public string Question3 { 
+		    get{
+		        return _Question3;
+		    } 
+		    set{
+		        this.OnQuestion3Changing(value);
+                this.SendPropertyChanging();
+                this._Question3 = value;
+                this.SendPropertyChanged("Question3");
+                this.OnQuestion3Changed();
+		    }
+		}
+		
+        partial void OnQuestion4Changing(string value);
+        partial void OnQuestion4Changed();
+		
+		private string _Question4;
+		public string Question4 { 
+		    get{
+		        return _Question4;
+		    } 
+		    set{
+		        this.OnQuestion4Changing(value);
+                this.SendPropertyChanging();
+                this._Question4 = value;
+                this.SendPropertyChanged("Question4");
+                this.OnQuestion4Changed();
+		    }
+		}
+		
+        partial void OnQuestion5Changing(string value);
+        partial void OnQuestion5Changed();
+		
+		private string _Question5;
+		public string Question5 { 
+		    get{
+		        return _Question5;
+		    } 
+		    set{
+		        this.OnQuestion5Changing(value);
+                this.SendPropertyChanging();
+                this._Question5 = value;
+                this.SendPropertyChanged("Question5");
+                this.OnQuestion5Changed();
+		    }
+		}
+		
+        partial void OnQuestion6Changing(string value);
+        partial void OnQuestion6Changed();
+		
+		private string _Question6;
+		public string Question6 { 
+		    get{
+		        return _Question6;
+		    } 
+		    set{
+		        this.OnQuestion6Changing(value);
+                this.SendPropertyChanging();
+                this._Question6 = value;
+                this.SendPropertyChanged("Question6");
+                this.OnQuestion6Changed();
+		    }
+		}
+		
+        partial void OnQuestion7Changing(string value);
+        partial void OnQuestion7Changed();
+		
+		private string _Question7;
+		public string Question7 { 
+		    get{
+		        return _Question7;
+		    } 
+		    set{
+		        this.OnQuestion7Changing(value);
+                this.SendPropertyChanging();
+                this._Question7 = value;
+                this.SendPropertyChanged("Question7");
+                this.OnQuestion7Changed();
+		    }
+		}
+		
+        partial void OnQuestion8Changing(string value);
+        partial void OnQuestion8Changed();
+		
+		private string _Question8;
+		public string Question8 { 
+		    get{
+		        return _Question8;
+		    } 
+		    set{
+		        this.OnQuestion8Changing(value);
+                this.SendPropertyChanging();
+                this._Question8 = value;
+                this.SendPropertyChanged("Question8");
+                this.OnQuestion8Changed();
+		    }
+		}
+		
+        partial void OnQuestion9Changing(string value);
+        partial void OnQuestion9Changed();
+		
+		private string _Question9;
+		public string Question9 { 
+		    get{
+		        return _Question9;
+		    } 
+		    set{
+		        this.OnQuestion9Changing(value);
+                this.SendPropertyChanging();
+                this._Question9 = value;
+                this.SendPropertyChanged("Question9");
+                this.OnQuestion9Changed();
+		    }
+		}
+		
+        partial void OnQuestion10Changing(string value);
+        partial void OnQuestion10Changed();
+		
+		private string _Question10;
+		public string Question10 { 
+		    get{
+		        return _Question10;
+		    } 
+		    set{
+		        this.OnQuestion10Changing(value);
+                this.SendPropertyChanging();
+                this._Question10 = value;
+                this.SendPropertyChanged("Question10");
+                this.OnQuestion10Changed();
+		    }
+		}
+		
+        partial void OnQuestion11Changing(string value);
+        partial void OnQuestion11Changed();
+		
+		private string _Question11;
+		public string Question11 { 
+		    get{
+		        return _Question11;
+		    } 
+		    set{
+		        this.OnQuestion11Changing(value);
+                this.SendPropertyChanging();
+                this._Question11 = value;
+                this.SendPropertyChanged("Question11");
+                this.OnQuestion11Changed();
+		    }
+		}
+		
+        partial void OnQuestion12Changing(string value);
+        partial void OnQuestion12Changed();
+		
+		private string _Question12;
+		public string Question12 { 
+		    get{
+		        return _Question12;
+		    } 
+		    set{
+		        this.OnQuestion12Changing(value);
+                this.SendPropertyChanging();
+                this._Question12 = value;
+                this.SendPropertyChanged("Question12");
+                this.OnQuestion12Changed();
+		    }
+		}
+		
+        partial void OnQuestion13Changing(string value);
+        partial void OnQuestion13Changed();
+		
+		private string _Question13;
+		public string Question13 { 
+		    get{
+		        return _Question13;
+		    } 
+		    set{
+		        this.OnQuestion13Changing(value);
+                this.SendPropertyChanging();
+                this._Question13 = value;
+                this.SendPropertyChanged("Question13");
+                this.OnQuestion13Changed();
+		    }
+		}
+		
+
+        #endregion
+
+        #region Foreign Keys
+        #endregion
+
+
+        private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+        public event PropertyChangingEventHandler PropertyChanging;
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void SendPropertyChanging()
+        {
+            var handler = PropertyChanging;
+            if (handler != null)
+               handler(this, emptyChangingEventArgs);
+        }
+
+        protected virtual void SendPropertyChanged(String propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+	}
+	
+    
+    
+    /// <summary>
     /// A class which represents the UserRole table in the Armor Database.
     /// This class is queryable through ArmorDB.UserRole 
     /// </summary>

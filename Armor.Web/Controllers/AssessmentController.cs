@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Armor.Web.Models;
 using Epilogger.Web;
+using Newtonsoft.Json;
 
 namespace Armor.Web.Controllers
 {
@@ -91,18 +92,18 @@ namespace Armor.Web.Controllers
                 S1.Question10 = model.Question10;
                 S1.Question11 = model.Question11;
 
-                S1.Question12 = fc["Question12"];
-                S1.Question13 = fc["Question13"];
+                S1.Question12 = fc["Question12.AnswerOptions"];
+                S1.Question13 = fc["Question13.AnswerOptions"];
 
-                if (fc["Question14"].Contains("Other"))
+                if (fc["Question14.AnswerOptions"].Contains("Other"))
                     S1.Question14 = "Other: " + fc["Question14Other"];
-                else S1.Question14 = fc["Question14"];
+                else S1.Question14 = fc["Question14.AnswerOptions"];
 
-                if (fc["Question15"].Contains("Other"))
+                if (fc["Question15.AnswerOptions"].Contains("Other"))
                     S1.Question15 = "Other: " + fc["Question15Other"];
-                else S1.Question15 = fc["Question15"];
+                else S1.Question15 = fc["Question15.AnswerOptions"];
 
-                S1.Question16 = fc["Question16"];
+                S1.Question16 = fc["Question16.AnswerOptions"];
 
                 int i =1;
                 foreach (AnswerModel item in model.Question17)
@@ -117,13 +118,13 @@ namespace Armor.Web.Controllers
                 {
                     S1.Question17 += fc["Question17Other"];
                 }
-                
 
-                if (fc["Question18"].Contains("Other"))
+
+                if (fc["Question18.AnswerOptions"].Contains("Other"))
                     S1.Question18 = "Other: " + fc["Question18Other"];
-                else S1.Question18 = fc["Question18"];
+                else S1.Question18 = fc["Question18.AnswerOptions"];
 
-                S1.Question19 = fc["Question19"];
+                S1.Question19 = fc["Question19.AnswerOptions"];
 
                 S1.Question20 = "Low: " + model.Question20Low + " Moderate: " + model.Question20Moderate + " High: " + model.Question20High;
 
@@ -141,8 +142,100 @@ namespace Armor.Web.Controllers
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult PatientAssessment()
         {
-            PatienAssessmentViewModel model = new PatienAssessmentViewModel();
+            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
             return View(model);
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PatientAssessment(PatientAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                PatientAssessmentService PAS = new PatientAssessmentService();
+                Data.PatientAssessment S1 = new Data.PatientAssessment();
+
+                S1.UserID = CurrentUserID;
+                S1.DateTimeTakenUTC = DateTime.UtcNow;
+
+                S1.Question1 = fc["Question1.AnswerOptions"];
+                S1.Question2 = fc["Question2.AnswerOptions"];
+                S1.Question3 = fc["Question3.AnswerOptions"];
+                S1.Question4 = fc["Question4.AnswerOptions"];
+                S1.Question5 = fc["Question5.AnswerOptions"];
+                S1.Question6 = model.Question6.ToString();
+                S1.Question7 = fc["Question7.AnswerOptions"];
+
+                S1.Question8 = fc["Question8.AnswerOptions"];
+                if (S1.Question8 == "H pylori infection")
+                {
+                    S1.Question8 = "H pylori infection - " + fc["Question8.SubAnswerOptions"];
+                }
+
+                //9 add to an object, then serialize to JSON, store the string.
+                OEMedicationMatrix OEM = new OEMedicationMatrix();
+                OEM.Acetaminophen = fc["Question9_Acetaminophen"];
+                OEM.Aspirin = fc["Question9_Aspirin"];
+                OEM.Diclofenac = fc["Question9_Diclofenac"];
+                OEM.DiclofenacMisoprostol = fc["Question9_DiclofenacMisoprostol"];
+                OEM.Ibuprofen = fc["Question9_Ibuprofen"];
+                OEM.Indomethacin = fc["Question9_Indomethacin"];
+                OEM.Meloxicam = fc["Question9_Meloxicam"];
+                OEM.Naproxen = fc["Question9_Naproxen"];
+                OEM.NaproxenEsomeprazole = fc["Question9_Naproxen—esomeprazole"];
+                OEM.Celecoxib = fc["Question9_Celecoxib"];
+                OEM.AcetaminophenTramadol = fc["Question9_Acetaminophen/tramadol"];
+                OEM.Codeine = fc["Question9_Codeine"];
+                OEM.Tramadol = fc["Question9_Tramadol"];
+                OEM.Other = fc["Question9_Other"];
+
+                S1.Question9 = JsonConvert.SerializeObject(OEM);
+
+
+                int i = 1;
+                foreach (AnswerModel item in model.Question10)
+                {
+                    if (fc.Get("Question10.AnswerCheck" + i) != "false")
+                    {
+                        S1.Question10 += item.Value + "; ";
+                    }
+                    i++;
+                }
+
+                S1.Question11 = fc["Question11.AnswerOptions"];
+                S1.Question12 = model.Question12;
+
+                S1.Question13 = fc["Question13.AnswerOptions"];
+                if (S1.Question13 == "Switch to")
+                {
+                    OEMedicationMatrix OEM2 = new OEMedicationMatrix();
+                    OEM2.Acetaminophen = fc["Question13_Acetaminophen"];
+                    OEM2.Aspirin = fc["Question13_Aspirin"];
+                    OEM2.Diclofenac = fc["Question13_Diclofenac"];
+                    OEM2.DiclofenacMisoprostol = fc["Question13_DiclofenacMisoprostol"];
+                    OEM2.Ibuprofen = fc["Question13_Ibuprofen"];
+                    OEM2.Indomethacin = fc["Question13_Indomethacin"];
+                    OEM2.Meloxicam = fc["Question13_Meloxicam"];
+                    OEM2.Naproxen = fc["Question13_Naproxen"];
+                    OEM2.NaproxenEsomeprazole = fc["Question13_Naproxen—esomeprazole"];
+                    OEM2.Celecoxib = fc["Question13_Celecoxib"];
+                    OEM2.AcetaminophenTramadol = fc["Question13_Acetaminophen/tramadol"];
+                    OEM2.Codeine = fc["Question13_Codeine"];
+                    OEM2.Tramadol = fc["Question13_Tramadol"];
+                    OEM2.Other = fc["Question13_Other"];
+
+                    S1.Question13 = JsonConvert.SerializeObject(OEM2);
+                }
+
+                PAS.Save(S1);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(model);
+            }
         }
 
        

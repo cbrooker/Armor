@@ -126,6 +126,7 @@ namespace Armor.Data
         public Query<Role> Roles { get; set; }
         public Query<User> Users { get; set; }
         public Query<ProgramEvaluatorStage1> ProgramEvaluatorStage1s { get; set; }
+        public Query<PatientAssessment> PatientAssessments { get; set; }
         public Query<UserRole> UserRoles { get; set; }
 
 			
@@ -235,6 +236,7 @@ namespace Armor.Data
             Roles = new Query<Role>(provider);
             Users = new Query<User>(provider);
             ProgramEvaluatorStage1s = new Query<ProgramEvaluatorStage1>(provider);
+            PatientAssessments = new Query<PatientAssessment>(provider);
             UserRoles = new Query<UserRole>(provider);
             #endregion
 
@@ -247,6 +249,7 @@ namespace Armor.Data
             	DataProvider.Schema.Tables.Add(new RolesTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new UserTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new ProgramEvaluatorStage1Table(DataProvider));
+            	DataProvider.Schema.Tables.Add(new PatientAssessmentTable(DataProvider));
             	DataProvider.Schema.Tables.Add(new UserRoleTable(DataProvider));
             }
             #endregion
