@@ -20,7 +20,7 @@
 	background:url(images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
 padding-top: 10px;}
-.registerForm {
+.registerForm, #slidingPanel {
 	margin-top: 0px;
 	background:url(images/registrationbackground.png) no-repeat bottom center;
 	min-height: 580px;
@@ -215,6 +215,7 @@ height: 100px;
 #title {
 width: 50%;
 float: left;
+margin-left: 20px;
 }
 #title h1 {
 font-size: 20px;
@@ -236,6 +237,7 @@ line-height:110%;
 float: left;
  margin-left: 20px;
 width: 210px;
+margin-right: 20px;
 }
 
 /* Sliding Panel */
