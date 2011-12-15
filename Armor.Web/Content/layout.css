@@ -44,7 +44,7 @@ margin-top: -17px;
 /* #Custom Buttons
 ================================================== */
 
-	 a.green
+	 a.green-action-button, input[type="submit"]
 	 {
 		background: #eee; /* Old browsers */
 		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
@@ -71,7 +71,7 @@ margin-top: -17px;
 	  line-height: 21px;
 	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-	a.green:hover
+	a.green-action-button:hover, input[type="submit"]:hover
 	{
 		color: #fff;
 		background: #eee; /* Old browsers */
@@ -85,7 +85,7 @@ margin-top: -17px;
 	  border-top: 1px solid #aaa;
 	  border-left: 1px solid #aaa; }
 
-	a.green:active
+	a.green-action-button:active, , input[type="submit"]:active
 	 {
 		border: 1px solid #666;
 		background: #eee; /* Old browsers */
@@ -96,7 +96,7 @@ margin-top: -17px;
 		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
 		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */ }
 
- a.blue-action-button
+ a.blue-action-button, input[type="button"]
 	 {
 		background: #eee; /* Old browsers */
 		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.6) 0%, rgba(27,67,119,.6) 100%); /* FF3.6+ */
@@ -123,7 +123,7 @@ margin-top: -17px;
 	  line-height: 21px;
 	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-	a.blue-action-button:hover
+	a.blue-action-button:hover, input[type="button"]:hover
 	{
 		color: #fff;
 		background: #eee; /* Old browsers */
@@ -137,7 +137,7 @@ margin-top: -17px;
 	  border-top: 1px solid #aaa;
 	  border-left: 1px solid #aaa; }
 
-	a.blue-action-button:active
+	a.blue-action-button:active, input[type="button"]:active
 	 {
 		border: 1px solid #666;
 		background: #ccc; /* Old browsers */
@@ -209,7 +209,7 @@ margin-top: -17px;
 /* Header */
 .header {
 
-height: 120px;
+height: 110px;
 width: 100%;
 }
 #title {
@@ -292,12 +292,15 @@ padding-bottom: 20px;
 	text-align: right;
 	padding-right: 15px;
 }
+.submitButton {
+text-align: right;
+width: 93%;
+}
 #registationProfileButton{
 float: left;
 text-align: right;
 margin-top: -30px;
-margin-right: 10px;
-width: 100%;
+width: 95%;
 z-index: 1;
 }
 /* #Media Queries
