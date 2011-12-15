@@ -208,13 +208,15 @@ margin-top: -17px;
 ================================================== */
 /* Header */
 .header {
-display: block;
-height: 100px;
+
+height: 120px;
+width: 100%;
 }
 #title {
 width: 50%;
 float: left;
 margin-left: 20px;
+margin-top: 15px;
 }
 #title h1 {
 font-size: 20px;
@@ -291,10 +293,11 @@ padding-bottom: 20px;
 	padding-right: 15px;
 }
 #registationProfileButton{
-
+float: left;
 text-align: right;
-margin-top: -20px;
+margin-top: -30px;
 margin-right: 10px;
+width: 100%;
 z-index: 1;
 }
 /* #Media Queries
