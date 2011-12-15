@@ -1,6 +1,6 @@
 ﻿@model Armor.Web.Models.CreateAccountModel
 
-<h2>Register Here</h2>
+<h1>Register Here</h1>
 <h3>Welcome to the ARMOR: Assessing Risk in the Management of <br /> OsteoaRthritis Personal Practise Assessment Program Registration.</h3>
 <h4>Please complete the information below to register and obtain your username and password.</h4>
 
@@ -11,6 +11,7 @@
 {
     @Html.ValidationSummary(true)
     <fieldset>
+	<div class="leftColumn">
         <legend>Register</legend>
 
         <div class="editor-label">
@@ -29,6 +30,14 @@
             @Html.ValidationMessageFor(model => model.LastName)
         </div>
 
+ 		<div class="editor-label">
+            @Html.LabelFor(model => model.EmailAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailAddress)
+            @Html.ValidationMessageFor(model => model.EmailAddress)
+        </div>
+		
         <div class="editor-label">
             @Html.LabelFor(model => model.Password)
         </div>
@@ -46,14 +55,6 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.EmailAddress)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.EmailAddress)
-            @Html.ValidationMessageFor(model => model.EmailAddress)
-        </div>
-
-        <div class="editor-label">
             @Html.LabelFor(model => model.Phone)
         </div>
         <div class="editor-field">
@@ -68,7 +69,8 @@
             @Html.EditorFor(model => model.Fax)
             @Html.ValidationMessageFor(model => model.Fax)
         </div>
-
+</div>
+<div class="rightColumn">
         <div class="editor-label">
             @Html.LabelFor(model => model.Address)
         </div>
@@ -94,10 +96,6 @@
             @Html.ValidationMessageFor(model => model.Provinces)
         </div>
 
-
-
-
-
         <div class="editor-label">
             @Html.LabelFor(model => model.PostalCode)
         </div>
@@ -117,5 +115,6 @@
         <p>
             <input type="submit" value="Submit" class="green-action-button" />
         </p>
+		</div>
     </fieldset>
 }

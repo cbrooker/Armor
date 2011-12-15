@@ -37,32 +37,32 @@ padding-top: 10px;}
 padding: 20px;	
 }
 
+.fleft {
+float: left;
+}
 /* #Custom Buttons
 ================================================== */
 
-	a.button,
-	button,
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"] {
+	 a.green
+	 {
 		background: #eee; /* Old browsers */
-		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
-		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
-		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
-		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
-		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
-		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
 	  border: 1px solid #aaa;
 	  border-top: 1px solid #ccc;
 	  border-left: 1px solid #ccc;
-	  padding: 4px 12px;
+	  padding: 8px 24px;
 	  -moz-border-radius: 3px;
 	  -webkit-border-radius: 3px;
 	  border-radius: 3px;
-	  color: #444;
+	  color: #fff;
 	  display: inline-block;
-	  font-size: 11px;
-	  font-weight: bold;
+	  font-size: 16px;
+	  font-weight: normal;
 	  text-decoration: none;
 	  text-shadow: 0 1px rgba(255, 255, 255, .75);
 	  cursor: pointer;
@@ -70,28 +70,126 @@ padding: 20px;
 	  line-height: 21px;
 	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-	a.button:hover,
-	button:hover,
-	input[type="submit"]:hover,
-	input[type="reset"]:hover,
-	input[type="button"]:hover {
-		color: #222;
-		background: #ddd; /* Old browsers */
-		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
-		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
-		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
-		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
-		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
-		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+	a.green:hover
+	{
+		color: #fff;
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
 	  border: 1px solid #888;
 	  border-top: 1px solid #aaa;
 	  border-left: 1px solid #aaa; }
 
-	a.button:active,
-	button:active,
-	input[type="submit"]:active,
-	input[type="reset"]:active,
-	input[type="button"]:active {
+	a.green:active
+	 {
+		border: 1px solid #666;
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */ }
+
+ a.blue-action-button
+	 {
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.6) 0%, rgba(27,67,119,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.6)), color-stop(100%,rgba(27,67,119,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.blue-action-button:hover
+	{
+		color: #fff;
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.9) 0%, rgba(27,67,119,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.9)), color-stop(100%,rgba(27,67,119,.2))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.blue-action-button:active
+	 {
+		border: 1px solid #666;
+		background: #ccc; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+ a.red
+	 {
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(158, 13, 13,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(158, 13, 13,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(158, 13, 13,.6) 0%,rgba(109,10,10,.6) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.red:hover
+	{
+		color: #fff;
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(109,10,10,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,10,10,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.red:active
+	 {
 		border: 1px solid #666;
 		background: #ccc; /* Old browsers */
 		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
@@ -102,20 +200,52 @@ padding: 20px;
 		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
 
 
+
+
+
 /* #Page Styles
 ================================================== */
 /* Header */
-.signInButton {
+.header {
+display: block;
+height: 100px;
+}
+#title {
+width: 50%;
 float: left;
-width: 80px;	
+}
+#title h1 {
+font-size: 20px;
+}
+#logindisplay {
+float: right;
+
+}
+#logindisplay h2 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 0px;
 }
 
-.forgotPassword {
+
+#forgotPasswordText {
 font-size: 10px;
 line-height:110%;	
 float: left;
+ margin-left: 20px;
+width: 210px;
+}
+
+/* Sliding Panel */
+#slidingPanel {
+padding: 20px;
+padding-bottom: 0;
+}
+#slidingPanel legend {
+display: none;
 }
 /* Registration Form */
+
 .descriptor {
 	font-size: 10px;
 	color:#666;
@@ -143,6 +273,10 @@ float: left;
 .formButton {
 	text-align: right;
 	padding-right: 15px;
+}
+#registationProfileButton{
+
+text-align: right;
 }
 /* #Media Queries
 ================================================== */
