@@ -24,7 +24,6 @@ namespace Armor.Web {
         }
 
         
-
         public User GetUserByID(Guid id) {
             return db.Users.Where(u => u.ID == id).FirstOrDefault();
         }
@@ -39,6 +38,28 @@ namespace Armor.Web {
 
         public User ValidateLogin(string emailaddress, string password) {
             return GetData().Where(u => u.EmailAddress == emailaddress && u.Password == password).FirstOrDefault();
+        }
+
+        public bool PreAssessmentComplete(Guid UserID)
+        {
+            if (db.PreAssessments.Where(i => i.UserID == UserID).Count() > 0) return true;
+            else return false;
+        }
+        public bool ProgramStage1Complete(Guid UserID)
+        {
+            if (db.ProgramEvaluatorStage1s.Where(i => i.UserID == UserID).Count() > 0) return true;
+            else return false;
+        }
+
+        public bool PatientAssessmentComplete(Guid UserID)
+        {
+            if (db.PatientAssessments.Where(i => i.UserID == UserID).Count() == 25) return true;
+            else return false;
+        }
+
+        public int PatientAssessmentCount(Guid UserID)
+        {
+            return db.PatientAssessments.Where(i => i.UserID == UserID).Count();
         }
 
     }

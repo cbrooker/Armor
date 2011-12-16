@@ -150,6 +150,8 @@
   <ItemGroup>
     <Content Include="Content\base.css" />
     <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\checkbox.jpg" />
+    <Content Include="Content\images\checkedbox.jpg" />
     <Content Include="Content\images\containerbackground.png" />
     <Content Include="Content\images\full_logo.png" />
     <Content Include="Content\images\green_arrow.png" />
@@ -214,7 +216,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -259,6 +260,7 @@
     <Content Include="Views\Assessment\PatientAssessment.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\AnswerOptionsGeneric.cshtml" />
     <Content Include="Views\Assessment\PreAssessment.cshtml" />
+    <Content Include="Views\Assessment\_Checkbox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -286,7 +288,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55976</DevelopmentServerPort>
+          <DevelopmentServerPort>60912</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

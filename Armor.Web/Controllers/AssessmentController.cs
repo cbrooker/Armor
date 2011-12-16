@@ -18,8 +18,38 @@ namespace Armor.Web.Controllers
         public ActionResult Index()
         {
             AssessmentChecklistViewModel model = new AssessmentChecklistViewModel();
+            UserService US = new UserService();
 
             model.user = CurrentUser;
+            model.PreAssessmentState = AssessmentState.Disabled;
+            model.ProgramStage1State = AssessmentState.Disabled;
+            model.ProgramStage2State = AssessmentState.Disabled;
+            model.PatientAssessmentState = AssessmentState.Disabled;
+            model.ProgramStage3State = AssessmentState.Disabled;
+
+            if (US.PreAssessmentComplete(CurrentUserID)) model.PreAssessmentState = AssessmentState.Complete; else model.PreAssessmentState = AssessmentState.Enabled;
+
+            if (model.PreAssessmentState == AssessmentState.Complete)
+            {
+                if (US.ProgramStage1Complete(CurrentUserID)) model.ProgramStage1State = AssessmentState.Complete; else model.ProgramStage1State = AssessmentState.Enabled;
+            }
+
+            //Do for Stage 2
+
+
+
+            if (model.ProgramStage1State == AssessmentState.Complete)
+            {
+                //Only complete after 25 assessments
+                if (US.PatientAssessmentComplete(CurrentUserID)) model.PatientAssessmentState = AssessmentState.Complete; else model.PatientAssessmentState = AssessmentState.Enabled;
+                model.PatientAssessmentCount = US.PatientAssessmentCount(CurrentUserID);
+            }
+
+
+            if (model.PatientAssessmentState == AssessmentState.Complete)
+            {
+                //if (US.PatientAssessmentComplete(CurrentUserID)) model.PatientAssessmentState = AssessmentState.Complete; else model.PatientAssessmentState = AssessmentState.Enabled;
+            }
 
             return View(model);
         }
