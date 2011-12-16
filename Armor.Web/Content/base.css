@@ -70,8 +70,8 @@
 	h1 { font-size: 32px; line-height: 50px; margin-bottom: 14px;font-weight: bold;}
 	h2 { font-size: 32px; line-height: 40px; margin-bottom: 10px; font-weight: bold;}
 	h3 { font-size: 18px; line-height: 24px; margin-bottom: 8px; font-weight: bold;}
-	h4 { font-size: 14px; line-height: 20px; margin-bottom: 4px; font-weight: bold;}
-	h5 { font-size: 17px; line-height: 24px; }
+	h4 { font-size: 21px; line-height: 24px; margin-bottom: 4px; font-weight: bold;}
+	h5 { font-size: 17px; line-height: 17px; margin-bottom: 14px;}
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
