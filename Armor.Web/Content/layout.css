@@ -344,3 +344,8 @@ z-index: 1;
 	    font-weight: normal;
 	    font-style: normal; }
 */
+
+/* Override some of the stuff in Base */
+label, legend {
+    float: none; display: block; width: 100%; text-align: left;
+}

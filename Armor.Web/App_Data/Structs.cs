@@ -1576,6 +1576,355 @@ namespace Armor.Data {
         }
         
         /// <summary>
+        /// Table: PreAssessment
+        /// Primary Key: ID
+        /// </summary>
+
+        public class PreAssessmentTable: DatabaseTable {
+            
+            public PreAssessmentTable(IDataProvider provider):base("PreAssessment",provider){
+                ClassName = "PreAssessment";
+                SchemaName = "dbo";
+                
+
+                Columns.Add(new DatabaseColumn("ID", this)
+                {
+	                IsPrimaryKey = true,
+	                DataType = DbType.Int32,
+	                IsNullable = false,
+	                AutoIncrement = true,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("UserID", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.Guid,
+	                IsNullable = false,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("DateTimeTakenUTC", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.DateTime,
+	                IsNullable = false,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 0
+                });
+
+                Columns.Add(new DatabaseColumn("Question1", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question2", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question3", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question4", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question5", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question6", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question7", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question8", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question9", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 500
+                });
+
+                Columns.Add(new DatabaseColumn("Question10", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 500
+                });
+
+                Columns.Add(new DatabaseColumn("Question11", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 255
+                });
+
+                Columns.Add(new DatabaseColumn("Question12", this)
+                {
+	                IsPrimaryKey = false,
+	                DataType = DbType.String,
+	                IsNullable = true,
+	                AutoIncrement = false,
+	                IsForeignKey = false,
+	                MaxLength = 1000
+                });
+                    
+                
+                
+            }
+            
+            public IColumn ID{
+                get{
+                    return this.GetColumn("ID");
+                }
+            }
+            				
+   			public static string IDColumn{
+			      get{
+        			return "ID";
+      			}
+		    }
+           
+            public IColumn UserID{
+                get{
+                    return this.GetColumn("UserID");
+                }
+            }
+            				
+   			public static string UserIDColumn{
+			      get{
+        			return "UserID";
+      			}
+		    }
+           
+            public IColumn DateTimeTakenUTC{
+                get{
+                    return this.GetColumn("DateTimeTakenUTC");
+                }
+            }
+            				
+   			public static string DateTimeTakenUTCColumn{
+			      get{
+        			return "DateTimeTakenUTC";
+      			}
+		    }
+           
+            public IColumn Question1{
+                get{
+                    return this.GetColumn("Question1");
+                }
+            }
+            				
+   			public static string Question1Column{
+			      get{
+        			return "Question1";
+      			}
+		    }
+           
+            public IColumn Question2{
+                get{
+                    return this.GetColumn("Question2");
+                }
+            }
+            				
+   			public static string Question2Column{
+			      get{
+        			return "Question2";
+      			}
+		    }
+           
+            public IColumn Question3{
+                get{
+                    return this.GetColumn("Question3");
+                }
+            }
+            				
+   			public static string Question3Column{
+			      get{
+        			return "Question3";
+      			}
+		    }
+           
+            public IColumn Question4{
+                get{
+                    return this.GetColumn("Question4");
+                }
+            }
+            				
+   			public static string Question4Column{
+			      get{
+        			return "Question4";
+      			}
+		    }
+           
+            public IColumn Question5{
+                get{
+                    return this.GetColumn("Question5");
+                }
+            }
+            				
+   			public static string Question5Column{
+			      get{
+        			return "Question5";
+      			}
+		    }
+           
+            public IColumn Question6{
+                get{
+                    return this.GetColumn("Question6");
+                }
+            }
+            				
+   			public static string Question6Column{
+			      get{
+        			return "Question6";
+      			}
+		    }
+           
+            public IColumn Question7{
+                get{
+                    return this.GetColumn("Question7");
+                }
+            }
+            				
+   			public static string Question7Column{
+			      get{
+        			return "Question7";
+      			}
+		    }
+           
+            public IColumn Question8{
+                get{
+                    return this.GetColumn("Question8");
+                }
+            }
+            				
+   			public static string Question8Column{
+			      get{
+        			return "Question8";
+      			}
+		    }
+           
+            public IColumn Question9{
+                get{
+                    return this.GetColumn("Question9");
+                }
+            }
+            				
+   			public static string Question9Column{
+			      get{
+        			return "Question9";
+      			}
+		    }
+           
+            public IColumn Question10{
+                get{
+                    return this.GetColumn("Question10");
+                }
+            }
+            				
+   			public static string Question10Column{
+			      get{
+        			return "Question10";
+      			}
+		    }
+           
+            public IColumn Question11{
+                get{
+                    return this.GetColumn("Question11");
+                }
+            }
+            				
+   			public static string Question11Column{
+			      get{
+        			return "Question11";
+      			}
+		    }
+           
+            public IColumn Question12{
+                get{
+                    return this.GetColumn("Question12");
+                }
+            }
+            				
+   			public static string Question12Column{
+			      get{
+        			return "Question12";
+      			}
+		    }
+           
+                    
+        }
+        
+        /// <summary>
         /// Table: UserRole
         /// Primary Key: ID
         /// </summary>

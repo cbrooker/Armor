@@ -31,7 +31,11 @@
             </div>
             <div id="title">
                 <!--<h1>@Html.ActionLink("ARMOR", "index", "home")</h1>-->
-<img src="@Url.Content("~/Content/images/full_logo.png")"/>            </div>
+                @*<img src="@Url.Content("~/Content/images/full_logo.png")"/>*@
+                <a href='@Url.Action("index", "home")'>
+                    <img src='@Url.Content("~/Content/images/full_logo.png")' />
+                </a>
+            </div>
             
             <div class="seperator"></div>
         </header>

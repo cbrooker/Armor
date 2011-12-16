@@ -1,0 +1,287 @@
+﻿@model Armor.Web.Models.PreAssessmentViewModel
+
+@{
+    ViewBag.Title = "PreAssessment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PreAssessment</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question1)
+            @Html.ValidationMessageFor(model => model.Question1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question2)
+            @Html.ValidationMessageFor(model => model.Question2)
+        </div>
+
+        <h4>The following questions apply only to the patients in your practice who meet the following criteria:</h4>
+        <ul>
+            <li>Diagnosis of osteoarthritis</li>
+            <li>Aged 18 years or older</li>
+            <li>Is not responding to over-the-counter oral or topical medications</li>
+            <li>Has pain that interferes with normal daily activities</li>
+            <li>Has an indication for NSAID treatment</li>
+        </ul>
+    
+    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question3)
+            @Html.ValidationMessageFor(model => model.Question3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question4)
+            @Html.ValidationMessageFor(model => model.Question4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question5ActiveSmoker)
+        </div>
+        <div class="editor-field">
+            
+            <label>Active smoker? @Html.EditorFor(model => model.Question5ActiveSmoker)%</label>
+            @Html.ValidationMessageFor(model => model.Question5ActiveSmoker)
+            <label>Ex-smoker? @Html.EditorFor(model => model.Question5ExSmoker)%</label>
+            @Html.ValidationMessageFor(model => model.Question5ExSmoker)
+            <label>Non-smoker @Html.EditorFor(model => model.Question5NonSmoker)%</label>
+            @Html.ValidationMessageFor(model => model.Question5NonSmoker)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question6)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question6)
+            @Html.ValidationMessageFor(model => model.Question6)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question7)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question7)
+            @Html.ValidationMessageFor(model => model.Question7)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Question8)
+            @Html.ValidationMessageFor(model => model.Question8)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question9UncomplicatedPepticUlcer)
+        </div>
+        <div class="editor-field">
+            <label>Uncomplicated peptic ulcer @Html.EditorFor(model => model.Question9UncomplicatedPepticUlcer) %</label>
+            @Html.ValidationMessageFor(model => model.Question9UncomplicatedPepticUlcer)
+            
+            <label>GERD @Html.EditorFor(model => model.Question9GERD) %</label>
+            @Html.ValidationMessageFor(model => model.Question9GERD)
+
+            <label>Dyspepsia @Html.EditorFor(model => model.Question9Dyspepsia) %</label>
+            @Html.ValidationMessageFor(model => model.Question9Dyspepsia)
+
+            <label>Bleeding peptic ulcer @Html.EditorFor(model => model.Question9BleedingPepticUlcer) %</label>
+            @Html.ValidationMessageFor(model => model.Question9BleedingPepticUlcer)
+
+            <label><em>H pylori</em> infection @Html.EditorFor(model => model.Question9HpyloriInfection) %</label>
+            @Html.ValidationMessageFor(model => model.Question9HpyloriInfection)
+
+        </div>
+    
+    <div class="editor-label">
+            @Html.LabelFor(model => model.Question10Cervical)
+        </div>
+        <div class="editor-field">
+            <label>Cervical @Html.EditorFor(model => model.Question10Cervical)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Cervical)
+
+            <label>Dorsal @Html.EditorFor(model => model.Question10Dorsal)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Dorsal)
+
+            <label>Lumbar @Html.EditorFor(model => model.Question10Lumbar)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Lumbar)
+
+            <label>Hand @Html.EditorFor(model => model.Question10Hand)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Hand)
+
+            <label>Hip  @Html.EditorFor(model => model.Question10Hip)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Hip)
+
+            <label>Knee @Html.EditorFor(model => model.Question10Knee)%</label>
+            @Html.ValidationMessageFor(model => model.Question10Knee)
+        </div>
+
+       
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question11Low)
+        </div>
+        <div class="editor-field">
+            <label>Low risk @Html.EditorFor(model => model.Question11Low)%</label>
+            @Html.ValidationMessageFor(model => model.Question11Low)
+
+            <label>Moderate risk @Html.EditorFor(model => model.Question11Moderate)%</label>
+            @Html.ValidationMessageFor(model => model.Question11Moderate)
+
+            <label>High risk @Html.EditorFor(model => model.Question11High)%</label>
+            @Html.ValidationMessageFor(model => model.Question11High)
+        </div>
+
+       
+    
+    
+    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Question12)
+        </div>
+        <div class="editor-field">
+            <table>
+                <tr>
+                    <th>Medication</th>
+                    <th>Low GI risk</th>
+                    <th>Moderate GI risk</th>
+                    <th>High GI risk</th>
+                </tr>
+                <tr>
+                    <td>Acetaminophen</td>
+                    <td>@Html.RadioButton("Question12_Acetaminophen", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Acetaminophen", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Acetaminophen", "High")</td>
+                </tr>
+                <tr>
+                    <td>Traditional NSAID</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indent">Aspirin (>300 mg)</td>
+                    <td>@Html.RadioButton("Question12_Aspirin", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Aspirin", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Aspirin", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Diclofenac</td>
+                    <td>@Html.RadioButton("Question12_Diclofenac", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Diclofenac", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Diclofenac", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Diclofenac/misoprostol</td>
+                    <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Low")</td>
+                    <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Ibuprofen</td>
+                    <td>@Html.RadioButton("Question12_Ibuprofen", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Ibuprofen", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Ibuprofen", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Indomethacin</td>
+                    <td>@Html.RadioButton("Question12_Indomethacin", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Indomethacin", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Indomethacin", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Meloxicam</td>
+                    <td>@Html.RadioButton("Question12_Meloxicam", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Meloxicam", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Meloxicam", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Naproxen</td>
+                    <td>@Html.RadioButton("Question12_Naproxen", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Naproxen", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Naproxen", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Naproxen—esomeprazole</td>
+                    <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Low")</td>
+                    <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "High")</td>
+                </tr>
+                <tr>
+                    <td>Coxibs</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indent">Celecoxib</td>
+                    <td>@Html.RadioButton("Question12_Celecoxib", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Celecoxib", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Celecoxib", "High")</td>
+                </tr>
+                <tr>
+                    <td>Opioids/combinations</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indent">Acetaminophen/tramadol</td>
+                    <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Low")</td>
+                    <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Codeine (in combination with acetaminophen)</td>
+                    <td>@Html.RadioButton("Question12_Codeine", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Codeine", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Codeine", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Tramadol</td>
+                    <td>@Html.RadioButton("Question12_Tramadol", "Low")</td>
+                    <td>@Html.RadioButton("Question12_Tramadol", "Moderate")</td>
+                    <td>@Html.RadioButton("Question12_Tramadol", "High")</td>
+                </tr>
+                <tr>
+                    <td class="indent">Other</td>
+                    <td colspan="3">@Html.TextBox("Question12_Other")</td>
+
+                </tr>
+            </table>
+
+            @Html.ValidationMessageFor(model => model.Question12)
+        </div>
+
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    
+}
+
+
+<script language="javascript" type="text/javascript">
+
+    $(function () {
+        $("#slidingPanel").slideUp();
+    });
+
+</script>

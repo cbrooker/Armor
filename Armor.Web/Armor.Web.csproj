@@ -120,6 +120,7 @@
     <Compile Include="Core\Email\TemplateParser.cs" />
     <Compile Include="Core\Filters\RequiresAuthentication.cs" />
     <Compile Include="Core\Helpers\PasswordHelpers.cs" />
+    <Compile Include="Core\Services\PreAssessmentService.cs" />
     <Compile Include="Core\Services\PatientAssessmentService.cs" />
     <Compile Include="Core\Services\Stage1Service.cs" />
     <Compile Include="Core\Services\ServiceBase.cs" />
@@ -132,6 +133,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AnswerModel.cs" />
     <Compile Include="Models\AssessmentChecklistViewModel.cs" />
+    <Compile Include="Models\PreAssessmentViewModel.cs" />
     <Compile Include="Models\OEMedicationMatrix.cs" />
     <Compile Include="Models\PatientAssessmentViewModel.cs" />
     <Compile Include="Models\CreateAccountModel.cs" />
@@ -256,6 +258,7 @@
     <Content Include="Views\Shared\EditorTemplates\AnswerCheckboxes.cshtml" />
     <Content Include="Views\Assessment\PatientAssessment.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\AnswerOptionsGeneric.cshtml" />
+    <Content Include="Views\Assessment\PreAssessment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

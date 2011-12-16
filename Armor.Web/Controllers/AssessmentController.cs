@@ -238,6 +238,81 @@ namespace Armor.Web.Controllers
             }
         }
 
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult PreAssessment()
+        {
+            PreAssessmentViewModel model = new PreAssessmentViewModel();
+            return View(model);
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PreAssessment(PreAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                PreAssessmentService PAS = new PreAssessmentService();
+                Data.PreAssessment S1 = new Data.PreAssessment();
+
+                S1.UserID = CurrentUserID;
+                S1.DateTimeTakenUTC = DateTime.UtcNow;
+
+                S1.Question1 = model.Question1;
+                S1.Question2 = model.Question2;
+                S1.Question3 = model.Question3;
+                S1.Question4 = model.Question4;
+                S1.Question5 = "Active Smoker: " + model.Question5ActiveSmoker + "%, Ex-Smoker: " + model.Question5ExSmoker + "%, Non-Smoker: " + model.Question5NonSmoker + "%";
+
+                S1.Question6 = model.Question6;
+                S1.Question7 = model.Question7;
+                S1.Question8 = model.Question8;
+
+                S1.Question9 = "Uncomplicated peptic ulcer: " + model.Question9UncomplicatedPepticUlcer + 
+                                "%, GERD: " + model.Question9GERD + 
+                                "%, Dyspepsia: " + model.Question9Dyspepsia + 
+                                "%, Bleeding peptic ulcer: " + model.Question9BleedingPepticUlcer + 
+                                "%, H pylori infection: " + model.Question9HpyloriInfection + "%";
+
+                S1.Question10 = "Cervical: " + model.Question10Cervical +
+                                "%, Dorsal: " + model.Question10Dorsal +
+                                "%, Lumbar: " + model.Question10Lumbar +
+                                "%, Hand: " + model.Question10Hand +
+                                "%, Hip: " + model.Question10Hip +
+                                "%, Knee: " + model.Question10Knee + "%";
+
+
+                S1.Question11 = "Low Risk: " + model.Question11Low + "%, Moderate Risk: " + model.Question11Moderate + "%, High Risk: " + model.Question11High + "%";
+
+                //12 add to an object, then serialize to JSON, store the string.
+                OEMedicationMatrix OEM = new OEMedicationMatrix();
+                OEM.Acetaminophen = fc["Question12_Acetaminophen"];
+                OEM.Aspirin = fc["Question12_Aspirin"];
+                OEM.Diclofenac = fc["Question12_Diclofenac"];
+                OEM.DiclofenacMisoprostol = fc["Question12_DiclofenacMisoprostol"];
+                OEM.Ibuprofen = fc["Question12_Ibuprofen"];
+                OEM.Indomethacin = fc["Question12_Indomethacin"];
+                OEM.Meloxicam = fc["Question12_Meloxicam"];
+                OEM.Naproxen = fc["Question12_Naproxen"];
+                OEM.NaproxenEsomeprazole = fc["Question12_NaproxenEsomeprazole"];
+                OEM.Celecoxib = fc["Question12_Celecoxib"];
+                OEM.AcetaminophenTramadol = fc["Question12_AcetaminophenTramadol"];
+                OEM.Codeine = fc["Question12_Codeine"];
+                OEM.Tramadol = fc["Question12_Tramadol"];
+                OEM.Other = fc["Question12_Other"];
+
+                S1.Question12 = JsonConvert.SerializeObject(OEM);
+                
+                PAS.Save(S1);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
        
     }
 }
