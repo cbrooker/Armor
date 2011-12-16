@@ -8,7 +8,7 @@
 <div id="registationProfileButton">
     <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
 </div>
-
+<div class="assessment padding">
 <h2>ASSESSMENT FORM</h2>
 <h3>To be completed by physician for patients who meet the following criteria:</h3>
 
@@ -284,12 +284,12 @@
             @Html.ValidationMessageFor(model => model.Question13)
         </div>
 
-        <p>
+        <div class="submitButton">
             <input type="submit" value="Submit" />
-        </p>
+        </div>
     
 }
-
+</div>
 <script language="javascript" type="text/javascript">
 
     $(function () {

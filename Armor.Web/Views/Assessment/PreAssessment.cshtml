@@ -4,7 +4,7 @@
     ViewBag.Title = "PreAssessment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<div class="preassessment padding">
 <h2>PreAssessment</h2>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
@@ -271,13 +271,13 @@
             @Html.ValidationMessageFor(model => model.Question12)
         </div>
 
-        <p>
+        <div class="submitButton">
             <input type="submit" value="Submit" />
-        </p>
+        </div>
     
 }
 
-
+</div>
 <script language="javascript" type="text/javascript">
 
     $(function () {

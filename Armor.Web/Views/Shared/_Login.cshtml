@@ -1,5 +1,5 @@
 ﻿@model Armor.Web.Models.LoginModel
-
+<div class="loginView padding">
 <h2>Login</h2>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
@@ -8,7 +8,7 @@
 @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { enctype = "multipart/form-data" })) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>LoginModel</legend>
+       <!-- <legend>LoginModel</legend> -->
 
         <div class="editor-label">
             @Html.LabelFor(model => model.EmailAddress)
@@ -34,9 +34,11 @@
             @Html.ValidationMessageFor(model => model.RememberMe)
         </div>
 
-        <p>
+       <div class="loginButton">
             <input type="submit" value="Login" class="green-action-button" />
-        </p>
+        </div>
     </fieldset>
 }
+
+</div>
 
