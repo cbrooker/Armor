@@ -8,7 +8,8 @@
 {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>EditAccountViewModel</legend>
+    <div class="leftColumn">
+        <!--<legend>EditAccountViewModel</legend>-->
 
         <div class="editor-label">
             @Html.LabelFor(model => model.FirstName)
@@ -49,7 +50,7 @@
             @Html.EditorFor(model => model.FaxNumber)
             @Html.ValidationMessageFor(model => model.FaxNumber)
         </div>
-
+</div><div class="rightColumn">
         <div class="editor-label">
             @Html.LabelFor(model => model.Address)
         </div>
@@ -90,8 +91,9 @@
             @Html.ValidationMessageFor(model => model.GSTInformation)
         </div>
 
-        <p>
+        <div class="submitButton">
             <input type="submit" value="Save" />
-        </p>
+        </div>
+        </div>
     </fieldset>
 }

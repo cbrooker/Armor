@@ -46,6 +46,9 @@ margin-top: -17px;
 color: #2A63AF;
 text-decoration: none;
 }
+.blue a:hover {
+color: #333;
+}
 /* #Custom Buttons
 ================================================== */
 
