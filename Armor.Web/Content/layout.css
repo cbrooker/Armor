@@ -325,9 +325,6 @@ z-index: 1;
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
     /* Override some of the stuff in Base */
-label, legend {
-    float: none; display: block; width: 100%; text-align: left;
-}
 }
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -361,4 +358,8 @@ label, legend {
 .disabled  
 {
     color: #C7C7C7;
+}
+
+label, legend {
+    float: none; display: block; width: 100%; text-align: left;
 }

@@ -3,10 +3,36 @@
 
 @model List<AnswerModel>
 
-<ul>
+@{
+    string prefix = ViewData.TemplateInfo.HtmlFieldPrefix;
+    int index = 0;
+    ViewData.TemplateInfo.HtmlFieldPrefix = string.Empty;
+    @: <ul>
+        foreach (AnswerModel item in Model)
+        {
+            @: <li>
+                string fieldName = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}_{1}", prefix, index++);
+                @Html.RadioButton(prefix, item.Value, false, new { @id = fieldName, @class = prefix }) 
+                @Html.Label(fieldName, item.Text)
+            @: </li>
+        }
+    @: </ul>
+    ViewData.TemplateInfo.HtmlFieldPrefix = prefix;
+}
+
+
+@*<li><label>@Html.RadioButton("AnswerOptions", item.Value, false)@item.Text</label></li>*@
+
+
+
+
+
+
+
+
+@*    <ul>
 @foreach (AnswerModel item in Model)
 {
     <li><label>@Html.RadioButton("AnswerOptions", item.Value, false)@item.Text</label></li>
 }
-</ul>
-
+</ul>*@

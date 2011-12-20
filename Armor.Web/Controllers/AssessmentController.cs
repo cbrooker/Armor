@@ -122,23 +122,23 @@ namespace Armor.Web.Controllers
                 S1.Question10 = model.Question10;
                 S1.Question11 = model.Question11;
 
-                S1.Question12 = fc["Question12.AnswerOptions"];
-                S1.Question13 = fc["Question13.AnswerOptions"];
+                S1.Question12 = fc["Question12"];
+                S1.Question13 = fc["Question13"];
 
-                if (fc["Question14.AnswerOptions"].Contains("Other"))
+                if (fc["Question14"].Contains("Other"))
                     S1.Question14 = "Other: " + fc["Question14Other"];
-                else S1.Question14 = fc["Question14.AnswerOptions"];
+                else S1.Question14 = fc["Question14"];
 
                 if (fc["Question15.AnswerOptions"].Contains("Other"))
                     S1.Question15 = "Other: " + fc["Question15Other"];
-                else S1.Question15 = fc["Question15.AnswerOptions"];
+                else S1.Question15 = fc["Question15"];
 
-                S1.Question16 = fc["Question16.AnswerOptions"];
+                S1.Question16 = fc["Question16"];
 
                 int i =1;
                 foreach (AnswerModel item in model.Question17)
                 {
-                    if (fc.Get("Question17.AnswerCheck" + i) != "false")
+                    if (fc.Get("Question17" + i) != "false")
                     {
                         S1.Question17 += item.Value + "; ";
                     }
@@ -150,11 +150,11 @@ namespace Armor.Web.Controllers
                 }
 
 
-                if (fc["Question18.AnswerOptions"].Contains("Other"))
+                if (fc["Question18"].Contains("Other"))
                     S1.Question18 = "Other: " + fc["Question18Other"];
-                else S1.Question18 = fc["Question18.AnswerOptions"];
+                else S1.Question18 = fc["Question18"];
 
-                S1.Question19 = fc["Question19.AnswerOptions"];
+                S1.Question19 = fc["Question19"];
 
                 S1.Question20 = "Low: " + model.Question20Low + " Moderate: " + model.Question20Moderate + " High: " + model.Question20High;
 
@@ -189,18 +189,18 @@ namespace Armor.Web.Controllers
                 S1.UserID = CurrentUserID;
                 S1.DateTimeTakenUTC = DateTime.UtcNow;
 
-                S1.Question1 = fc["Question1.AnswerOptions"];
-                S1.Question2 = fc["Question2.AnswerOptions"];
-                S1.Question3 = fc["Question3.AnswerOptions"];
-                S1.Question4 = fc["Question4.AnswerOptions"];
-                S1.Question5 = fc["Question5.AnswerOptions"];
+                S1.Question1 = fc["Question1"];
+                S1.Question2 = fc["Question2"];
+                S1.Question3 = fc["Question3"];
+                S1.Question4 = fc["Question4"];
+                S1.Question5 = fc["Question5"];
                 S1.Question6 = model.Question6.ToString();
-                S1.Question7 = fc["Question7.AnswerOptions"];
+                S1.Question7 = fc["Question7"];
 
-                S1.Question8 = fc["Question8.AnswerOptions"];
+                S1.Question8 = fc["Question8"];
                 if (S1.Question8 == "H pylori infection")
                 {
-                    S1.Question8 = "H pylori infection - " + fc["Question8.SubAnswerOptions"];
+                    S1.Question8 = "H pylori infection - " + fc["Question8_2"];
                 }
 
                 //9 add to an object, then serialize to JSON, store the string.
@@ -233,10 +233,10 @@ namespace Armor.Web.Controllers
                     i++;
                 }
 
-                S1.Question11 = fc["Question11.AnswerOptions"];
+                S1.Question11 = fc["Question11"];
                 S1.Question12 = model.Question12;
 
-                S1.Question13 = fc["Question13.AnswerOptions"];
+                S1.Question13 = fc["Question13"];
                 if (S1.Question13 == "Switch to")
                 {
                     OEMedicationMatrix OEM2 = new OEMedicationMatrix();

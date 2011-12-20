@@ -9,7 +9,7 @@ int i = 1;
 
 @foreach (AnswerModel item in Model)
 {
-    <li><label>@Html.CheckBox("AnswerCheck" + i, false, new { @value = @item.Value })@item.Text</label></li>
+    <li><label>@Html.CheckBox("AnswerCheck" + i, false, new { @value = @item.Value, @class = "AnswerCheckBoxes" })@item.Text</label></li>
     i++;
 }
 </ul>
