@@ -8,6 +8,21 @@ $(function () {
     //    $(".Question8").bind("click", function (e) {
     //        CalculateRisk();
     //    });
+
+    //Show and hide the sections as a user progresses through the survey.
+    $("#Section1Button").bind("click", function (e) {
+        $("#Section1").slideUp();
+        $("#Section2").slideDown();
+    });
+
+    $("#Section2Button").bind("click", function (e) {
+        $("#Section2").slideUp();
+        $("#Section3").slideDown();
+    });
+
+
+
+    //Calculate the risk
     $("input:radio, .AnswerCheckBoxes").bind("click", function (e) {
         CalculateRisk();
     });
@@ -94,7 +109,7 @@ $(function () {
         if (Green == 0 && Yellow <= 1 && Blue == 0) { $("#Question12").val("Low risk"); }
         if ((Green == 1 || Green == 2) || (Yellow >= 2 && Blue == 0)) { $("#Question12").val("Moderate risk"); }
         if (Green >= 3 || (Green >= 2 && Yellow >= 2) || Blue >= 1) { $("#Question12").val("High risk"); }
-        
+
         //alert("Green=" + Green + " Yellow=" + Yellow + " Blue=" + Blue);
 
     }

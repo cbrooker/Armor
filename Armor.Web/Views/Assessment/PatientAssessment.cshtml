@@ -71,7 +71,7 @@
             </div>
 
             <div class="submitButton">
-                <input type="button" value="Next ->" />
+                <input type="button" id="Section1Button" value="Next ->" />
             </div>
         </div>
     
@@ -181,6 +181,9 @@
                         <td>@Html.TextBox("Question9_Other")</td>
                     </tr>
                 </table>
+            </div>
+            <div class="submitButton">
+                <input type="button" id="Section2Button" value="Next ->" />
             </div>
         </div>
     
@@ -295,9 +298,6 @@
 
                 @Html.ValidationMessageFor(model => model.Question13)
 
-                <div class="submitButton">
-                    <input type="button" value="Next ->" />
-                </div>
             </div>
         
 
