@@ -264,6 +264,28 @@ z-index: 5;
 #slidingPanel legend {
 display: none;
 }
+
+/*Sign In Form */
+
+.loginView {
+
+padding-left:10%;
+width: 80%;
+}
+
+.loginView label {
+float: left;
+width: 130px;
+text-align: right;
+}
+
+.loginView .loginButton{
+margin-top: 30px;
+margin-left: 35%;
+}
+#RememberMe {
+margin-top: 10px;
+}
 /* Registration Form */
 .leftColumn {
 width: 45%;
@@ -365,6 +387,11 @@ width: 98%;
 }
 
 /* Evaluator Forms */
+
+.evaluator form {
+padding-left: 2%;
+width: 98%;
+}
 .evaluator h4 {
 margin-top: 20px;
 }
