@@ -19,7 +19,9 @@
 .header {
 	background:url(images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
-padding-top: 10px;}
+padding-top: 10px;
+border-bottom: 1px #cecece dashed;
+}
 .registerForm, #slidingPanel {
 	margin-top: 0px;
 	background:url(images/registrationbackground.png) no-repeat bottom center;
@@ -339,6 +341,28 @@ padding-top: 10px;
 
 .checkBox a {
 }
+
+/* Preassessment Forms */
+.preassessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+th {
+font-weight: bold;
+padding: 10px;
+}
+td {
+padding: 3px;
+vertical-align: top;
+}
+input[type="radio"] {
+margin-left: 40%;
+}
+.preassessment form {
+padding-left: 2%;
+width: 98%;
+}
 /* #Media Queries
 ================================================== */
 
@@ -389,5 +413,5 @@ padding-top: 10px;
 }
 
 label, legend {
-    float: none; display: block; width: 100%; text-align: left;
+    float: none; display: block; width: 100%; text-align: left; margin-bottom: 10px;
 }
