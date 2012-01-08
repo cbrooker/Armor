@@ -456,6 +456,19 @@ margin-right: 10px;
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
     /* Override some of the stuff in Base */
+    
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: left;
+}
+.registerForm, #slidingPanel {
+	margin-top: 0px;
+	background:url(images/registrationbackground.png) repeat bottom center;
+}
 }
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
