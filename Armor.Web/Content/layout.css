@@ -217,7 +217,7 @@ color: #333;
 /* Header */
 .header {
 
-height: 110px;
+height: 130px;
 width: 100%;
 }
 #title {
@@ -307,7 +307,7 @@ width: 93%;
 #registationProfileButton{
 float: left;
 text-align: right;
-margin-top: -30px;
+margin-top: -35px;
 width: 95%;
 z-index: 1;
 }
@@ -318,6 +318,23 @@ margin-right: 20px;
 }
 .editor-label label {
 text-align: right;
+}
+.checkBoxes {
+width: 80%;
+padding-left: 3%;
+}
+
+.checkBoxes img {
+float: left;
+margin-top: -5px;
+}
+.checkBox {
+margin-bottom: 30px;
+padding-top: 10px;
+
+}
+
+.checkBox a {
 }
 /* #Media Queries
 ================================================== */
