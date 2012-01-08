@@ -452,6 +452,15 @@ margin-right: 10px;
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #slidingPanel .editor-label label {
+text-align: left;
+
+}
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
 }
 
 	/* All Mobile Sizes (devices and browser) */
