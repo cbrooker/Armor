@@ -356,12 +356,32 @@ td {
 padding: 3px;
 vertical-align: top;
 }
-input[type="radio"] {
+.preassessment input[type="radio"] {
 margin-left: 40%;
 }
 .preassessment form {
 padding-left: 2%;
 width: 98%;
+}
+
+/* Evaluator Forms */
+.evaluator h4 {
+margin-top: 20px;
+}
+
+.evaluator td {
+text-align: center;
+}
+
+.evaluator li label {
+
+}
+.evaluator li input[type="radio"] {
+margin: 10px;
+
+float: left;
+
+
 }
 /* #Media Queries
 ================================================== */
