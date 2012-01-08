@@ -20,7 +20,7 @@
 	background:url(images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
 padding-top: 10px;
-border-bottom: 1px #cecece dashed;
+/*border-bottom: 1px #cecece dashed; */
 }
 .registerForm, #slidingPanel {
 	margin-top: 0px;
@@ -219,7 +219,7 @@ color: #333;
 /* Header */
 .header {
 
-height: 130px;
+height: 125px;
 width: 100%;
 }
 #title {
