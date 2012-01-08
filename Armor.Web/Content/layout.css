@@ -219,7 +219,7 @@ color: #333;
 /* Header */
 .header {
 
-height: 125px;
+height: 130px;
 width: 100%;
 }
 #title {
@@ -260,6 +260,7 @@ padding: 20px;
 padding-top: 0;
 padding-bottom: 0;
 z-index: 5;
+margin-top: -4px;
 }
 #slidingPanel legend {
 display: none;
