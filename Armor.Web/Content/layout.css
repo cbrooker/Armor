@@ -410,6 +410,38 @@ float: left;
 
 
 }
+
+/* Assessment Forms */
+
+.assessment form {
+padding-left: 2%;
+width: 98%;
+}
+.assessment h4 {
+margin-top: 20px;
+}
+
+.assessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.assessment form ul {
+list-style: none;
+padding-left: 0;
+margin-top: 0;
+}
+.assessment li label {
+
+}
+.assessment li input[type="radio"] {
+margin: 10px;
+float: left;
+}
+
+.assessment li input[type="checkbox"] {
+margin-right: 10px;
+}
 /* #Media Queries
 ================================================== */
 
