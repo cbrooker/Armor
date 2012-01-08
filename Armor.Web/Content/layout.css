@@ -249,6 +249,9 @@ width: 210px;
 margin-right: 20px;
 }
 
+.signoffButton {
+margin-right: 20px;
+}
 /* Sliding Panel */
 #slidingPanel {
 padding: 20px;
@@ -311,12 +314,12 @@ margin-top: -35px;
 width: 95%;
 z-index: 1;
 }
-.editor-label {
+#slidingPanel .editor-label {
 float: left;
 width: 155px;
 margin-right: 20px;
 }
-.editor-label label {
+#slidingPanel .editor-label label {
 text-align: right;
 }
 .checkBoxes {
