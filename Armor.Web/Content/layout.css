@@ -311,6 +311,14 @@ margin-top: -30px;
 width: 95%;
 z-index: 1;
 }
+.editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+.editor-label label {
+text-align: right;
+}
 /* #Media Queries
 ================================================== */
 
