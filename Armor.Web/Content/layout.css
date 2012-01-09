@@ -19,7 +19,9 @@
 .header {
 	background:url(images/headerbackground.png) repeat-y center;
 margin-bottom: 0px;
-padding-top: 10px;}
+padding-top: 10px;
+/*border-bottom: 1px #cecece dashed; */
+}
 .registerForm, #slidingPanel {
 	margin-top: 0px;
 	background:url(images/registrationbackground.png) no-repeat bottom center;
@@ -217,7 +219,7 @@ color: #333;
 /* Header */
 .header {
 
-height: 110px;
+height: 130px;
 width: 100%;
 }
 #title {
@@ -249,16 +251,45 @@ width: 210px;
 margin-right: 20px;
 }
 
+.signoffButton {
+margin-right: 20px;
+}
 /* Sliding Panel */
 #slidingPanel {
 padding: 20px;
 padding-top: 0;
 padding-bottom: 0;
 z-index: 5;
+<<<<<<< HEAD
 display: none;
+=======
+margin-top: -4px;
+>>>>>>> 99385071754871994e938312aca5be2d64b8c410
 }
 #slidingPanel legend {
 display: none;
+}
+
+/*Sign In Form */
+
+.loginView {
+
+padding-left:10%;
+width: 80%;
+}
+
+.loginView label {
+float: left;
+width: 130px;
+text-align: right;
+}
+
+.loginView .loginButton{
+margin-top: 30px;
+margin-left: 35%;
+}
+#RememberMe {
+margin-top: 10px;
 }
 /* Registration Form */
 .leftColumn {
@@ -308,9 +339,113 @@ width: 93%;
 #registationProfileButton{
 float: left;
 text-align: right;
-margin-top: -30px;
+margin-top: -35px;
 width: 95%;
 z-index: 1;
+}
+#slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: right;
+}
+.checkBoxes {
+width: 80%;
+padding-left: 3%;
+}
+
+.checkBoxes img {
+float: left;
+margin-top: -5px;
+}
+.checkBox {
+margin-bottom: 30px;
+padding-top: 10px;
+
+}
+
+.checkBox a {
+}
+
+/* Preassessment Forms */
+.preassessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+th {
+font-weight: bold;
+padding: 10px;
+}
+td {
+padding: 3px;
+vertical-align: top;
+}
+.preassessment input[type="radio"] {
+margin-left: 40%;
+}
+.preassessment form {
+padding-left: 2%;
+width: 98%;
+}
+
+/* Evaluator Forms */
+
+.evaluator form {
+padding-left: 2%;
+width: 98%;
+}
+.evaluator h4 {
+margin-top: 20px;
+}
+
+.evaluator td {
+text-align: center;
+}
+
+.evaluator li label {
+
+}
+.evaluator li input[type="radio"] {
+margin: 10px;
+
+float: left;
+
+
+}
+
+/* Assessment Forms */
+
+.assessment form {
+padding-left: 2%;
+width: 98%;
+}
+.assessment h4 {
+margin-top: 20px;
+}
+
+.assessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.assessment form ul {
+list-style: none;
+padding-left: 0;
+margin-top: 0;
+}
+.assessment li label {
+
+}
+.assessment li input[type="radio"] {
+margin: 10px;
+float: left;
+}
+
+.assessment li input[type="checkbox"] {
+margin-right: 10px;
 }
 /* #Media Queries
 ================================================== */
@@ -321,11 +456,33 @@ z-index: 1;
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #slidingPanel .editor-label label {
+text-align: left;
+
+}
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
 }
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
     /* Override some of the stuff in Base */
+    
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: left;
+}
+.registerForm, #slidingPanel {
+	margin-top: 0px;
+	background:url(images/registrationbackground.png) repeat bottom center;
+}
 }
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -362,7 +519,7 @@ z-index: 1;
 }
 
 label, legend {
-    float: none; display: block; width: 100%; text-align: left;
+    float: none; display: block; width: 100%; text-align: left; margin-bottom: 10px;
 }
 
 
