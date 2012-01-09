@@ -395,6 +395,10 @@ margin-left: 40%;
 padding-left: 2%;
 width: 98%;
 }
+.percentage {
+margin-top: -50px;
+margin-left: 10px;
+}
 
 /* Evaluator Forms */
 
