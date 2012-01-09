@@ -27,7 +27,8 @@ padding-top: 10px;
 	background:url(images/registrationbackground.png) no-repeat bottom center;
 }
 .padding {
-padding: 20px;	
+padding: 20px;
+padding-left: 30px;	
 }
 
 .fleft {
@@ -523,5 +524,5 @@ label, legend {
 }
 
 
-.horizontalSlide { width: 900px; }
-.hiddenSection { display: none; margin-left: 900px; }
+.horizontalSlide { width: 880px; }
+.hiddenSection { display: none; margin-left: 880px; }
