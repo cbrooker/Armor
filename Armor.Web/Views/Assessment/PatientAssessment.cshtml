@@ -1,7 +1,7 @@
 ﻿@model Armor.Web.Models.PatientAssessmentViewModel
 
 @{
-    ViewBag.Title = "PatientAssessment";
+    ViewBag.Title = "Armor - Patient Assessment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,7 +11,7 @@
     <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
 </div>
 <div class="assessment padding">
-<h2>ASSESSMENT FORM</h2>
+<h2>Patient Assessment</h2>
 <h3>To be completed by physician for patients who meet the following criteria:</h3>
 
 <ul>
@@ -28,10 +28,11 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-   
-        <div id="Section1">
+  <div style="overflow: hidden;">
+        <div id="Section1" class="horizontalSlide">
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question1)
+                @*@Html.LabelFor(model => model.Question1)*@
+                1. Age
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question1, "AnswerOptions")
@@ -39,7 +40,8 @@
             </div>
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question2)
+                @*@Html.LabelFor(model => model.Question2)*@
+                2. Sex
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question2, "AnswerOptions")
@@ -47,7 +49,8 @@
             </div>
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question3)
+                @*@Html.LabelFor(model => model.Question3)*@
+                3. Type of OA (select all that apply)
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question3, "AnswerOptions")
@@ -55,7 +58,8 @@
             </div>
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question4)
+                @*@Html.LabelFor(model => model.Question4)*@
+                4. Is this patient overweight (ie, BMI >25)
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question4, "AnswerOptions")
@@ -63,7 +67,8 @@
             </div>
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question5)
+                @*@Html.LabelFor(model => model.Question5)*@
+                5. Smoking status
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question5, "AnswerOptions")
@@ -76,9 +81,10 @@
         </div>
     
     
-        <div id="Section2" class="hidden">
+        <div id="Section2" class="hiddenSection horizontalSlide" >
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question6)
+                @*@Html.LabelFor(model => model.Question6)*@
+                6. Average number of alcoholic drinks per week
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question6)
@@ -86,7 +92,8 @@
             </div>
 
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question7)
+                @*@Html.LabelFor(model => model.Question7)*@
+                7. Does this patient use illicit/recreational drugs?
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question7, "AnswerOptions")
@@ -95,7 +102,8 @@
     
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question8)
+                @*@Html.LabelFor(model => model.Question8)*@
+                8. History of
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question8, "AnswerOptionsGeneric")
@@ -104,7 +112,8 @@
     
         
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question9)
+                @*@Html.LabelFor(model => model.Question9)*@
+                9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)
             </div>
             <div class="editor-field">
                 <table>
@@ -187,10 +196,11 @@
             </div>
         </div>
     
-        <div id="Section3" class="hidden">
+        <div id="Section3" class="hiddenSection horizontalSlide">
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question10)
+                @*@Html.LabelFor(model => model.Question10)*@
+                10. Which of the following other medication(s) is this patient currently taking? (Select all that apply)
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question10, "AnswerCheckboxes")
@@ -199,7 +209,8 @@
     
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question11)
+                @*@Html.LabelFor(model => model.Question11)*@
+                11. How would you categorize this patient’s GI risk?
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question11, "AnswerOptions")
@@ -207,17 +218,20 @@
             </div>
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question12)
+                @*@Html.LabelFor(model => model.Question12)*@
+                12. Your patient’s GI risk
             </div>
             <div class="editor-field">
+                @*Karim - This can be changed to show the results in pretty much anyway you want, just let me know.*@
                 @Html.EditorFor(model => model.Question12)
-                @Html.ValidationMessageFor(model => model.Question12)
+                @*@Html.ValidationMessageFor(model => model.Question12)*@
             </div>
 
     
     
             <div class="editor-label">
-                @Html.LabelFor(model => model.Question13)
+                @*@Html.LabelFor(model => model.Question13)*@
+                13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)
             </div>
             <div class="editor-field">
                 <table>
@@ -305,12 +319,6 @@
                 <input type="submit" value="Submit" />
             </div>
         </div>
+    </div>
 }
 </div>
-<script language="javascript" type="text/javascript">
-
-    $(function () {
-        $("#slidingPanel").slideUp();
-    });
-
-</script>

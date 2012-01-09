@@ -255,6 +255,7 @@ padding: 20px;
 padding-top: 0;
 padding-bottom: 0;
 z-index: 5;
+display: none;
 }
 #slidingPanel legend {
 display: none;
@@ -363,3 +364,7 @@ z-index: 1;
 label, legend {
     float: none; display: block; width: 100%; text-align: left;
 }
+
+
+.horizontalSlide { width: 900px; }
+.hiddenSection { display: none; margin-left: 900px; }
