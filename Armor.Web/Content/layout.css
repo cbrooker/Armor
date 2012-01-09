@@ -261,11 +261,15 @@ padding: 20px;
 padding-top: 0;
 padding-bottom: 0;
 z-index: 5;
-<<<<<<< HEAD
+
+/* Added this back in to make it work for now */
+display: none;
+margin-top: -4px;
+/*<<<<<<< HEAD
 display: none;
 =======
 margin-top: -4px;
->>>>>>> 99385071754871994e938312aca5be2d64b8c410
+>>>>>>> 99385071754871994e938312aca5be2d64b8c410*/
 }
 #slidingPanel legend {
 display: none;
