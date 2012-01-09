@@ -53,7 +53,7 @@
 ================================================== */
 	body {
 		background: #1B3D84;
-		background:url(images/background.jpg) no-repeat top center;
+		background-image:url(images/background.jpg) no-repeat top center;
 		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
