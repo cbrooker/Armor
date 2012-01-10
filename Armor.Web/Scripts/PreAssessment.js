@@ -1,6 +1,6 @@
 ﻿$(function () {
 
-    //Show and hide the sections as a user progresses through the survey.
+    Show and hide the sections as a user progresses through the survey.
     $("#Section1Button").bind("click", function (e) {
         //Slide Section1 out
         var $marginLefty = $("#Section1");

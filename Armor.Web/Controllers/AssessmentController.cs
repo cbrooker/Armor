@@ -274,6 +274,16 @@ namespace Armor.Web.Controllers
             PreAssessmentViewModel model = new PreAssessmentViewModel();
             return View(model);
         }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult PreAssessment2(PreAssessmentViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult PreAssessment3(PreAssessmentViewModel model)
+        {
+            return View(model);
+        }
 
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         [HttpPost]
@@ -281,7 +291,6 @@ namespace Armor.Web.Controllers
         {
             try
             {
-
                 PreAssessmentService PAS = new PreAssessmentService();
                 Data.PreAssessment S1 = new Data.PreAssessment();
 
@@ -292,16 +301,54 @@ namespace Armor.Web.Controllers
                 S1.Question2 = model.Question2;
                 S1.Question3 = model.Question3;
                 S1.Question4 = model.Question4;
-                S1.Question5 = "Active Smoker: " + model.Question5ActiveSmoker + "%, Ex-Smoker: " + model.Question5ExSmoker + "%, Non-Smoker: " + model.Question5NonSmoker + "%";
 
+                PAS.Save(S1);
+
+                return RedirectToAction("PreAssessment2", S1);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PreAssessment2(PreAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+                PreAssessmentService PAS = new PreAssessmentService();
+                Data.PreAssessment S1 = PAS.GetByID(model.ID);
+                
+                S1.Question5 = "Active Smoker: " + model.Question5ActiveSmoker + "%, Ex-Smoker: " + model.Question5ExSmoker + "%, Non-Smoker: " + model.Question5NonSmoker + "%";
                 S1.Question6 = model.Question6;
                 S1.Question7 = model.Question7;
                 S1.Question8 = model.Question8;
 
-                S1.Question9 = "Uncomplicated peptic ulcer: " + model.Question9UncomplicatedPepticUlcer + 
-                                "%, GERD: " + model.Question9GERD + 
-                                "%, Dyspepsia: " + model.Question9Dyspepsia + 
-                                "%, Bleeding peptic ulcer: " + model.Question9BleedingPepticUlcer + 
+                PAS.Save(S1);
+
+                return RedirectToAction("PreAssessment3", S1);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PreAssessment3(PreAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+                PreAssessmentService PAS = new PreAssessmentService();
+                Data.PreAssessment S1 = PAS.GetByID(model.ID);
+                
+                S1.Question9 = "Uncomplicated peptic ulcer: " + model.Question9UncomplicatedPepticUlcer +
+                                "%, GERD: " + model.Question9GERD +
+                                "%, Dyspepsia: " + model.Question9Dyspepsia +
+                                "%, Bleeding peptic ulcer: " + model.Question9BleedingPepticUlcer +
                                 "%, H pylori infection: " + model.Question9HpyloriInfection + "%";
 
                 S1.Question10 = "Cervical: " + model.Question10Cervical +
@@ -310,7 +357,6 @@ namespace Armor.Web.Controllers
                                 "%, Hand: " + model.Question10Hand +
                                 "%, Hip: " + model.Question10Hip +
                                 "%, Knee: " + model.Question10Knee + "%";
-
 
                 S1.Question11 = "Low Risk: " + model.Question11Low + "%, Moderate Risk: " + model.Question11Moderate + "%, High Risk: " + model.Question11High + "%";
 
@@ -332,10 +378,10 @@ namespace Armor.Web.Controllers
                 OEM.Other = fc["Question12_Other"];
 
                 S1.Question12 = JsonConvert.SerializeObject(OEM);
-                
+
                 PAS.Save(S1);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("index");
             }
             catch
             {

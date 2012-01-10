@@ -22,5 +22,11 @@ namespace Armor.Web {
             return base.GetRepository<PreAssessment>().Add(entity);
         }
 
+        public PreAssessment GetByID(int ID)
+        {
+            return db.PreAssessments.Where(e => e.ID == ID).FirstOrDefault();
+        }
+
+
     }
 }

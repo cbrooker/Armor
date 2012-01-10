@@ -16,297 +16,54 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-        <div style="overflow: hidden;">
+    <div style="overflow: hidden;">
 
-            <div id="Section1" class="horizontalSlide">
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question1)*@
-                    1. What percentage of patients in your practice have OA?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question1)
-                    @Html.ValidationMessageFor(model => model.Question1)
-                </div>
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question2)*@
-                    2. What percentage of your patients with OA are taking an NSAID?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question2)
-                    @Html.ValidationMessageFor(model => model.Question2)
-                </div>
-
-                <h4>The following questions apply only to the patients in your practice who meet the following criteria:</h4>
-                <ul>
-                    <li>Diagnosis of osteoarthritis</li>
-                    <li>Aged 18 years or older</li>
-                    <li>Is not responding to over-the-counter oral or topical medications</li>
-                    <li>Has pain that interferes with normal daily activities</li>
-                    <li>Has an indication for NSAID treatment</li>
-                </ul>
-    
-    
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question3)*@
-                    3. What percentage of these patients are older than 60 years of age?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question3)
-                    @Html.ValidationMessageFor(model => model.Question3)
-                </div>
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question4)*@
-                    4. What percentage of these patients are overweight?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question4)
-                    @Html.ValidationMessageFor(model => model.Question4)
-                </div>
-
-                <div class="submitButton">
-                    <input type="button" id="Section1Button" value="Next ->" />
-                </div>
+        <div id="Section1" class="horizontalSlide">
+            <h3>Page 1 of 3</h3>
+            <div class="editor-label">
+                1. What percentage of patients in your practice have OA?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question1)
+                @Html.ValidationMessageFor(model => model.Question1)
             </div>
 
-            <div id="Section2" class="hiddenSection horizontalSlide" >
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question5ActiveSmoker)*@
-                    5. What percentage of these patients are:
-                </div>
-                <div class="editor-field">
-            
-                    <label>Active smoker? @Html.EditorFor(model => model.Question5ActiveSmoker)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question5ActiveSmoker)
-                    <label>Ex-smoker? @Html.EditorFor(model => model.Question5ExSmoker)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question5ExSmoker)
-                    <label>Non-smoker @Html.EditorFor(model => model.Question5NonSmoker)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question5NonSmoker)
-                </div>
-        
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question6)*@
-                    6. What percentage of these patients are taking low-dose ASA (<300 mg/day) for CV protection?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question6)
-                    @Html.ValidationMessageFor(model => model.Question6)
-                </div>
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question7)*@
-                    7. What percentage of these patients are taking a corticosteroid?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question7)
-                    @Html.ValidationMessageFor(model => model.Question7)
-                </div>
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question8)*@
-                    8. What percentage of these patients are taking an anticoagulant medication?
-                </div>
-                <div class="editor-field">
-                    @Html.EditorFor(model => model.Question8)
-                    @Html.ValidationMessageFor(model => model.Question8)
-                </div>
-
-                <div class="submitButton">
-                    <input type="button" id="Section2Button" value="Next ->" />
-                </div>
+            <div class="editor-label">
+                2. What percentage of your patients with OA are taking an NSAID?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question2)
+                @Html.ValidationMessageFor(model => model.Question2)
             </div>
 
-            <div id="Section3" class="hiddenSection horizontalSlide">
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question9UncomplicatedPepticUlcer)*@
-                    9. What percentage of these patients have a history of:
-                </div>
-                <div class="editor-field">
-                    <label>Uncomplicated peptic ulcer @Html.EditorFor(model => model.Question9UncomplicatedPepticUlcer)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question9UncomplicatedPepticUlcer)
-            
-                    <label>GERD @Html.EditorFor(model => model.Question9GERD)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question9GERD)
-
-                    <label>Dyspepsia @Html.EditorFor(model => model.Question9Dyspepsia)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question9Dyspepsia)
-
-                    <label>Bleeding peptic ulcer @Html.EditorFor(model => model.Question9BleedingPepticUlcer)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question9BleedingPepticUlcer)
-
-                    <label><em>H pylori</em> infection @Html.EditorFor(model => model.Question9HpyloriInfection)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question9HpyloriInfection)
-
-                </div>
+            <h4>The following questions apply only to the patients in your practice who meet the following criteria:</h4>
+            <ul>
+                <li>Diagnosis of osteoarthritis</li>
+                <li>Aged 18 years or older</li>
+                <li>Is not responding to over-the-counter oral or topical medications</li>
+                <li>Has pain that interferes with normal daily activities</li>
+                <li>Has an indication for NSAID treatment</li>
+            </ul>
     
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question10Cervical)*@
-                    10. What percentage of these patients have OA in the following sites (% does not need to add up to 100% as patients may have OA in more than one site):
-                </div>
-                <div class="editor-field">
-                    <label>Cervical @Html.EditorFor(model => model.Question10Cervical)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Cervical)
+            <div class="editor-label">
+                3. What percentage of these patients are older than 60 years of age?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question3)
+                @Html.ValidationMessageFor(model => model.Question3)
+            </div>
 
-                    <label>Dorsal @Html.EditorFor(model => model.Question10Dorsal)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Dorsal)
-
-                    <label>Lumbar @Html.EditorFor(model => model.Question10Lumbar)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Lumbar)
-
-                    <label>Hand @Html.EditorFor(model => model.Question10Hand)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Hand)
-
-                    <label>Hip  @Html.EditorFor(model => model.Question10Hip)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Hip)
-
-                    <label>Knee @Html.EditorFor(model => model.Question10Knee)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question10Knee)
-                </div>
-
-       
-
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question11Low)*@
-                    11. What percentage of this patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):
-                </div>
-                <div class="editor-field">
-                    <label>Low risk @Html.EditorFor(model => model.Question11Low)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question11Low)
-
-                    <label>Moderate risk @Html.EditorFor(model => model.Question11Moderate)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question11Moderate)
-
-                    <label>High risk @Html.EditorFor(model => model.Question11High)</label><div class="percentage">%</div>
-                    @Html.ValidationMessageFor(model => model.Question11High)
-                </div>
-
-       
-    
-    
-    
-                <div class="editor-label">
-                    @*@Html.LabelFor(model => model.Question12)*@
-                    12. Which medications do you typically prescribe for these patients in the following GI risk categories (select all that apply):
-                </div>
-                <div class="editor-field">
-                    <table>
-                        <tr>
-                            <th>Medication</th>
-                            <th>Low GI risk</th>
-                            <th>Moderate GI risk</th>
-                            <th>High GI risk</th>
-                        </tr>
-                        <tr>
-                            <td>Acetaminophen</td>
-                            <td>@Html.RadioButton("Question12_Acetaminophen", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Acetaminophen", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Acetaminophen", "High")</td>
-                        </tr>
-                        <tr>
-                            <td>Traditional NSAID</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Aspirin (>300 mg)</td>
-                            <td>@Html.RadioButton("Question12_Aspirin", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Aspirin", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Aspirin", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Diclofenac</td>
-                            <td>@Html.RadioButton("Question12_Diclofenac", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Diclofenac", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Diclofenac", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Diclofenac/misoprostol</td>
-                            <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Low")</td>
-                            <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Ibuprofen</td>
-                            <td>@Html.RadioButton("Question12_Ibuprofen", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Ibuprofen", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Ibuprofen", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Indomethacin</td>
-                            <td>@Html.RadioButton("Question12_Indomethacin", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Indomethacin", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Indomethacin", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Meloxicam</td>
-                            <td>@Html.RadioButton("Question12_Meloxicam", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Meloxicam", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Meloxicam", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Naproxen</td>
-                            <td>@Html.RadioButton("Question12_Naproxen", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Naproxen", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Naproxen", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Naproxen—esomeprazole</td>
-                            <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Low")</td>
-                            <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "High")</td>
-                        </tr>
-                        <tr>
-                            <td>Coxibs</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Celecoxib</td>
-                            <td>@Html.RadioButton("Question12_Celecoxib", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Celecoxib", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Celecoxib", "High")</td>
-                        </tr>
-                        <tr>
-                            <td>Opioids/combinations</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Acetaminophen/tramadol</td>
-                            <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Low")</td>
-                            <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Codeine (in combination with acetaminophen)</td>
-                            <td>@Html.RadioButton("Question12_Codeine", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Codeine", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Codeine", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Tramadol</td>
-                            <td>@Html.RadioButton("Question12_Tramadol", "Low")</td>
-                            <td>@Html.RadioButton("Question12_Tramadol", "Moderate")</td>
-                            <td>@Html.RadioButton("Question12_Tramadol", "High")</td>
-                        </tr>
-                        <tr>
-                            <td class="indent">Other</td>
-                            <td colspan="3">@Html.TextBox("Question12_Other")</td>
-
-                        </tr>
-                    </table>
-
-                    @Html.ValidationMessageFor(model => model.Question12)
-                </div>
-
-                <div class="submitButton">
-                    <input type="submit" value="Submit" />
-                </div>
+            <div class="editor-label">
+                4. What percentage of these patients are overweight?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question4)
+                @Html.ValidationMessageFor(model => model.Question4)
             </div>
         </div>
-    
+    </div>
+    <div class="submitButton">
+        <input type="button"  onclick="$(form).submit();" value="Next ->" />
+    </div>
 }
-
 </div>
