@@ -540,3 +540,6 @@ label, legend {
 
 .horizontalSlide { width: 880px; }
 .hiddenSection { display: none; margin-left: 880px; }
+.field-validation-error {
+float: left;
+}
