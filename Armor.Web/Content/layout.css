@@ -404,6 +404,7 @@ width: 98%;
 .percentage {
 margin-top: -50px;
 margin-left: 230px;
+margin-bottom: 10px;
 }
 
 /* Evaluator Forms */
@@ -541,5 +542,6 @@ label, legend {
 .horizontalSlide { width: 880px; }
 .hiddenSection { display: none; margin-left: 880px; }
 .field-validation-error {
-float: left;
+float: none;
+
 }
