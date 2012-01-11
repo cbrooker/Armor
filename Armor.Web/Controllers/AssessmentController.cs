@@ -154,7 +154,7 @@ namespace Armor.Web.Controllers
                     S1.Question18 = "Other: " + fc["Question18Other"];
                 else S1.Question18 = fc["Question18"];
 
-                S1.Question19 = fc["Question19"];
+                S1.Question19 = model.Question19;
 
                 S1.Question20 = "Low: " + model.Question20Low + " Moderate: " + model.Question20Moderate + " High: " + model.Question20High;
 
