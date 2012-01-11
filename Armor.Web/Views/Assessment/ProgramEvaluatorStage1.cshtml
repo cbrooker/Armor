@@ -226,10 +226,10 @@
     
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question19)*@
-                19. Do you take GI risk factors into consideration when prescribing NSAIDs for your patients with OA?
-            </div>
+                19.For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?
+            </div><div class="percentage">%</div>
             <div class="editor-field">
-                @Html.EditorFor(model => model.Question19, "AnswerOptions")
+                @Html.EditorFor(model => model.Question19)
                 @Html.ValidationMessageFor(model => model.Question19)
             </div>
 

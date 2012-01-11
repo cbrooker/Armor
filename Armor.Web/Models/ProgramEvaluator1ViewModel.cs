@@ -47,6 +47,8 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "87%", Value = "87" };
                 TheList.Add(model);
+				model = new AnswerModel() { Text = "I don't know", Value = "I dont know" };
+                TheList.Add(model);
                 return TheList;
             }
         }
@@ -73,6 +75,8 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "History of bleeding peptic ulcer", Value = "History of bleeding peptic ulcer" };
                 TheList.Add(model);
+				model = new AnswerModel() { Text = "I don't know", Value = "I dont know" };
+                TheList.Add(model);
                 return TheList;
             }
         }
@@ -85,15 +89,15 @@ namespace Armor.Web.Models
                 List<AnswerModel> TheList = new List<AnswerModel>();
                 AnswerModel model = new AnswerModel() { Text = "Traditional NSAID + misoprostol", Value = "Traditional NSAID + misoprostol" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + ranitidine", Value = "Traditional NSAID + ranitidine" };
+                model = new AnswerModel() { Text = "Traditional NSAID + H<sub>2</sub> receptor antagonist", Value = "Traditional NSAID + H2 receptor antagonist" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + omeprazole", Value = "Traditional NSAID + omeprazole" };
+                model = new AnswerModel() { Text = "Traditional NSAID + PPI", Value = "Traditional NSAID + PPI" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Coxib + misoprostol", Value = "Coxib + misoprostol" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + ranitidine", Value = "Coxib + ranitidine" };
+                model = new AnswerModel() { Text = "Coxib + H<sub>2</sub> receptor antagonist", Value = "Coxib + H2 receptor antagonist" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + omeprazole", Value = "Coxib + omeprazole" };
+                model = new AnswerModel() { Text = "Coxib + PPI", Value = "Coxib + PPI" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
                 TheList.Add(model);
@@ -111,15 +115,15 @@ namespace Armor.Web.Models
                 List<AnswerModel> TheList = new List<AnswerModel>();
                 AnswerModel model = new AnswerModel() { Text = "Traditional NSAID + misoprostol", Value = "Traditional NSAID + misoprostol" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + ranitidine", Value = "Traditional NSAID + ranitidine" };
+                model = new AnswerModel() { Text = "Traditional NSAID + H<sub>2</sub> receptor antagonist", Value = "Traditional NSAID + H2 receptor antagonist" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + omeprazole", Value = "Traditional NSAID + omeprazole" };
+                model = new AnswerModel() { Text = "Traditional NSAID + PPI", Value = "Traditional NSAID + PPI" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Coxib + misoprostol", Value = "Coxib + misoprostol" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + ranitidine", Value = "Coxib + ranitidine" };
+                model = new AnswerModel() { Text = "Coxib + H<sub>2</sub> receptor antagonist", Value = "Coxib + H2 receptor antagonist" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + omeprazole", Value = "Coxib + omeprazole" };
+                model = new AnswerModel() { Text = "Coxib + PPI", Value = "Coxib + PPI" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
                 TheList.Add(model);
@@ -189,7 +193,7 @@ namespace Armor.Web.Models
         public String Question18Other { get; set; }
 
 
-        [DisplayName("19. Do you take GI risk factors into consideration when prescribing NSAIDs for your patients with OA?")]
+        [DisplayName("19. For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?")]
         public List<AnswerModel> Question19
         {
             get
