@@ -227,6 +227,18 @@
                 @Html.ValidationMessageFor(model => model.Question11)
             </div>
     
+
+            <div class="submitButton">
+                <input type="button" id="Section3Button" value="Next ->" />
+            </div>
+
+
+
+
+
+        </div>
+
+        <div id="Section4" class="hiddenSection horizontalSlide">
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question12)*@
                 12. Your patient’s GI risk
@@ -323,13 +335,16 @@
 
                 @Html.ValidationMessageFor(model => model.Question13)
 
+
+                <div class="submitButton">
+                    <input type="submit" value="Submit" />
+                </div>
+
             </div>
         
-
-            <div class="submitButton">
-                <input type="submit" value="Submit" />
-            </div>
         </div>
+
+
     </div>
 }
 </div>

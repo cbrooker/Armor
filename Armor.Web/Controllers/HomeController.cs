@@ -12,9 +12,10 @@ namespace Armor.Web.Controllers
         {
             if (CurrentUser != null)
             {
-                return RedirectToAction("Index", "Assessment");
+                return RedirectToAction("Index", "Assessment"); 
             }
-            return View();
+            //return View();
+            return RedirectToAction("Login", "Account");
         }
 
         public ActionResult About()
