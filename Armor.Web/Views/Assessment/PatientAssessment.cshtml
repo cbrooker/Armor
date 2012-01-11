@@ -123,50 +123,52 @@
                 9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)
             </div>
             <div class="editor-field">
-                <table>
+   <table>
                     <tr>
                         <th>Medication</th>
-                        <th>Dose (mg/day)</th>
+                        <th colspan="2">Dose (mg/day)</th>
                     </tr>
                     <tr>
                         <td>Acetaminophen</td>
-                        <td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen < 3000mg") < 3000mg</label><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen >= 3000mg") >= 3000mg</label></td>
-                    </tr>
+                        <td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen < 3000mg/day") < 3000mg/day</label>
+                                                </td><td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen >3000mg/day") > 3000mg/day</label>
+
+                    </td></tr>
                    <!-- <tr>
                         <td>Traditional NSAID</td>
                         <td></td>
                     </tr> -->
                     <tr>
                         <td class="indent">Aspirin (>300 mg)</td>
-                        <td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin < 3000mg") < 3000mg</label><label>@Html.RadioButton("Question9_Aspirin", "Aspirin >= 3000mg") >= 3000mg</label></td>
-                    </tr>
+                        <td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin < 3000mg/day") < 3000mg/day</label></td><td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin >= 3000mg/day") >= 3000mg/day</label>
+                    </td></tr>
                     <tr>
                         <td class="indent">Diclofenac</td>
-                        <td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 100mg/day") 100mg/day</label><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 150mg/day") 150mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 100mg/day") 100mg/day</label></td><td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 150mg/day") 150mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Diclofenac/misoprostol</td>
-                        <td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") 100 mg diclofenac/day </label><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") 150 mg diclofenac/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") 100 mg diclofenac/day </label></td><td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") 150 mg diclofenac/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Ibuprofen</td>
-                        <td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen < 1200mg") < 1200mg</label><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen >= 1200mg") >= 1200mg</label></td>
-                    </tr>
+                        <td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen < 1200mg/day") < 1200mg/day</label></td><td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen >= 1200mg/day") >= 1200mg/day</label>
+                    </td></tr>
                     <tr>
                         <td class="indent">Indomethacin</td>
-                        <td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin < 200 mg/day") < 200 mg/day</label><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin >= 200 mg/day") >= 200 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin < 200 mg/day") < 200 mg/day</label></td><td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin >= 200 mg/day") >= 200 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Meloxicam</td>
-                        <td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam < 15 mg/day") < 15 mg/day</label><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam >= 15 mg/day") >= 15 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam < 15 mg/day") < 15 mg/day</label></td><td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam >= 15 mg/day") >= 15 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Naproxen</td>
-                        <td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen < 1000 mg/day") < 1000 mg/day</label><label>@Html.RadioButton("Question9_Naproxen", "Naproxen >= 1000 mg/day") >= 1000 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen < 1000 mg/day") < 1000 mg/day</label></td><td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen >= 1000 mg/day") >= 1000 mg/day</label></td>
                     </tr>
                     <tr>
-                        <td class="indent">Naproxen—esomeprazole</td>
-                        <td><label>@Html.RadioButton("Question9_Naproxen—esomeprazole", "Naproxen—esomeprazole < 1000 mg/day") < 1000 mg/day</label><label>@Html.RadioButton("Question9_Naproxen—esomeprazole", "Naproxen—esomeprazole >= 1000 mg/day") >= 1000 mg/day</label></td>
+                        <td class="indent">Naproxen—PPI
+                        </td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI < 1000 mg/day") < 1000 mg/day</label></td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI >= 1000 mg/day") >= 1000 mg/day</label></td>
                     </tr>
                   <!--  <tr>
                         <td>Coxibs</td>
@@ -174,7 +176,7 @@
                     </tr> -->
                     <tr>
                         <td class="indent">Celecoxib</td>
-                        <td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib < 200 mg/day") < 200 mg/day</label><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib >= 200 mg/day") >= 200 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib < 200 mg/day") < 200 mg/day</label></td><td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib >= 200 mg/day") >= 200 mg/day</label></td>
                     </tr>
                    <!-- <tr>
                         <td>Opioids/combinations</td>
@@ -182,19 +184,20 @@
                     </tr> -->
                     <tr>
                         <td class="indent">Acetaminophen/tramadol</td>
-                        <td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300 mg/day") < 3000/300 mg/day</label><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol >= 3000/300 mg/day") >= 3000/300 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300 mg/day") < 3000/300 mg/day</label></td><td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol > 3000/300 mg/day") > 3000/300 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Codeine (in combination with acetaminophen)</td>
-                        <td><label>@Html.RadioButton("Question9_Codeine", "Codeine < 3000/300 mg/day") < 360 mg codeine/day</label><label>@Html.RadioButton("Question9_Codeine", "Codeine >= 3000/300 mg/day") >= 360 mg codeine/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Codeine", "Codeine < 360 mg/day") < 360 mg codeine/day</label></td><td><label>@Html.RadioButton("Question9_Codeine", "Codeine > 360 mg/day") > 360 mg codeine/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Tramadol</td>
-                        <td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol < 300 mg/day") < 300 mg/day</label><label>@Html.RadioButton("Question9_Tramadol", "Tramadol >= 300 mg/day") >= 300 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol < 300 mg/day") < 300 mg/day</label></td><td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol > 300 mg/day") > 300 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Other</td>
                         <td>@Html.TextBox("Question9_Other")</td>
+                        <td></td>
                     </tr>
                 </table>
             </div>
@@ -241,78 +244,79 @@
                 13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)
             </div>
             <div class="editor-field">
-                <table>
+   <table>
                     <tr>
                         <th>Medication</th>
-                        <th>Dose (mg/day)</th>
+                        <th colspan="2">Dose (mg/day)</th>
                     </tr>
                     <tr>
                         <td>Acetaminophen</td>
-                        <td><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen < 3000mg") < 3000mg</label><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen >= 3000mg") >= 3000mg</label></td>
-                    </tr>
-                    <tr>
+                        <td><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen < 3000mg/day") < 3000mg/day</label></td><td><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen >= 3000mg/day") >= 3000mg/day</label>
+                    </td></tr>
+                  <!--  <tr>
                         <td>Traditional NSAID</td>
                         <td></td>
-                    </tr>
+                    </tr>-->
                     <tr>
                         <td class="indent">Aspirin (>300 mg)</td>
-                        <td><label>@Html.RadioButton("Question13_Aspirin", "Aspirin < 3000mg") < 3000mg</label><label>@Html.RadioButton("Question13_Aspirin", "Aspirin >= 3000mg") >= 3000mg</label></td>
-                    </tr>
+                        <td><label>@Html.RadioButton("Question13_Aspirin", "Aspirin < 3000mg/day") < 3000mg/day</label></td><td><label>@Html.RadioButton("Question13_Aspirin", "Aspirin > 3000mg/day") > 3000mg/day</label>
+                    </td></tr>
                     <tr>
                         <td class="indent">Diclofenac</td>
-                        <td><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 100mg/day") 100mg/day</label><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 150mg/day") 150mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 100mg/day") 100mg/day</label></td><td><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 150mg/day") 150mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Diclofenac/misoprostol</td>
-                        <td><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") 100 mg diclofenac/day </label><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") 150 mg diclofenac/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") 100 mg diclofenac/day </label></td><td><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") 150 mg diclofenac/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Ibuprofen</td>
-                        <td><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen < 1200mg") < 1200mg</label><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen >= 1200mg") >= 1200mg</label></td>
+                        <td><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen < 1200mg/day") < 1200mg/day</label></td><td><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen >= 1200mg") >= 1200mg</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Indomethacin</td>
-                        <td><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin < 200 mg/day") < 200 mg/day</label><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin >= 200 mg/day") >= 200 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin < 200 mg/day") < 200 mg/day</label></td><td><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin >= 200 mg/day") >= 200 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Meloxicam</td>
-                        <td><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam < 15 mg/day") < 15 mg/day</label><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam >= 15 mg/day") >= 15 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam < 15 mg/day") < 15 mg/day</label></td><td><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam >= 15 mg/day") >= 15 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Naproxen</td>
-                        <td><label>@Html.RadioButton("Question13_Naproxen", "Naproxen < 1000 mg/day") < 1000 mg/day</label><label>@Html.RadioButton("Question13_Naproxen", "Naproxen >= 1000 mg/day") >= 1000 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Naproxen", "Naproxen < 1000 mg/day") < 1000 mg/day</label></td><td><label>@Html.RadioButton("Question13_Naproxen", "Naproxen >= 1000 mg/day") >= 1000 mg/day</label></td>
                     </tr>
                     <tr>
-                        <td class="indent">Naproxen—esomeprazole</td>
-                        <td><label>@Html.RadioButton("Question13_Naproxen—esomeprazole", "Naproxen—esomeprazole < 1000 mg/day") < 1000 mg/day</label><label>@Html.RadioButton("Question13_Naproxen—esomeprazole", "Naproxen—esomeprazole >= 1000 mg/day") >= 1000 mg/day</label></td>
+                        <td class="indent">Naproxen—PPI
+                        </td><td><label>@Html.RadioButton("Question13_Naproxen—PPI", "Naproxen—PPI < 1000 mg/day") < 1000 mg/day</label></td><td><label>@Html.RadioButton("Question13_Naproxen—PPI", "Naproxen—PPI >= 1000 mg/day") >= 1000 mg/day</label></td>
                     </tr>
-                    <tr>
+<!--                    <tr>
                         <td>Coxibs</td>
                         <td></td>
-                    </tr>
+                    </tr>-->
                     <tr>
                         <td class="indent">Celecoxib</td>
-                        <td><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib < 200 mg/day") < 200 mg/day</label><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib >= 200 mg/day") >= 200 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib < 200 mg/day") < 200 mg/day</label></td><td><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib >= 200 mg/day") >= 200 mg/day</label></td>
                     </tr>
-                    <tr>
+<!--                    <tr>
                         <td>Opioids/combinations</td>
                         <td></td>
-                    </tr>
+                    </tr>-->
                     <tr>
                         <td class="indent">Acetaminophen/tramadol</td>
-                        <td><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300 mg/day") < 3000/300 mg/day</label><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol >= 3000/300 mg/day") >= 3000/300 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300 mg/day") < 3000/300 mg/day</label></td><td><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol > 3000/300 mg/day") > 3000/300 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Codeine (in combination with acetaminophen)</td>
-                        <td><label>@Html.RadioButton("Question13_Codeine", "Codeine < 3000/300 mg/day") < 360 mg codeine/day</label><label>@Html.RadioButton("Question13_Codeine", "Codeine >= 3000/300 mg/day") >= 360 mg codeine/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Codeine", "Codeine < 360 mg/day") < 360 mg codeine/day</label></td><td><label>@Html.RadioButton("Question13_Codeine", "Codeine > 360 mg/day") > 360 mg codeine/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Tramadol</td>
-                        <td><label>@Html.RadioButton("Question13_Tramadol", "Tramadol < 300 mg/day") < 300 mg/day</label><label>@Html.RadioButton("Question13_Tramadol", "Tramadol >= 300 mg/day") >= 300 mg/day</label></td>
+                        <td><label>@Html.RadioButton("Question13_Tramadol", "Tramadol < 300 mg/day") < 300 mg/day</label></td><td><label>@Html.RadioButton("Question13_Tramadol", "Tramadol > 300 mg/day") > 300 mg/day</label></td>
                     </tr>
                     <tr>
                         <td class="indent">Other</td>
                         <td>@Html.TextBox("Question13_Other")</td>
+                        <td></td>
                     </tr>
                 </table>
 

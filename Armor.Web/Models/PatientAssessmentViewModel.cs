@@ -68,8 +68,6 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Lumbar", Value = "Lumbar" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Dorsal", Value = "Dorsal" };
-                TheList.Add(model);
                 model = new AnswerModel() { Text = "Hand", Value = "Hand" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Hip", Value = "Hip" };
