@@ -409,17 +409,22 @@ margin-left: 230px;
 /* Evaluator Forms */
 
 
-.evaluator .editor-label intQuestion{
+.evaluator .editor-label.intQuestion{
 float: left;
 width: 40%;
 padding-right: 2%;
+margin-top: 20px;
 }
-.evaluator .editor-field intQuestions {
+.evaluator .editor-field.intQuestion {
 float: left;
 width: 50%;
-margin-bottom: 20px;
+margin-top:20px;
 }
-
+.evaluator .submitButton {
+position: relative;
+top: 20px;
+float: left;
+}
 .evaluator form {
 padding-left: 2%;
 width: 98%;
