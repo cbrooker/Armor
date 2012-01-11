@@ -404,10 +404,21 @@ width: 98%;
 .percentage {
 margin-top: -50px;
 margin-left: 230px;
-margin-bottom: 10px;
 }
 
 /* Evaluator Forms */
+
+
+.evaluator .editor-label{
+float: left;
+width: 40%;
+padding-right: 2%;
+}
+.evaluator .editor-field intQuestions {
+float: left;
+width: 50%;
+margin-bottom: 20px;
+}
 
 .evaluator form {
 padding-left: 2%;
@@ -541,7 +552,3 @@ label, legend {
 
 .horizontalSlide { width: 880px; }
 .hiddenSection { display: none; margin-left: 880px; }
-.field-validation-error {
-float: none;
-
-}
