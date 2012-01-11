@@ -481,7 +481,11 @@ width: 7%;
 float: left;
 width: 100%;
 }
-.assessment li input[type="radio"] {
+.numbers {
+float: left;
+width: 100%;
+}
+.assessment li input[type="radio"], .question8 ul input[type="radio"] {
 margin: 10px;
 float: left;
 }
@@ -489,6 +493,11 @@ float: left;
 .assessment li input[type="checkbox"] {
 margin-right: 10px;
 }
+.question8 {
+float: left;
+width: 100%;
+}
+
 /* #Media Queries
 ================================================== */
 
