@@ -236,12 +236,13 @@
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question20Low)*@
                 20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)
-				 <ul>
+				 <div class="criteria><ul>
                 <li>Diagnosis of osteoarthritis</li>
                 <li>Aged 18 years or older</li>
                 <li>Pain that interferes with normal daily activities</li>
                 <li>Indication for NSAID treatment</li>
             </ul>
+			</div>
             </div>
             <div class="editor-field">
                 Low @Html.EditorFor(model => model.Question20Low)

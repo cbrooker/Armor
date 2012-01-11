@@ -447,6 +447,11 @@ float: left;
 
 
 }
+.criteria ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
 
 /* Assessment Forms */
 
