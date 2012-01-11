@@ -13,15 +13,14 @@
 <div class="assessment padding">
 <h2>Patient Assessment</h2>
 <h3>To be completed by physician for patients who meet the following criteria:</h3>
-
+<div class="criteria">
 <ul>
     <li>Diagnosis of osteoarthritis</li>
     <li>Aged 18 years or older</li>
-    <li>Is not responding to over-the-counter oral or topical medications</li>
     <li>Has pain that interferes with normal daily activities</li>
     <li>Has an indication for NSAID treatment</li>
 </ul>
-
+</div>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -34,34 +33,34 @@
                 @*@Html.LabelFor(model => model.Question1)*@
                 1. Age
             </div>
-            <div class="editor-field">
+            <div class="editor-field numbers">
                 @Html.EditorFor(model => model.Question1, "AnswerOptions")
                 @Html.ValidationMessageFor(model => model.Question1)
             </div>
     
-            <div class="editor-label">
+            <div class="editor-label numbers">
                 @*@Html.LabelFor(model => model.Question2)*@
-                2. Sex
+                2. Gender
             </div>
-            <div class="editor-field">
+            <div class="editor-field numbers">
                 @Html.EditorFor(model => model.Question2, "AnswerOptions")
                 @Html.ValidationMessageFor(model => model.Question2)
             </div>
     
-            <div class="editor-label">
+            <div class="editor-label numbers">
                 @*@Html.LabelFor(model => model.Question3)*@
                 3. Type of OA (select all that apply)
             </div>
-            <div class="editor-field">
+            <div class="editor-field numbers">
                 @Html.EditorFor(model => model.Question3, "AnswerOptions")
                 @Html.ValidationMessageFor(model => model.Question3)
             </div>
     
-            <div class="editor-label">
+            <div class="editor-label numbers">
                 @*@Html.LabelFor(model => model.Question4)*@
                 4. Is this patient overweight (ie, BMI >25)
             </div>
-            <div class="editor-field">
+            <div class="editor-field numbers">
                 @Html.EditorFor(model => model.Question4, "AnswerOptions")
                 @Html.ValidationMessageFor(model => model.Question4)
             </div>
@@ -82,7 +81,7 @@
     
     
         <div id="Section2" class="hiddenSection horizontalSlide" >
-            <div class="editor-label">
+            <div class="editor-label noFloat">
                 @*@Html.LabelFor(model => model.Question6)*@
                 6. Average number of alcoholic drinks per week
             </div>
@@ -91,11 +90,11 @@
                 @Html.ValidationMessageFor(model => model.Question6)
             </div>
 
-            <div class="editor-label">
+            <div class="editor-label numbers">
                 @*@Html.LabelFor(model => model.Question7)*@
                 7. Does this patient use illicit/recreational drugs?
             </div>
-            <div class="editor-field">
+            <div class="editor-field numbers">
                 @Html.EditorFor(model => model.Question7, "AnswerOptions")
                 @Html.ValidationMessageFor(model => model.Question7)
             </div>
