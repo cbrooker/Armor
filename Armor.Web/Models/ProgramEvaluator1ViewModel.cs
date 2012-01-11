@@ -194,8 +194,7 @@ namespace Armor.Web.Models
 
 
         [DisplayName("19. For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?")]
-       
-		        public String Question19 { get; set; }
+		public String Question19 { get; set; }
         [Range(0, 100)]
 
 
