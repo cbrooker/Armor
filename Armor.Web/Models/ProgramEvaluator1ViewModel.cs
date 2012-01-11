@@ -194,18 +194,9 @@ namespace Armor.Web.Models
 
 
         [DisplayName("19. For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?")]
-        public List<AnswerModel> Question19
-        {
-            get
-            {
-                List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Yes", Value = "Yes" };
-                TheList.Add(model);
-                model = new AnswerModel() { Text = "No", Value = "No" };
-                TheList.Add(model);
-                return TheList;
-            }
-        }
+       
+		        public String Question19 { get; set; }
+        [Range(0, 100)]
 
 
         [DisplayName("20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)")]
