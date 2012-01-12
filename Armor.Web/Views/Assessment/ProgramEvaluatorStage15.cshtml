@@ -1,0 +1,71 @@
+﻿@model Armor.Web.Models.ProgramEvaluator1ViewModel
+
+@{
+    ViewBag.Title = "Armor - Program Evaluator Stage 1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+
+<div class="evaluator padding">
+<h2>Program Evaluator Stage 1</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+    <div style="overflow: hidden;">
+        
+        <div id="Section5" class="horizontalSlide">
+            <h3>Page 5 of 5</h3>
+            <h4>Based on your own practice:</h4>
+    
+
+            
+
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question19)*@
+                19.For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question19)<div class="percentage">%</div>
+                @Html.ValidationMessageFor(model => model.Question19)
+                
+            </div>
+			<br style="clear:both;" />
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question20Low)*@
+                20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)
+				<div class="criteria"><ul>
+                <li>Diagnosis of osteoarthritis</li>
+                <li>Aged 18 years or older</li>
+                <li>Pain that interferes with normal daily activities</li>
+                <li>Indication for NSAID treatment</li>
+            </ul>
+			</div>
+            </div>
+            <div class="editor-field">
+                Low @Html.EditorFor(model => model.Question20Low)
+                @Html.ValidationMessageFor(model => model.Question20Low)
+                Moderate @Html.EditorFor(model => model.Question20Moderate)
+                @Html.ValidationMessageFor(model => model.Question20Moderate)
+                High @Html.EditorFor(model => model.Question20High)
+                @Html.ValidationMessageFor(model => model.Question20High)
+            </div>
+
+
+            <div class="submitButton">
+                <input type="submit" value="Submit" class="green-action-button" />
+            </div>
+        </div>
+    </div>
+}
+</div>

@@ -21,5 +21,10 @@ namespace Armor.Web {
             return base.GetRepository<ProgramEvaluatorStage1>().Add(entity);
         }
 
+        public ProgramEvaluatorStage1 GetByID(int ID)
+        {
+            return db.ProgramEvaluatorStage1s.Where(e => e.ID == ID).FirstOrDefault();
+        }
+
     }
 }

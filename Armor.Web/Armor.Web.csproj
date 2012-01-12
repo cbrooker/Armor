@@ -269,6 +269,10 @@
     <Content Include="Views\Assessment\PreAssessment3.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage2.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage3.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage12.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage13.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage14.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage15.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
