@@ -152,9 +152,13 @@ $(function () {
             }
         });
 
-        if (Green == 0 && Yellow <= 1 && Blue == 0) { $("#Question12").val("Low risk"); }
-        if ((Green == 1 || Green == 2) || (Yellow >= 2 && Blue == 0)) { $("#Question12").val("Moderate risk"); }
-        if (Green >= 3 || (Green >= 2 && Yellow >= 2) || Blue >= 1) { $("#Question12").val("High risk"); }
+//        if (Green == 0 && Yellow <= 1 && Blue == 0) { $("#Question12").val("Low risk"); }
+//        if ((Green == 1 || Green == 2) || (Yellow >= 2 && Blue == 0)) { $("#Question12").val("Moderate risk"); }
+//        if (Green >= 3 || (Green >= 2 && Yellow >= 2) || Blue >= 1) { $("#Question12").val("High risk"); }
+
+        if (Green == 0 && Yellow <= 1 && Blue == 0) { $(".GIRisk").val("Low risk"); $(".GIRisk").html("Low risk").addClass("green");  }
+        if ((Green == 1 || Green == 2) || (Yellow >= 2 && Blue == 0)) { $(".GIRisk").val("Moderate risk"); $(".GIRisk").html("Moderate risk").addClass("yellow"); }
+        if (Green >= 3 || (Green >= 2 && Yellow >= 2) || Blue >= 1) { $(".GIRisk").val("High risk"); $(".GIRisk").html("High risk").addClass("red"); }
 
         //alert("Green=" + Green + " Yellow=" + Yellow + " Blue=" + Blue);
 
