@@ -437,9 +437,6 @@ margin-top: 20px;
 text-align: center;
 }
 
-.evaluator li label {
-
-}
 .evaluator li input[type="radio"] {
 margin: 10px;
 
@@ -451,6 +448,17 @@ float: left;
 padding-left: 20px;
 list-style: disc;
 margin-top: 10px;
+}
+
+.evaluator label {
+margin-top: 20px;
+}
+
+.evaluator .percentage {
+margin-top: -10px;
+position: relative;
+top: 30px;
+margin-left: 230px;
 }
 
 /* Assessment Forms */
