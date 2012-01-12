@@ -227,6 +227,7 @@ namespace Armor.Web.Models
                 model = new AnswerModel() { Text = "Switch to", Value = "Switch to" };
                 TheList.Add(model);
 				AnswerModel model = new AnswerModel() { Text = "Add a Gastroprotective Agent", Value = "Add a Gastroprotective Agent" };
+				TheList.Add(model);
                 return TheList;
 
             }
