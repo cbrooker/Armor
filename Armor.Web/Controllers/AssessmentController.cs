@@ -372,8 +372,6 @@ namespace Armor.Web.Controllers
                     OEM2.Codeine = fc["Question13_Codeine"];
                     OEM2.Tramadol = fc["Question13_Tramadol"];
                     OEM2.Other = fc["Question13_Other"];
-					OEM2.Gastro = fc["Question13_Gastro"];
-
 
                     S1.Question13 = JsonConvert.SerializeObject(OEM2);
                 }
