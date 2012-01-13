@@ -9,6 +9,8 @@ using Armor.Web.Models;
 using Armor.Data;
 using Armor.Web.Core.Email;
 using System.Configuration;
+using System.Globalization;
+using System.Threading;
 
 namespace Armor.Web
 {
@@ -56,7 +58,6 @@ namespace Armor.Web
             }
         }
     }
-
 
 
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -128,6 +129,48 @@ namespace Armor.Web
 
             
             Mapper.AssertConfigurationIsValid();
+        }
+
+
+        //For Culture changing
+        //protected void Application_AcquireRequestState(object sender, EventArgs e)
+        //{
+        //    //Create culture info object 
+        //    CultureInfo ci = new CultureInfo("fr");
+
+        //    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+        //    System.Threading.Thread.CurrentThread.CurrentCulture =
+        //    CultureInfo.CreateSpecificCulture(ci.Name);
+        //}
+
+        protected void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            //It's important to check whether session object is ready
+            if (HttpContext.Current.Session != null)
+            {
+                CultureInfo ci = (CultureInfo)this.Session["Culture"];
+                //Checking first if there is no value in session 
+                //and set default language 
+                //this can happen for first user's request
+                if (ci == null)
+                {
+                    //Sets default culture to english invariant
+                    string langName = "en";
+    
+                    //Try to get values from Accept lang HTTP header
+                    if (HttpContext.Current.Request.UserLanguages != null && 
+                    HttpContext.Current.Request.UserLanguages.Length != 0)
+                    {
+                        //Gets accepted list 
+                        langName = HttpContext.Current.Request.UserLanguages[0].Substring(0, 2);
+                    }
+                ci = new CultureInfo(langName);
+                this.Session["Culture"] = ci;
+                }
+                //Finally setting culture for each request
+                Thread.CurrentThread.CurrentUICulture = ci;
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(ci.Name);
+            }
         }
 
 

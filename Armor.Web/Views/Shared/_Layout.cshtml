@@ -23,6 +23,7 @@
 
 </head>
 <body>
+    @ViewRes.SharedString.Title
  <div class="container page">
   	<div class="header sixteen">
         <header>
@@ -36,7 +37,11 @@
                     <img src='@Url.Content("~/Content/images/full_logo.png")' />
                 </a>
             </div>
-            
+            <ul class="language">
+                <li>@Html.ActionLink("English", "ChangeCulture", "Home", new { lang = "en", returnUrl = this.Request.RawUrl }, null)</li>
+                <li>@Html.ActionLink("Français", "ChangeCulture", "Home", new { lang = "fr", returnUrl = this.Request.RawUrl }, null)</li>
+            </ul>
+                        
             <div class="seperator"></div>
         </header>
 	</div>

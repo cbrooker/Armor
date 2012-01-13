@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BeforeQ3Bullets" xml:space="preserve">
+    <value>&lt;ul&gt;
+                &lt;li&gt;Diagnosis of osteoarthritis&lt;/li&gt;
+                &lt;li&gt;Aged 18 years or older&lt;/li&gt;
+                &lt;li&gt;Has pain that interferes with normal daily activities&lt;/li&gt;
+                &lt;li&gt;Has an indication for NSAID treatment&lt;/li&gt;
+            &lt;/ul&gt;</value>
+  </data>
+  <data name="HeaderBeforeQ3" xml:space="preserve">
+    <value>The following questions apply only to the patients in your practice who meet the following criteria:</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>1. What percentage of patients in your practice have OA?</value>
+  </data>
+  <data name="Question10" xml:space="preserve">
+    <value>10. What percentage of these patients have OA in the following sites (% does not need to add up to 100% as patients may have OA in more than one site):</value>
+  </data>
+  <data name="Question101" xml:space="preserve">
+    <value>Cervical</value>
+  </data>
+  <data name="Question102" xml:space="preserve">
+    <value>Dorsal</value>
+  </data>
+  <data name="Question103" xml:space="preserve">
+    <value>Lumbar</value>
+  </data>
+  <data name="Question104" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Question105" xml:space="preserve">
+    <value>Hip</value>
+  </data>
+  <data name="Question106" xml:space="preserve">
+    <value>Knee</value>
+  </data>
+  <data name="Question11" xml:space="preserve">
+    <value>11. What percentage of this patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):</value>
+  </data>
+  <data name="Question111" xml:space="preserve">
+    <value>Low risk</value>
+  </data>
+  <data name="Question112" xml:space="preserve">
+    <value>Moderate risk</value>
+  </data>
+  <data name="Question113" xml:space="preserve">
+    <value>High risk</value>
+  </data>
+  <data name="Question12" xml:space="preserve">
+    <value>12. Which medications do you typically prescribe for these patients in the following GI risk categories (select all that apply):</value>
+  </data>
+  <data name="Question121" xml:space="preserve">
+    <value>Acetaminophen</value>
+  </data>
+  <data name="Question1210" xml:space="preserve">
+    <value>Celecoxib</value>
+  </data>
+  <data name="Question1211" xml:space="preserve">
+    <value>Acetaminophen/tramadol</value>
+  </data>
+  <data name="Question1212" xml:space="preserve">
+    <value>Codeine (in combination with acetaminophen)</value>
+  </data>
+  <data name="Question1213" xml:space="preserve">
+    <value>Tramadol</value>
+  </data>
+  <data name="Question1214" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Question122" xml:space="preserve">
+    <value>Aspirin (&gt;300 mg)</value>
+  </data>
+  <data name="Question123" xml:space="preserve">
+    <value>Diclofenac</value>
+  </data>
+  <data name="Question124" xml:space="preserve">
+    <value>Diclofenac/misoprostol</value>
+  </data>
+  <data name="Question125" xml:space="preserve">
+    <value>Ibuprofen</value>
+  </data>
+  <data name="Question126" xml:space="preserve">
+    <value>Indomethacin</value>
+  </data>
+  <data name="Question127" xml:space="preserve">
+    <value>Meloxicam</value>
+  </data>
+  <data name="Question128" xml:space="preserve">
+    <value>Naproxen</value>
+  </data>
+  <data name="Question129" xml:space="preserve">
+    <value>Naproxen/PPI</value>
+  </data>
+  <data name="Question12Header1" xml:space="preserve">
+    <value>Medication</value>
+  </data>
+  <data name="Question12Header2" xml:space="preserve">
+    <value>Low GI risk</value>
+  </data>
+  <data name="Question12Header3" xml:space="preserve">
+    <value>Moderate GI risk</value>
+  </data>
+  <data name="Question12Header4" xml:space="preserve">
+    <value>High GI risk</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>2. What percentage of your patients with OA are taking an NSAID?</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>3. What percentage of these patients are older than 60 years of age?</value>
+  </data>
+  <data name="Question4" xml:space="preserve">
+    <value>4. What percentage of these patients are overweight?</value>
+  </data>
+  <data name="Question5" xml:space="preserve">
+    <value>5. What percentage of these patients are:</value>
+  </data>
+  <data name="Question51" xml:space="preserve">
+    <value>Active smokers?</value>
+  </data>
+  <data name="Question52" xml:space="preserve">
+    <value>Ex-smokers?</value>
+  </data>
+  <data name="Question53" xml:space="preserve">
+    <value>Non-smokers</value>
+  </data>
+  <data name="Question6" xml:space="preserve">
+    <value>6. What percentage of these patients are taking low-dose ASA (&lt;300 mg/day) for CV protection?</value>
+  </data>
+  <data name="Question7" xml:space="preserve">
+    <value>7. What percentage of these patients are taking a corticosteroid?</value>
+  </data>
+  <data name="Question8" xml:space="preserve">
+    <value>8. What percentage of these patients are taking an anticoagulant medication?</value>
+  </data>
+  <data name="Question9" xml:space="preserve">
+    <value>9. What percentage of these patients have a history of:</value>
+  </data>
+  <data name="Question91" xml:space="preserve">
+    <value>Uncomplicated peptic ulcer</value>
+  </data>
+  <data name="Question92" xml:space="preserve">
+    <value>GERD</value>
+  </data>
+  <data name="Question93" xml:space="preserve">
+    <value>Dyspepsia</value>
+  </data>
+  <data name="Question94" xml:space="preserve">
+    <value>Bleeding peptic ulcer</value>
+  </data>
+  <data name="Question95" xml:space="preserve">
+    <value>&lt;em&gt;H pylori&lt;/em&gt; infection</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Pre-Assessment Questionnaire</value>
+  </data>
+</root>

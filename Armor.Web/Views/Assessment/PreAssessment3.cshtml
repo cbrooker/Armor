@@ -1,14 +1,14 @@
 ﻿@model Armor.Web.Models.PreAssessmentViewModel
 
 @{
-    ViewBag.Title = "Armor - Pre-Assessment Page 3";
+    ViewBag.Title = ViewRes.PreAssessment.Title + " Page 3";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <script src="@Url.Content("~/Scripts/PreAssessment.js")" type="text/javascript"></script>
 
 <div class="preassessment padding">
-<h2>Pre-Assessment Questionnaire</h2>
+<h2>@ViewRes.PreAssessment.Title</h2>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -21,79 +21,83 @@
         <div id="Section3" class="horizontalSlide">
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question9UncomplicatedPepticUlcer)*@
-                9. What percentage of these patients have a history of:
+                @*9. What percentage of these patients have a history of:*@
+                @ViewRes.PreAssessment.Question9
             </div>
             <div class="editor-field">
-                <label>Uncomplicated peptic ulcer @Html.EditorFor(model => model.Question9UncomplicatedPepticUlcer)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question91 @Html.EditorFor(model => model.Question9UncomplicatedPepticUlcer)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question9UncomplicatedPepticUlcer)
             
-                <label>GERD @Html.EditorFor(model => model.Question9GERD)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question92 @Html.EditorFor(model => model.Question9GERD)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question9GERD)
 
-                <label>Dyspepsia @Html.EditorFor(model => model.Question9Dyspepsia)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question93 @Html.EditorFor(model => model.Question9Dyspepsia)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question9Dyspepsia)
 
-                <label>Bleeding peptic ulcer @Html.EditorFor(model => model.Question9BleedingPepticUlcer)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question94 @Html.EditorFor(model => model.Question9BleedingPepticUlcer)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question9BleedingPepticUlcer)
 
-                <label><em>H pylori</em> infection @Html.EditorFor(model => model.Question9HpyloriInfection)</label><div class="percentage">%</div>
+                <label>@Html.Raw(ViewRes.PreAssessment.Question95) infection @Html.EditorFor(model => model.Question9HpyloriInfection)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question9HpyloriInfection)
 
             </div>
     
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question10Cervical)*@
-                10. What percentage of these patients have OA in the following sites (% does not need to add up to 100% as patients may have OA in more than one site):
+                @*10. What percentage of these patients have OA in the following sites (% does not need to add up to 100% as patients may have OA in more than one site):*@
+                @ViewRes.PreAssessment.Question10
             </div>
             <div class="editor-field">
-                <label>Cervical @Html.EditorFor(model => model.Question10Cervical)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question101 @Html.EditorFor(model => model.Question10Cervical)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Cervical)
 
-                <label>Dorsal @Html.EditorFor(model => model.Question10Dorsal)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question102 @Html.EditorFor(model => model.Question10Dorsal)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Dorsal)
 
-                <label>Lumbar @Html.EditorFor(model => model.Question10Lumbar)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question103 @Html.EditorFor(model => model.Question10Lumbar)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Lumbar)
 
-                <label>Hand @Html.EditorFor(model => model.Question10Hand)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question104 @Html.EditorFor(model => model.Question10Hand)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Hand)
 
-                <label>Hip  @Html.EditorFor(model => model.Question10Hip)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question105  @Html.EditorFor(model => model.Question10Hip)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Hip)
 
-                <label>Knee @Html.EditorFor(model => model.Question10Knee)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question106 @Html.EditorFor(model => model.Question10Knee)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question10Knee)
             </div>
 
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question11Low)*@
-                11. What percentage of this patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):
+                @*11. What percentage of this patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):*@
+                @ViewRes.PreAssessment.Question11
             </div>
             <div class="editor-field">
-                <label>Low risk @Html.EditorFor(model => model.Question11Low)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question111 @Html.EditorFor(model => model.Question11Low)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question11Low)
 
-                <label>Moderate risk @Html.EditorFor(model => model.Question11Moderate)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question112 @Html.EditorFor(model => model.Question11Moderate)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question11Moderate)
 
-                <label>High risk @Html.EditorFor(model => model.Question11High)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question113 @Html.EditorFor(model => model.Question11High)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question11High)
             </div>
 
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question12)*@
-                12. Which medications do you typically prescribe for these patients in the following GI risk categories (select all that apply):
+                @*12. Which medications do you typically prescribe for these patients in the following GI risk categories (select all that apply):*@
+                @ViewRes.PreAssessment.Question12
             </div>
             <div class="editor-field">
                 <table>
                     <tr>
-                        <th>Medication</th>
-                        <th>Low GI risk</th>
-                        <th>Moderate GI risk</th>
-                        <th>High GI risk</th>
+                        <th>@ViewRes.PreAssessment.Question12Header1</th>
+                        <th>@ViewRes.PreAssessment.Question12Header2</th>
+                        <th>@ViewRes.PreAssessment.Question12Header3</th>
+                        <th>@ViewRes.PreAssessment.Question12Header4</th>
                     </tr>
                     <tr>
-                        <td>Acetaminophen</td>
+                        <td>@ViewRes.PreAssessment.Question121</td>
                         <td>@Html.RadioButton("Question12_Acetaminophen", "Low")</td>
                         <td>@Html.RadioButton("Question12_Acetaminophen", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Acetaminophen", "High")</td>
@@ -105,49 +109,49 @@
                         <td></td>
                     </tr> -->
                     <tr>
-                        <td class="indent">Aspirin (>300 mg)</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question122</td>
                         <td>@Html.RadioButton("Question12_Aspirin", "Low")</td>
                         <td>@Html.RadioButton("Question12_Aspirin", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Aspirin", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Diclofenac</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question123</td>
                         <td>@Html.RadioButton("Question12_Diclofenac", "Low")</td>
                         <td>@Html.RadioButton("Question12_Diclofenac", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Diclofenac", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Diclofenac/misoprostol</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question124</td>
                         <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Low")</td>
                         <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_DiclofenacMisoprostol", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Ibuprofen</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question125</td>
                         <td>@Html.RadioButton("Question12_Ibuprofen", "Low")</td>
                         <td>@Html.RadioButton("Question12_Ibuprofen", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Ibuprofen", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Indomethacin</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question126</td>
                         <td>@Html.RadioButton("Question12_Indomethacin", "Low")</td>
                         <td>@Html.RadioButton("Question12_Indomethacin", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Indomethacin", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Meloxicam</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question127</td>
                         <td>@Html.RadioButton("Question12_Meloxicam", "Low")</td>
                         <td>@Html.RadioButton("Question12_Meloxicam", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Meloxicam", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Naproxen</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question128</td>
                         <td>@Html.RadioButton("Question12_Naproxen", "Low")</td>
                         <td>@Html.RadioButton("Question12_Naproxen", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Naproxen", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Naproxen/PPI</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question129</td>
                         <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Low")</td>
                         <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_NaproxenEsomeprazole", "High")</td>
@@ -157,7 +161,7 @@
                         <td></td>
                     </tr> -->
                     <tr>
-                        <td class="indent">Celecoxib</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question1210</td>
                         <td>@Html.RadioButton("Question12_Celecoxib", "Low")</td>
                         <td>@Html.RadioButton("Question12_Celecoxib", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Celecoxib", "High")</td>
@@ -167,25 +171,25 @@
                         <td></td>
                     </tr> -->
                     <tr>
-                        <td class="indent">Acetaminophen/tramadol</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question1211</td>
                         <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Low")</td>
                         <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_AcetaminophenTramadol", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Codeine (in combination with acetaminophen)</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question1212</td>
                         <td>@Html.RadioButton("Question12_Codeine", "Low")</td>
                         <td>@Html.RadioButton("Question12_Codeine", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Codeine", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Tramadol</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question1213</td>
                         <td>@Html.RadioButton("Question12_Tramadol", "Low")</td>
                         <td>@Html.RadioButton("Question12_Tramadol", "Moderate")</td>
                         <td>@Html.RadioButton("Question12_Tramadol", "High")</td>
                     </tr>
                     <tr>
-                        <td class="indent">Other</td>
+                        <td class="indent">@ViewRes.PreAssessment.Question1214</td>
                         <td colspan="3">@Html.TextBox("Question12_Other")</td>
                     </tr>
                 </table>

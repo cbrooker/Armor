@@ -32,6 +32,19 @@ namespace Armor.Web.Controllers
             }
         }
 
+        protected string CurrentUserLang
+        {
+            get
+            {
+                string UserLang = "en";
+                if (CookieHelpers.GetCookieValue("Amorlc", "lang") != null)
+                {
+                    UserLang = CookieHelpers.GetCookieValue("Amorlc", "lang").ToString();
+                }
+                return UserLang;
+            }
+        }
+
         protected UserAuthenticationProfile CurrentUserTwitterAuthorization
         {
             get

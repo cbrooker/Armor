@@ -38,3 +38,13 @@ C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.xml
 C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.dll
 C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.pdb
 C:\ChrisProjects\Armor\Armor.Web\bin\Newtonsoft.Json.xml
+C:\Projects\Armor\Armor.Web\bin\fr\Armor.Web.resources.dll
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Shared.SharedString.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Shared.SharedString.fr.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\fr\Armor.Web.resources.dll
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.PreAssessment.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.PreAssessment.fr.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Login.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Login.fr.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.Index.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.Index.fr.resources

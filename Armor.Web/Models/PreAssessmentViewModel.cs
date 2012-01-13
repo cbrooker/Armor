@@ -5,6 +5,8 @@ using System.Web;
 using System.ComponentModel;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
+using Armor.Web.Core.Filters;
+using ViewRes;
 
 namespace Armor.Web.Models
 {
@@ -14,7 +16,8 @@ namespace Armor.Web.Models
 
         [Required(ErrorMessage = "Required")]
         [Range(0, 100)]
-        [DisplayName("1. What percentage of patients in your practice have OA?")]
+        //[DisplayName("1. What percentage of patients in your practice have OA?")]
+        //[LocalizedDisplayName("Question1", NameResourceType = typeof(PreAssessment))]
         public String Question1 { get; set; }
 
         [Required(ErrorMessage = "Required")]

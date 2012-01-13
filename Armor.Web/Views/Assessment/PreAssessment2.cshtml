@@ -1,14 +1,14 @@
 ﻿@model Armor.Web.Models.PreAssessmentViewModel
 
 @{
-    ViewBag.Title = "Armor - Pre-Assessment Page 2";
+    ViewBag.Title = @ViewRes.PreAssessment.Title + " Page 2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <script src="@Url.Content("~/Scripts/PreAssessment.js")" type="text/javascript"></script>
 
 <div class="preassessment padding">
-<h2>Pre-Assessment Questionnaire</h2>
+<h2>@ViewRes.PreAssessment.Title</h2>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -22,21 +22,23 @@
             <h3>Page 2 of 3</h3>
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question5ActiveSmoker)*@
-                5. What percentage of these patients are:
+                @*5. What percentage of these patients are:*@
+                @ViewRes.PreAssessment.Question5
             </div>
             <div class="editor-field">
             
-                <label>Active smokers? @Html.EditorFor(model => model.Question5ActiveSmoker)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question51 @Html.EditorFor(model => model.Question5ActiveSmoker)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question5ActiveSmoker)
-                <label>Ex-smokers? @Html.EditorFor(model => model.Question5ExSmoker)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question52 @Html.EditorFor(model => model.Question5ExSmoker)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question5ExSmoker)
-                <label>Non-smokers @Html.EditorFor(model => model.Question5NonSmoker)</label><div class="percentage">%</div>
+                <label>@ViewRes.PreAssessment.Question53 @Html.EditorFor(model => model.Question5NonSmoker)</label><div class="percentage">%</div>
                 @Html.ValidationMessageFor(model => model.Question5NonSmoker)
             </div>
         
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question6)*@
-                6. What percentage of these patients are taking low-dose ASA (<300 mg/day) for CV protection?
+                @*6. What percentage of these patients are taking low-dose ASA (<300 mg/day) for CV protection?*@
+                @ViewRes.PreAssessment.Question6
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question6)
@@ -45,7 +47,8 @@
 
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question7)*@
-                7. What percentage of these patients are taking a corticosteroid?
+                @*7. What percentage of these patients are taking a corticosteroid?*@
+                @ViewRes.PreAssessment.Question7
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question7)
@@ -54,7 +57,8 @@
 
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question8)*@
-                8. What percentage of these patients are taking an anticoagulant medication?
+                @*8. What percentage of these patients are taking an anticoagulant medication?*@
+                @ViewRes.PreAssessment.Question8
             </div>
             <div class="editor-field">
                 @Html.EditorFor(model => model.Question8)
