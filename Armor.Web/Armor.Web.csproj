@@ -176,6 +176,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PreAssessment.fr.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Assessment\ProgramEvaluatorStage1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramEvaluatorStage1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Assessment\ProgramEvaluatorStage1.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgramEvaluatorStage1.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\Shared\SharedString.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -348,6 +358,16 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PreAssessment.Designer.cs</LastGenOutput>
       <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Assessment\ProgramEvaluatorStage1.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramEvaluatorStage1.fr.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Assessment</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Assessment\ProgramEvaluatorStage1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgramEvaluatorStage1.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Assessment</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Shared\SharedString.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -70,7 +70,7 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "87%", Value = "87" };
                 TheList.Add(model);
-				model = new AnswerModel() { Text = "I don't know", Value = "I dont know" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question12DontKnow, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question12DontKnow };
                 TheList.Add(model);
                 return TheList;
             }
@@ -82,23 +82,23 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Age 60 years or older", Value = "Age 60 years or older" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question131, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question131 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "History of dyspepsia", Value = "History of dyspepsia" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question132, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question132 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "High NSAID dose", Value = "High NSAID dose" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question133, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question133 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Concomitant use of ASA", Value = "Concomitant use of ASA" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question134, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question134 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "History of uncomplicated peptic ulcer", Value = "History of uncomplicated peptic ulcer" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question135, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question135 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Concomitant use of corticosteroids", Value = "Concomitant use of corticosteroids" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question136, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question136 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Concomitant use of oral anticoagulants", Value = "Concomitant use of oral anticoagulants" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question137, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question137 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "History of bleeding peptic ulcer", Value = "History of bleeding peptic ulcer" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question138, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question138 };
                 TheList.Add(model);
-				model = new AnswerModel() { Text = "I don't know", Value = "I dont know" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question139, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question139 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -110,19 +110,19 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Traditional NSAID + misoprostol", Value = "Traditional NSAID + misoprostol" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question141, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question141 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + H<sub>2</sub> receptor antagonist", Value = "Traditional NSAID + H2 receptor antagonist" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question142, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question142 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + PPI", Value = "Traditional NSAID + PPI" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question143, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question143 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + misoprostol", Value = "Coxib + misoprostol" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question144, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question144 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + H<sub>2</sub> receptor antagonist", Value = "Coxib + H2 receptor antagonist" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question145, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question145 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + PPI", Value = "Coxib + PPI" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question146, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question147 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question147, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question147 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -136,19 +136,19 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Traditional NSAID + misoprostol", Value = "Traditional NSAID + misoprostol" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question151, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question151 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + H<sub>2</sub> receptor antagonist", Value = "Traditional NSAID + H2 receptor antagonist" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question152, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question152 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Traditional NSAID + PPI", Value = "Traditional NSAID + PPI" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question153, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question153 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + misoprostol", Value = "Coxib + misoprostol" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question154, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question154 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + H<sub>2</sub> receptor antagonist", Value = "Coxib + H2 receptor antagonist" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question155, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question155 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Coxib + PPI", Value = "Coxib + PPI" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question156, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question156 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question157, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question157 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -161,11 +161,11 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Low", Value = "Low" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question161, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question161 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Medium", Value = "Medium" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question162, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question162 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "High", Value = "High" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question163, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question163 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -177,15 +177,15 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Increase her dosage of acetaminophen", Value = "Increase her dosage of acetaminophen" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question171, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question171 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Prescribe a traditional NSAID", Value = "Prescribe a traditional NSAID" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question172, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question173 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Prescribe a coxib", Value = "Prescribe a coxib" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question173, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question173 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Prescribe a gastroprotective agent", Value = "Prescribe a gastroprotective agent" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question174, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question174 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question175, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question175 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -200,15 +200,15 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "No change", Value = "No change" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question181, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question181 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Take her off diclofenac and prescribe a coxib", Value = "Take her off diclofenac and prescribe a coxib" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question182, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question182 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Reduce her dose of diclofenac", Value = "Reduce her dose of diclofenac" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question183, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question184 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Maintain her current dose of diclofenac and prescribe a gastroprotective agent", Value = "Maintain her current dose of diclofenac and prescribe a gastroprotective agent" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question184, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question184 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Other (please specify)", Value = "Other (please specify" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question185, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question185 };
                 TheList.Add(model);
                 return TheList;
             }

@@ -13,7 +13,8 @@
             @: <li>
                 string fieldName = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}_{1}", prefix, index++);
                 @Html.RadioButton(prefix, item.Value, false, new { @id = fieldName, @class = prefix }) 
-                @Html.Label(fieldName, item.Text)
+                <label for=@fieldName>@Html.Raw(item.Text)</label>            
+                @*@Html.Label(fieldName, item.Text)*@
             @: </li>
         }
     @: </ul>

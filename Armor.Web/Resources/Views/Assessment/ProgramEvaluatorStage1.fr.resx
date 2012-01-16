@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HeadingBefore16" xml:space="preserve">
+    <value>Portraits de patients</value>
+  </data>
+  <data name="HeadingBefore19" xml:space="preserve">
+    <value>Selon votre propre expérience clinique:</value>
+  </data>
+  <data name="PleaseRate" xml:space="preserve">
+    <value>Veuillez indiquer dans quelle mesure les points suivants vous sont familiers:</value>
+  </data>
+  <data name="PleaseRate2" xml:space="preserve">
+    <value>Veuillez évaluer les facteurs de risque suivants selon leur importance en matière de risque de complications GI associées à la prise d’AINS:</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>1. L’étude LOGICA (Lanas et al., 2010)</value>
+  </data>
+  <data name="Question10" xml:space="preserve">
+    <value>10. Prise concomitante d’anticoagulants oraux</value>
+  </data>
+  <data name="Question11" xml:space="preserve">
+    <value>11. Antécédents d’ulcère gastroduodénal hémorragique</value>
+  </data>
+  <data name="Question12" xml:space="preserve">
+    <value>12. Dans le cadre de l’étude LOGICA, quel pourcentage des 3 293 patients étaient exposés à un risque accru de présenter une manifestation GI indésirable associée à la prise d’AINS?</value>
+  </data>
+  <data name="Question12DontKnow" xml:space="preserve">
+    <value>Ne sait pas</value>
+  </data>
+  <data name="Question13" xml:space="preserve">
+    <value>13. Quel était le facteur de risque GI le plus fréquent dans le cadre de l’étude LOGICA?</value>
+  </data>
+  <data name="Question131" xml:space="preserve">
+    <value>Personnes âgées de 60 ans et plus</value>
+  </data>
+  <data name="Question132" xml:space="preserve">
+    <value>Antécédents de dyspepsie</value>
+  </data>
+  <data name="Question133" xml:space="preserve">
+    <value>AINS à forte dose</value>
+  </data>
+  <data name="Question134" xml:space="preserve">
+    <value>Emploi concomitant d’AAS</value>
+  </data>
+  <data name="Question135" xml:space="preserve">
+    <value>Antécédents d’ulcère gastroduodénal non compliqué</value>
+  </data>
+  <data name="Question136" xml:space="preserve">
+    <value>Emploi concomitant de corticostéroïdes</value>
+  </data>
+  <data name="Question137" xml:space="preserve">
+    <value>Emploi concomitant d’anticoagulants oraux</value>
+  </data>
+  <data name="Question138" xml:space="preserve">
+    <value>Antécédents d’ulcère gastroduodénal hémorragique</value>
+  </data>
+  <data name="Question139" xml:space="preserve">
+    <value>Ne sait pas</value>
+  </data>
+  <data name="Question14" xml:space="preserve">
+    <value>14. Quelle est votre stratégie thérapeutique privilégiée pour les patients arthrosiques qui ne répondent pas à l’acétaminophène et qui présentent un risque modéré de manifestations GI indésirables associées à la prise d’AINS?</value>
+  </data>
+  <data name="Question141" xml:space="preserve">
+    <value>AINS classique + misoprostol</value>
+  </data>
+  <data name="Question142" xml:space="preserve">
+    <value>AINS classique + antagoniste des récepteurs H2</value>
+  </data>
+  <data name="Question143" xml:space="preserve">
+    <value>AINS classique + IPP</value>
+  </data>
+  <data name="Question144" xml:space="preserve">
+    <value>Coxib + misoprostol</value>
+  </data>
+  <data name="Question145" xml:space="preserve">
+    <value>Coxib + antagoniste des récepteurs H2</value>
+  </data>
+  <data name="Question146" xml:space="preserve">
+    <value>Coxib + IPP</value>
+  </data>
+  <data name="Question147" xml:space="preserve">
+    <value>Autre (veuillez préciser)</value>
+  </data>
+  <data name="Question15" xml:space="preserve">
+    <value>15. Quelle est votre stratégie thérapeutique privilégiée pour les patients arthrosiques qui ne répondent pas à l’acétaminophène et qui présentent un risque élevé de manifestations GI indésirables associées à la prise d’AINS?</value>
+  </data>
+  <data name="Question151" xml:space="preserve">
+    <value>AINS classique + misoprostol</value>
+  </data>
+  <data name="Question152" xml:space="preserve">
+    <value>AINS classique + antagoniste des récepteurs H2</value>
+  </data>
+  <data name="Question153" xml:space="preserve">
+    <value>AINS classique + IPP</value>
+  </data>
+  <data name="Question154" xml:space="preserve">
+    <value>Coxib + misoprostol</value>
+  </data>
+  <data name="Question155" xml:space="preserve">
+    <value>Coxib + antagoniste des récepteurs H2</value>
+  </data>
+  <data name="Question156" xml:space="preserve">
+    <value>Coxib + IPP</value>
+  </data>
+  <data name="Question157" xml:space="preserve">
+    <value>Autre (veuillez préciser)</value>
+  </data>
+  <data name="Question16" xml:space="preserve">
+    <value>16. Georges est un homme de 65 ans qui a reçu un diagnostic d’arthrose il y a six mois et qui a des antécédents d’ulcère gastroduodénal non compliqué. À la lumière de ces données, comment classeriez-vous le risque de présenter une manifestation GI indésirable associée à la prise d’AINS auquel Georges est exposé?</value>
+  </data>
+  <data name="Question161" xml:space="preserve">
+    <value>Faible</value>
+  </data>
+  <data name="Question162" xml:space="preserve">
+    <value>Modéré</value>
+  </data>
+  <data name="Question163" xml:space="preserve">
+    <value>Élevé</value>
+  </data>
+  <data name="Question17" xml:space="preserve">
+    <value>17. Marie est une femme de 40 ans qui a fait récemment l’objet d’un diagnostic d’arthrose et qui a des antécédents de dyspepsie. Elle prend de l’acétaminophène à 1000 mg trois fois par jour, mais la douleur qu’elle éprouve l’empêche encore de vaquer normalement à ses activités quotidiennes. Le seul autre médicament qu’elle prend régulièrement est de la fluticasone pour traiter son asthme. Comment traiteriez-vous la douleur arthrosique tenace éprouvée par Marie? (Choisissez toutes les réponses qui s’appliquent.)</value>
+  </data>
+  <data name="Question171" xml:space="preserve">
+    <value>Augmentation de la dose d’acétaminophène</value>
+  </data>
+  <data name="Question172" xml:space="preserve">
+    <value>Prescription d’un AINS classique</value>
+  </data>
+  <data name="Question173" xml:space="preserve">
+    <value>Prescription d’un coxib</value>
+  </data>
+  <data name="Question174" xml:space="preserve">
+    <value>Prescription d’un agent gastroprotecteur</value>
+  </data>
+  <data name="Question175" xml:space="preserve">
+    <value>Autre (veuillez préciser)</value>
+  </data>
+  <data name="Question18" xml:space="preserve">
+    <value>18. Karine est une femme de 40 ans qui est atteinte d’arthrose et qui est traitée avec succès depuis trois ans par du diclofénac à 150 mg/jour. Elle a subi récemment une thrombose veineuse profonde causée par la prise de contraceptifs oraux et elle prend de la warfarine quotidiennement. Quel changement apporteriez-vous au traitement analgésique de Karine?</value>
+  </data>
+  <data name="Question181" xml:space="preserve">
+    <value>Aucun changement</value>
+  </data>
+  <data name="Question182" xml:space="preserve">
+    <value>Retrait du diclofénac et prescription d’un coxib</value>
+  </data>
+  <data name="Question183" xml:space="preserve">
+    <value>Réduction de la dose de diclofénac</value>
+  </data>
+  <data name="Question184" xml:space="preserve">
+    <value>Poursuite du traitement par le diclofénac et prescription d’un agent gastroprotecteur</value>
+  </data>
+  <data name="Question185" xml:space="preserve">
+    <value>Autre (veuillez préciser)</value>
+  </data>
+  <data name="Question19" xml:space="preserve">
+    <value>19. Pour quel pourcentage des patients à qui vous prescrivez des AINS tenez-vous compte des facteurs de risque GI?</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>2. L’évaluation des facteurs de risque GI chez les patients arthrosiques</value>
+  </data>
+  <data name="Question20" xml:space="preserve">
+    <value>20. Quel pourcentage de vos patients répondant aux critères suivants rangeriez-vous dans les catégories présentant un risque faible, modéré ou élevé de complications GI associées à la prise d’AINS? (Les pourcentages doivent totaliser 100 %):</value>
+  </data>
+  <data name="Question201" xml:space="preserve">
+    <value>Risque faible</value>
+  </data>
+  <data name="Question202" xml:space="preserve">
+    <value>Risque modéré</value>
+  </data>
+  <data name="Question203" xml:space="preserve">
+    <value>Risque élevé</value>
+  </data>
+  <data name="Question20Bullets" xml:space="preserve">
+    <value>&lt;div class="criteria"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;Diagnostic d’arthrose&lt;/li&gt;
+                        &lt;li&gt;Âge égal ou supérieur à 18 ans&lt;/li&gt;
+                        &lt;li&gt;Douleur nuisant à l’exécution des activités quotidiennes du patient&lt;/li&gt;
+                        &lt;li&gt;Indication pour le traitement au moyen d’AINS&lt;/li&gt;
+                    &lt;/ul&gt;
+			    &lt;/div&gt;</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>3. Les différents traitements offerts aux patients arthrosiques qui présentent un risque accru de manifestations GI indésirables associées à la prise d’AINS</value>
+  </data>
+  <data name="Question4" xml:space="preserve">
+    <value>4. Personnes âgées de 60 ans et plus</value>
+  </data>
+  <data name="Question5" xml:space="preserve">
+    <value>5. Antécédents de dyspepsie</value>
+  </data>
+  <data name="Question6" xml:space="preserve">
+    <value>6. AINS à forte dose</value>
+  </data>
+  <data name="Question7" xml:space="preserve">
+    <value>7. Prise concomitante d’AAS</value>
+  </data>
+  <data name="Question8" xml:space="preserve">
+    <value>8. Antécédents d’ulcère gastroduodénal non compliqué</value>
+  </data>
+  <data name="Question9" xml:space="preserve">
+    <value>9. Prise concomitante de corticostéroïdes</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Fiche de Contrôle du Programme 1</value>
+  </data>
+</root>

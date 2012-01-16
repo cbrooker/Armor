@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HeadingBefore16" xml:space="preserve">
+    <value>Patient Profiles</value>
+  </data>
+  <data name="HeadingBefore19" xml:space="preserve">
+    <value>Based on your own practice:</value>
+  </data>
+  <data name="PleaseRate" xml:space="preserve">
+    <value>Please rate your familiarity with the following:</value>
+  </data>
+  <data name="PleaseRate2" xml:space="preserve">
+    <value>Rate the following risk factors in terms of their importance in GI risk with NSAID use:</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>1. The LOGICA study (Lanas et al 2010)</value>
+  </data>
+  <data name="Question10" xml:space="preserve">
+    <value>10. Concomitant use of oral anticoagulants</value>
+  </data>
+  <data name="Question11" xml:space="preserve">
+    <value>11. History of bleeding peptic ulcer</value>
+  </data>
+  <data name="Question12" xml:space="preserve">
+    <value>12. In the LOGICA study, what percentage of 3,293 patients were at increased risk of experiencing a GI adverse event with NSAID use?</value>
+  </data>
+  <data name="Question12DontKnow" xml:space="preserve">
+    <value>I don't know</value>
+  </data>
+  <data name="Question13" xml:space="preserve">
+    <value>13. What was the most common GI risk factor in the LOGICA study?</value>
+  </data>
+  <data name="Question131" xml:space="preserve">
+    <value>Age 60 years or older</value>
+  </data>
+  <data name="Question132" xml:space="preserve">
+    <value>History of dyspepsia</value>
+  </data>
+  <data name="Question133" xml:space="preserve">
+    <value>High NSAID dose</value>
+  </data>
+  <data name="Question134" xml:space="preserve">
+    <value>Concomitant use of ASA</value>
+  </data>
+  <data name="Question135" xml:space="preserve">
+    <value>History of uncomplicated peptic ulcer</value>
+  </data>
+  <data name="Question136" xml:space="preserve">
+    <value>Concomitant use of corticosteroids</value>
+  </data>
+  <data name="Question137" xml:space="preserve">
+    <value>Concomitant use of oral anticoagulants</value>
+  </data>
+  <data name="Question138" xml:space="preserve">
+    <value>History of bleeding peptic ulcer</value>
+  </data>
+  <data name="Question139" xml:space="preserve">
+    <value>I don't know</value>
+  </data>
+  <data name="Question14" xml:space="preserve">
+    <value>14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class="underline"&gt;moderate&lt;/span&gt; risk of GI adverse events with NSAIDs?</value>
+  </data>
+  <data name="Question141" xml:space="preserve">
+    <value>Traditional NSAID + misoprostol</value>
+  </data>
+  <data name="Question142" xml:space="preserve">
+    <value>Traditional NSAID + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist</value>
+  </data>
+  <data name="Question143" xml:space="preserve">
+    <value>Traditional NSAID + PPI</value>
+  </data>
+  <data name="Question144" xml:space="preserve">
+    <value>Coxib + misoprostol</value>
+  </data>
+  <data name="Question145" xml:space="preserve">
+    <value>Coxib + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist</value>
+  </data>
+  <data name="Question146" xml:space="preserve">
+    <value>Coxib + PPI</value>
+  </data>
+  <data name="Question147" xml:space="preserve">
+    <value>Other (please specify)</value>
+  </data>
+  <data name="Question15" xml:space="preserve">
+    <value>15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class'underline'&gt;high&lt;/span&gt; risk of GI adverse events with NSAIDs?</value>
+  </data>
+  <data name="Question151" xml:space="preserve">
+    <value>Traditional NSAID + misoprostol</value>
+  </data>
+  <data name="Question152" xml:space="preserve">
+    <value>Traditional NSAID + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist</value>
+  </data>
+  <data name="Question153" xml:space="preserve">
+    <value>Traditional NSAID + PPI</value>
+  </data>
+  <data name="Question154" xml:space="preserve">
+    <value>Coxib + misoprostol</value>
+  </data>
+  <data name="Question155" xml:space="preserve">
+    <value>Coxib + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist</value>
+  </data>
+  <data name="Question156" xml:space="preserve">
+    <value>Coxib + PPI</value>
+  </data>
+  <data name="Question157" xml:space="preserve">
+    <value>Other (please specify)</value>
+  </data>
+  <data name="Question16" xml:space="preserve">
+    <value>16. Gary is a 65-year-old man with osteoarthritis that was diagnosed 6 months ago. He has a history of uncomplicated peptic ulcer. Based on this information, how would you classify Gary’s risk of experiencing a GI adverse event with NSAIDs?</value>
+  </data>
+  <data name="Question161" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Question162" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Question163" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Question17" xml:space="preserve">
+    <value>17. Mary is a 40-year-old woman with recently diagnosed OA and a history of dyspepsia. She has been taking acetaminophen 1,000 mg tid but her pain is still interfering with her daily activities. The only other medication that she takes regularly is fluticasone for asthma. How would you manage Mary’s ongoing OA pain? (Select all that apply)</value>
+  </data>
+  <data name="Question171" xml:space="preserve">
+    <value>Increase her dosage of acetaminophen</value>
+  </data>
+  <data name="Question172" xml:space="preserve">
+    <value>Prescribe a traditional NSAID</value>
+  </data>
+  <data name="Question173" xml:space="preserve">
+    <value>Prescribe a coxib</value>
+  </data>
+  <data name="Question174" xml:space="preserve">
+    <value>Prescribe a gastroprotective agent</value>
+  </data>
+  <data name="Question175" xml:space="preserve">
+    <value>Other (please specify)</value>
+  </data>
+  <data name="Question18" xml:space="preserve">
+    <value>18. Karen is a 40-year-old woman with OA that has been well managed with diclofenac 150 mg/day for the past three years. She recently experienced a DVT secondary to oral contraceptives and is taking daily warfarin. What change would you make to Karen’s pain medication?</value>
+  </data>
+  <data name="Question181" xml:space="preserve">
+    <value>No change</value>
+  </data>
+  <data name="Question182" xml:space="preserve">
+    <value>Take her off diclofenac and prescribe a coxib</value>
+  </data>
+  <data name="Question183" xml:space="preserve">
+    <value>Reduce her dose of diclofenac</value>
+  </data>
+  <data name="Question184" xml:space="preserve">
+    <value>Maintain her current dose of diclofenac and prescribe a gastroprotective agent</value>
+  </data>
+  <data name="Question185" xml:space="preserve">
+    <value>Other (please specify)</value>
+  </data>
+  <data name="Question19" xml:space="preserve">
+    <value>19. For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>2. Screening for GI risk factors in patients with OA</value>
+  </data>
+  <data name="Question20" xml:space="preserve">
+    <value>20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)</value>
+  </data>
+  <data name="Question201" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Question202" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="Question203" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Question20Bullets" xml:space="preserve">
+    <value>&lt;div class="criteria"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;Diagnosis of osteoarthritis&lt;/li&gt;
+                        &lt;li&gt;Aged 18 years or older&lt;/li&gt;
+                        &lt;li&gt;Pain that interferes with normal daily activities&lt;/li&gt;
+                        &lt;li&gt;Indication for NSAID treatment&lt;/li&gt;
+                    &lt;/ul&gt;
+			    &lt;/div&gt;</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>3. Treatment options for patients with OA who are at increased risk of GI adverse events associated with NSAID use</value>
+  </data>
+  <data name="Question4" xml:space="preserve">
+    <value>4. Age 60 years or older</value>
+  </data>
+  <data name="Question5" xml:space="preserve">
+    <value>5. History of dyspepsia</value>
+  </data>
+  <data name="Question6" xml:space="preserve">
+    <value>6. High NSAID dose</value>
+  </data>
+  <data name="Question7" xml:space="preserve">
+    <value>7. Concomitant use of ASA</value>
+  </data>
+  <data name="Question8" xml:space="preserve">
+    <value>8. History of uncomplicated peptic ulcer</value>
+  </data>
+  <data name="Question9" xml:space="preserve">
+    <value>9. Concomitant use of corticosteroids</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Program Evaluator Stage 1</value>
+  </data>
+</root>
