@@ -153,7 +153,7 @@
     <value>Knee</value>
   </data>
   <data name="Question11" xml:space="preserve">
-    <value>11. What percentage of this patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):</value>
+    <value>11. What percentage of these patients would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%):</value>
   </data>
   <data name="Question111" xml:space="preserve">
     <value>Low risk</value>
