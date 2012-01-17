@@ -166,6 +166,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.fr.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Views\Assessment\PatientAssessment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientAssessment.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Assessment\PatientAssessment.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientAssessment.fr.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\Assessment\PreAssessment.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +205,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SharedString.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Account\Registration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Account\Registration.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registration.fr.resx</DependentUpon>
     </Compile>
     <Compile Include="Views\Emails\AccountEmails.Designer.cs" />
   </ItemGroup>
@@ -349,6 +369,16 @@
       <LastGenOutput>Index.Designer.cs</LastGenOutput>
       <CustomToolNamespace>ViewRes.Assessment</CustomToolNamespace>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Assessment\PatientAssessment.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PatientAssessment.fr.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Assessment</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Assessment\PatientAssessment.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PatientAssessment.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Assessment</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Assessment\PreAssessment.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PreAssessment.fr.Designer.cs</LastGenOutput>
@@ -378,6 +408,16 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SharedString.Designer.cs</LastGenOutput>
       <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account\Registration.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Registration.fr.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Account</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account\Registration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Registration.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Account</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Emails\AccountEmails.resx" />
   </ItemGroup>

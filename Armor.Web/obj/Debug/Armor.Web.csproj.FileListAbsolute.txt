@@ -50,3 +50,7 @@ C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.Index
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.Index.fr.resources
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.ProgramEvaluatorStage1.resources
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.ProgramEvaluatorStage1.fr.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.PatientAssessment.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.PatientAssessment.fr.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Registration.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Registration.fr.resources
