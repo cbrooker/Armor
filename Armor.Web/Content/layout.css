@@ -1205,9 +1205,9 @@ label, legend {
 .hiddenSection { display: none; margin-left: 880px; }
 
 
-.green { color: Green; }
-.yellow { color: Yellow; }
-.red { color: red; }
+.green { color: #009900; }
+.yellow { color: #FFFF66; }
+.red { color: #9E0D0D; }
 
 .field-validation-error {
 
