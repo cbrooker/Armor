@@ -179,7 +179,7 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Low-dose ASA (<300 mg/day)", Value = "Low-dose ASA (<300 mg/day)" };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Selective serotonin reuptake inhibitor (citalopram, dapoxetine)", Value = "Selective serotonin reuptake inhibitor (citalopram, dapoxetine)" };
+                model = new AnswerModel() { Text = "Selective serotonin reuptake inhibitor (eg, citalopram, paroxetine)", Value = "Selective serotonin reuptake inhibitor (eg, citalopram, paroxetine)" };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = "Anticoagulant (eg, warfarin)", Value = "Anticoagulant (eg, warfarin)" };
                 TheList.Add(model);
