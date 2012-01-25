@@ -124,10 +124,10 @@
     <value>Based on your own practice:</value>
   </data>
   <data name="PleaseRate" xml:space="preserve">
-    <value>Please rate your familiarity with the following:</value>
+    <value>Please rate your familiarity with the following: (1 = not familiar at all, 10 = very familiar):</value>
   </data>
   <data name="PleaseRate2" xml:space="preserve">
-    <value>Rate the following risk factors in terms of their importance in GI risk with NSAID use:</value>
+    <value>Rate the following risk factors in terms of their importance in GI risk with NSAID use (1 = low risk, 10 = high risk):</value>
   </data>
   <data name="Question1" xml:space="preserve">
     <value>1. The LOGICA study (Lanas et al 2010)</value>
@@ -175,7 +175,7 @@
     <value>I don't know</value>
   </data>
   <data name="Question14" xml:space="preserve">
-    <value>14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class="underline"&gt;moderate&lt;/span&gt; risk of GI adverse events with NSAIDs?</value>
+    <value>14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;strong&gt;&lt;span class="underline"&gt;moderate risk&lt;/span&gt;&lt;/strong&gt; of GI adverse events with NSAIDs?</value>
   </data>
   <data name="Question141" xml:space="preserve">
     <value>Traditional NSAID + misoprostol</value>
@@ -199,7 +199,7 @@
     <value>Other (please specify)</value>
   </data>
   <data name="Question15" xml:space="preserve">
-    <value>15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class'underline'&gt;high&lt;/span&gt; risk of GI adverse events with NSAIDs?</value>
+    <value>15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;strong&gt;&lt;span class'underline'&gt;high risk&lt;/span&gt;&lt;/strong&gt; of GI adverse events with NSAIDs?</value>
   </data>
   <data name="Question151" xml:space="preserve">
     <value>Traditional NSAID + misoprostol</value>
