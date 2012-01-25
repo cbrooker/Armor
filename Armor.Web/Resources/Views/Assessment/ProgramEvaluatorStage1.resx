@@ -124,10 +124,10 @@
     <value>Based on your own practice:</value>
   </data>
   <data name="PleaseRate" xml:space="preserve">
-    <value>Please rate your familiarity with the following: (1 = not familiar at all, 10 = very familiar):</value>
+    <value>Please rate your familiarity with the following &lt;br /&gt; (1 = not familiar at all, 10 = very familiar):</value>
   </data>
   <data name="PleaseRate2" xml:space="preserve">
-    <value>Rate the following risk factors in terms of their importance in GI risk with NSAID use (1 = low risk, 10 = high risk):</value>
+    <value>Rate the following risk factors in terms of their importance in GI risk with NSAID use &lt;br /&gt; (1 = low risk, 10 = high risk):</value>
   </data>
   <data name="Question1" xml:space="preserve">
     <value>1. The LOGICA study (Lanas et al 2010)</value>
