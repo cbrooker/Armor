@@ -1,4 +1,4 @@
-﻿
+
 $(function () {
 
 
@@ -175,7 +175,7 @@ $(function () {
         if ((Green == 1 || Green == 2) || (Yellow >= 2 && Blue == 0)) { $(".GIRisk").val("Moderate risk"); $(".GIRisk").html("Moderate risk").addClass("yellow"); }
         if (Green >= 3 || (Green >= 2 && Yellow >= 2) || Blue >= 1) { $(".GIRisk").val("High risk"); $(".GIRisk").html("High risk").addClass("red"); }
 
-        alert("Green=" + Green + " Yellow=" + Yellow + " Blue=" + Blue);
+     //   alert("Green=" + Green + " Yellow=" + Yellow + " Blue=" + Blue);
 
     }
 
