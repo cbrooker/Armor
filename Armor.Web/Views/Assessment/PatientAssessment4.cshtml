@@ -20,6 +20,12 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
        
+        @Html.HiddenFor(Model => Model.Question1)
+        @Html.HiddenFor(Model => Model.Question8)
+        @Html.HiddenFor(Model => Model.Question9)
+        @Html.HiddenFor(Model => Model.Question10)
+    
+    
         <div id="Section4" class="horizontalSlide">
             <h3>Page 4 of 4</h3>
             <div class="editor-label">

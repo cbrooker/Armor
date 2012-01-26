@@ -224,12 +224,16 @@
     <Content Include="!Database Creation Script\Armor.sql" />
     <Content Include="Content\base.css" />
     <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\background_old.jpg" />
     <Content Include="Content\images\checkbox.jpg" />
     <Content Include="Content\images\checkedbox.jpg" />
     <Content Include="Content\images\containerbackground.png" />
+    <Content Include="Content\images\full_background.png" />
     <Content Include="Content\images\full_logo.png" />
     <Content Include="Content\images\green_arrow.png" />
     <Content Include="Content\images\headerbackground.png" />
+    <Content Include="Content\images\headerbackground_old.png" />
+    <Content Include="Content\images\main_background.png" />
     <Content Include="Content\images\registrationbackground.png" />
     <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\images\ui-bg_flat_75_ffffff_40x100.png" />

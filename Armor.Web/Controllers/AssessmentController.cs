@@ -675,19 +675,16 @@ namespace Armor.Web.Controllers
             return View(model);
         }
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
-        public ActionResult PatientAssessment2()
+        public ActionResult PatientAssessment2(PatientAssessmentViewModel model)
         {
-            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
             return View(model);
         }
-        public ActionResult PatientAssessment3()
+        public ActionResult PatientAssessment3(PatientAssessmentViewModel model)
         {
-            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
             return View(model);
         }
-        public ActionResult PatientAssessment4()
+        public ActionResult PatientAssessment4(PatientAssessmentViewModel model)
         {
-            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
             return View(model);
         }
 
@@ -742,11 +739,17 @@ namespace Armor.Web.Controllers
                 S1.Question6 = model.Question6.ToString();
                 S1.Question7 = fc["Question7"];
 
-                S1.Question8 = fc["Question8"];
-                if (S1.Question8 == "H pylori infection")
+
+                int i = 1;
+                foreach (AnswerModel item in model.Question8)
                 {
-                    S1.Question8 = "H pylori infection - " + fc["Question8_2"];
+                    if (fc.Get("Question8.AnswerCheck" + i) != "false")
+                    {
+                        S1.Question8 += item.Value + "; ";
+                    }
+                    i++;
                 }
+                
 
                 //9 add to an object, then serialize to JSON, store the string.
                 OEMedicationMatrix OEM = new OEMedicationMatrix();
