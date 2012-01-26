@@ -298,7 +298,7 @@ namespace Armor.Web.Controllers
                 int i = 1;
                 foreach (AnswerModel item in model.Question17)
                 {
-                    if (fc.Get("Question17" + i) != "false")
+                    if (fc.Get("Question17.AnswerCheck" + i) != "false")
                     {
                         S1.Question17 += item.Value + "; ";
                     }
@@ -453,7 +453,7 @@ namespace Armor.Web.Controllers
                 int i = 1;
                 foreach (AnswerModel item in model.Question17)
                 {
-                    if (fc.Get("Question17" + i) != "false")
+                    if (fc.Get("Question17.AnswerCheck" + i) != "false")
                     {
                         S2.Question17 += item.Value + "; ";
                     }
@@ -605,7 +605,7 @@ namespace Armor.Web.Controllers
                 int i = 1;
                 foreach (AnswerModel item in model.Question17)
                 {
-                    if (fc.Get("Question17" + i) != "false")
+                    if (fc.Get("Question17.AnswerCheck" + i) != "false")
                     {
                         S3.Question17 += item.Value + "; ";
                     }
@@ -706,7 +706,7 @@ namespace Armor.Web.Controllers
                 int i=1;
                 foreach (AnswerModel item in model.Question3)
                 {
-                    if (fc.Get("Question3" + i) != "false")
+                    if (fc.Get("Question3.AnswerCheck" + i) != "false")
                     {
                         S1.Question3 += item.Value + "; ";
                     }
