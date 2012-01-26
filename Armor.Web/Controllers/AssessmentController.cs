@@ -50,12 +50,16 @@ namespace Armor.Web.Controllers
             if (model.PatientAssessmentState == AssessmentState.Complete)
             {
                 //if (US.PatientAssessmentComplete(CurrentUserID)) model.PatientAssessmentState = AssessmentState.Complete; else model.PatientAssessmentState = AssessmentState.Enabled;
-            }
-
-            if (model.ProgramStage2State == AssessmentState.Complete)
-            {
                 if (US.ProgramStage3Complete(CurrentUserID)) model.ProgramStage3State = AssessmentState.Complete; else model.ProgramStage3State = AssessmentState.Enabled;
             }
+
+
+
+
+            //if (model.ProgramStage2State == AssessmentState.Complete)
+            //{
+            //    if (US.ProgramStage3Complete(CurrentUserID)) model.ProgramStage3State = AssessmentState.Complete; else model.ProgramStage3State = AssessmentState.Enabled;
+            //}
 
             return View(model);
         }

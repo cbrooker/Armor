@@ -187,15 +187,18 @@
     <value>AINS classique + IPP</value>
   </data>
   <data name="Question144" xml:space="preserve">
-    <value>Coxib + misoprostol</value>
+    <value>Coxib</value>
   </data>
   <data name="Question145" xml:space="preserve">
-    <value>Coxib + antagoniste des récepteurs H2</value>
+    <value>Coxib + misoprostol</value>
   </data>
   <data name="Question146" xml:space="preserve">
-    <value>Coxib + IPP</value>
+    <value>Coxib + antagoniste des récepteurs H2</value>
   </data>
   <data name="Question147" xml:space="preserve">
+    <value>Coxib + IPP</value>
+  </data>
+  <data name="Question148" xml:space="preserve">
     <value>Autre (veuillez préciser)</value>
   </data>
   <data name="Question15" xml:space="preserve">
@@ -211,15 +214,18 @@
     <value>AINS classique + IPP</value>
   </data>
   <data name="Question154" xml:space="preserve">
-    <value>Coxib + misoprostol</value>
+    <value>Coxib</value>
   </data>
   <data name="Question155" xml:space="preserve">
-    <value>Coxib + antagoniste des récepteurs H2</value>
+    <value>Coxib + misoprostol</value>
   </data>
   <data name="Question156" xml:space="preserve">
-    <value>Coxib + IPP</value>
+    <value>Coxib + antagoniste des récepteurs H2</value>
   </data>
   <data name="Question157" xml:space="preserve">
+    <value>Coxib + IPP</value>
+  </data>
+  <data name="Question158" xml:space="preserve">
     <value>Autre (veuillez préciser)</value>
   </data>
   <data name="Question16" xml:space="preserve">

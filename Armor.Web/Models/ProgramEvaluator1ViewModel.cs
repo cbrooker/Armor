@@ -124,6 +124,8 @@ namespace Armor.Web.Models
                 TheList.Add(model);
                 model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question147, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question147 };
                 TheList.Add(model);
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question148, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question148 };
+                TheList.Add(model);
                 return TheList;
             }
         }
@@ -149,6 +151,8 @@ namespace Armor.Web.Models
                 model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question156, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question156 };
                 TheList.Add(model);
                 model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question157, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question157 };
+                TheList.Add(model);
+                model = new AnswerModel() { Text = ViewRes.Assessment.ProgramEvaluatorStage1.Question158, Value = ViewRes.Assessment.ProgramEvaluatorStage1.Question158 };
                 TheList.Add(model);
                 return TheList;
             }

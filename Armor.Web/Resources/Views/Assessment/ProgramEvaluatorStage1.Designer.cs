@@ -268,7 +268,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + misoprostol.
+        ///   Looks up a localized string similar to Coxib.
         /// </summary>
         public static string Question144 {
             get {
@@ -277,7 +277,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
+        ///   Looks up a localized string similar to Coxib + misoprostol.
         /// </summary>
         public static string Question145 {
             get {
@@ -286,7 +286,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + PPI.
+        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
         /// </summary>
         public static string Question146 {
             get {
@@ -295,11 +295,20 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Other (please specify).
+        ///   Looks up a localized string similar to Coxib + PPI.
         /// </summary>
         public static string Question147 {
             get {
                 return ResourceManager.GetString("Question147", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other (please specify).
+        /// </summary>
+        public static string Question148 {
+            get {
+                return ResourceManager.GetString("Question148", resourceCulture);
             }
         }
         
@@ -340,7 +349,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + misoprostol.
+        ///   Looks up a localized string similar to Coxib.
         /// </summary>
         public static string Question154 {
             get {
@@ -349,7 +358,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
+        ///   Looks up a localized string similar to Coxib + misoprostol.
         /// </summary>
         public static string Question155 {
             get {
@@ -358,7 +367,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + PPI.
+        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
         /// </summary>
         public static string Question156 {
             get {
@@ -367,11 +376,20 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Other (please specify).
+        ///   Looks up a localized string similar to Coxib + PPI.
         /// </summary>
         public static string Question157 {
             get {
                 return ResourceManager.GetString("Question157", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other (please specify).
+        /// </summary>
+        public static string Question158 {
+            get {
+                return ResourceManager.GetString("Question158", resourceCulture);
             }
         }
         
