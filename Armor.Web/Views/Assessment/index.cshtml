@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="@Url.Content("~/Scripts/jquery.blockUI.js")" type="text/javascript"></script>
 
 <div id="registationProfileButton">
     <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
@@ -26,8 +27,8 @@
 </div>
 <script language="javascript" type="text/javascript">
 
-//    $(document).ready(function () { 
-//        $(".disabled").block({ message: null });
-//    });
+    $(document).ready(function () {
+        $(".disabled").parent().parent().block({ message: null, overlayCSS: { marginTop: 15, cursor: 'default'} });
+    });
 
 </script>

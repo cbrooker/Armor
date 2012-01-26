@@ -221,6 +221,7 @@
     <Compile Include="Views\Emails\AccountEmails.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="!Database Creation Script\Armor.sql" />
     <Content Include="Content\base.css" />
     <Content Include="Content\images\background.jpg" />
     <Content Include="Content\images\checkbox.jpg" />
@@ -439,7 +440,6 @@
     <EmbeddedResource Include="Views\Emails\AccountEmails.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="!Database Creation Script\" />
     <Folder Include="Content\themes\base\images\" />
     <Folder Include="Resources\Views\Home\" />
   </ItemGroup>
