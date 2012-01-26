@@ -847,7 +847,7 @@ namespace Armor.Web.Controllers
 
                 PAS.Save(S1);
 
-                return RedirectToAction("index");
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -970,7 +970,7 @@ namespace Armor.Web.Controllers
 
                 PAS.Save(S1);
 
-                return RedirectToAction("index");
+                return RedirectToAction("Index");
             }
             catch
             {
