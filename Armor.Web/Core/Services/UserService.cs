@@ -42,12 +42,22 @@ namespace Armor.Web {
 
         public bool PreAssessmentComplete(Guid UserID)
         {
-            if (db.PreAssessments.Where(i => i.UserID == UserID).Count() > 0) return true;
+            if (db.PreAssessments.Where(i => i.UserID == UserID & i.Question12 != null).Count() > 0) return true;
             else return false;
         }
         public bool ProgramStage1Complete(Guid UserID)
         {
-            if (db.ProgramEvaluatorStage1s.Where(i => i.UserID == UserID).Count() > 0) return true;
+            if (db.ProgramEvaluatorStage1s.Where(i => i.UserID == UserID & i.Question20 != null).Count() > 0) return true;
+            else return false;
+        }
+        public bool ProgramStage2Complete(Guid UserID)
+        {
+            if (db.ProgramEvaluatorStage2s.Where(i => i.UserID == UserID & i.Question20 != null).Count() > 0) return true;
+            else return false;
+        }
+        public bool ProgramStage3Complete(Guid UserID)
+        {
+            if (db.ProgramEvaluatorStage3s.Where(i => i.UserID == UserID & i.Question20 != null).Count() > 0) return true;
             else return false;
         }
 

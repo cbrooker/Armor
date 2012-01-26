@@ -19,41 +19,41 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-    
-    <div style="overflow: hidden;">
-        <div id="Section1" class="horizontalSlide">
-            <h3>Page 1 of 5</h3>
-            <h4>@Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.PleaseRate)</h4>
-            <div class="editor-label intQuestion">
-                @*@Html.LabelFor(model => model.Question1)*@
-                @ViewRes.Assessment.ProgramEvaluatorStage1.Question1
-            </div>
-            <div class="editor-field intQuestion">
-                @Html.EditorFor(model => model.Question1, "OneToTenInt")
-                @Html.ValidationMessageFor(model => model.Question1)
-            </div>
 
-            <div class="editor-label intQuestion">
-                @*@Html.LabelFor(model => model.Question2)*@
-                @ViewRes.Assessment.ProgramEvaluatorStage1.Question2
-            </div>
-            <div class="editor-field intQuestion">
-                @Html.EditorFor(model => model.Question2, "OneToTenInt")
-                @Html.ValidationMessageFor(model => model.Question2)
-            </div>
+    <div id="Section1" class="horizontalSlide">
+        <h3>Page 1 of 5</h3>
+        <h4>@Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.PleaseRate)</h4>
+        <div class="editor-label intQuestion">
+            @*@Html.LabelFor(model => model.Question1)*@
+            @ViewRes.Assessment.ProgramEvaluatorStage1.Question1
+        </div>
+        <div class="editor-field intQuestion">
+            @Html.EditorFor(model => model.Question1, "OneToTenInt")
+            @Html.ValidationMessageFor(model => model.Question1)
+        </div>
 
-            <div class="editor-label intQuestion">
-                @*@Html.LabelFor(model => model.Question3)*@
-                @ViewRes.Assessment.ProgramEvaluatorStage1.Question3
-            </div>
-            <div class="editor-field intQuestion">
-                @Html.EditorFor(model => model.Question3, "OneToTenInt")
-                @Html.ValidationMessageFor(model => model.Question3)
-            </div>
-            <div class="submitButton">
-                <input type="button"  onclick="$(form).submit();" value="Next ->" />
-            </div>
+        <div class="editor-label intQuestion">
+            @*@Html.LabelFor(model => model.Question2)*@
+            @ViewRes.Assessment.ProgramEvaluatorStage1.Question2
+        </div>
+        <div class="editor-field intQuestion">
+            @Html.EditorFor(model => model.Question2, "OneToTenInt")
+            @Html.ValidationMessageFor(model => model.Question2)
+        </div>
+
+        <div class="editor-label intQuestion">
+            @*@Html.LabelFor(model => model.Question3)*@
+            @ViewRes.Assessment.ProgramEvaluatorStage1.Question3
+        </div>
+        <div class="editor-field intQuestion">
+            @Html.EditorFor(model => model.Question3, "OneToTenInt")
+            @Html.ValidationMessageFor(model => model.Question3)
+        </div>
+            
+        <div class="submitButton">
+            <input type="button"  onclick="$(form).submit();" value="Next ->" />
         </div>
     </div>
+    
 }
 </div>

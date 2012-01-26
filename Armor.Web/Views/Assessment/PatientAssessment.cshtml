@@ -14,12 +14,12 @@
 <h2>Patient Assessment</h2>
 <h3>To be completed by physician for patients who meet the following criteria:</h3>
 <div class="criteria">
-<ul>
-    <li>Diagnosis of osteoarthritis</li>
-    <li>Aged 18 years or older</li>
-    <li>Has pain that interferes with normal daily activities</li>
-    <li>Has an indication for NSAID treatment</li>
-</ul>
+    <ul>
+        <li>Diagnosis of osteoarthritis</li>
+        <li>Aged 18 years or older</li>
+        <li>Has pain that interferes with normal daily activities</li>
+        <li>Has an indication for NSAID treatment</li>
+    </ul>
 </div>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
@@ -27,51 +27,50 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-  <div style="overflow: hidden;">
+
         <div id="Section1" class="horizontalSlide">
-		    <div class="numbers">
+            <h3>Page 1 of 4</h3>
+            <div class="numbers">
+                <div class="editor-label">
+                    @*@Html.LabelFor(model => model.Question1)*@
+                    1. Age
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Question1, "AnswerOptions")
+                    @Html.ValidationMessageFor(model => model.Question1)
+                </div>
+            </div>
+            <div class="numbers">
 
             <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question1)*@
-                1. Age
+            @*@Html.LabelFor(model => model.Question2)*@
+            2. Gender
             </div>
             <div class="editor-field">
-                @Html.EditorFor(model => model.Question1, "AnswerOptions")
-                @Html.ValidationMessageFor(model => model.Question1)
+            @Html.EditorFor(model => model.Question2, "AnswerOptions")
+            @Html.ValidationMessageFor(model => model.Question2)
             </div>
-			</div>
-        <div class="numbers">
-
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question2)*@
-                2. Gender
             </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question2, "AnswerOptions")
-                @Html.ValidationMessageFor(model => model.Question2)
-            </div>
-			</div>
-        <div class="numbers">
-
+            
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question3)*@
                 3. Type of OA (select all that apply)
             </div>
             <div class="editor-field">
-                @Html.EditorFor(model => model.Question3, "AnswerOptions")
+                @Html.EditorFor(model => model.Question3, "AnswerCheckboxes")
                 @Html.ValidationMessageFor(model => model.Question3)
             </div>
-			</div>
-    <div class="numbers">
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question4)*@
-                4. Is this patient overweight (ie, BMI >25)
+            
+            <div class="numbers">
+                <div class="editor-label">
+                    @*@Html.LabelFor(model => model.Question4)*@
+                    4. Is this patient overweight (ie, BMI >25)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Question4, "AnswerOptions")
+                    @Html.ValidationMessageFor(model => model.Question4)
+                </div>
             </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question4, "AnswerOptions")
-                @Html.ValidationMessageFor(model => model.Question4)
-            </div>
-    </div>
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question5)*@
                 5. Smoking status
@@ -82,289 +81,9 @@
             </div>
 
             <div class="submitButton">
-                <input type="button" id="Section1Button" value="Next ->" />
+                <input type="button"  onclick="$(form).submit();" value="Next ->" />
             </div>
         </div>
-    
-    
-        <div id="Section2" class="hiddenSection horizontalSlide" >
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question6)*@
-                6. Average number of alcoholic drinks per week
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question6)
-                @Html.ValidationMessageFor(model => model.Question6)
-            </div>
-    <div class="numbers">
 
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question7)*@
-                7. Does this patient use illicit/recreational drugs?
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question7, "AnswerOptions")
-                @Html.ValidationMessageFor(model => model.Question7)
-            </div>
-    </div>
-    <div class="question8">
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question8)*@
-                8. History of
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question8, "AnswerOptionsGeneric")
-                @Html.ValidationMessageFor(model => model.Question8)
-            </div>
-    </div>
-        
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question9)*@
-                9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)
-            </div>
-            <div class="editor-field">
-   <table>
-                    <tr>
-                        <th>Medication</th>
-                        <th colspan="2">Dose (mg/day)</th>
-                    </tr>
-                    <tr>
-                        <td>Acetaminophen</td>
-                        <td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen < 3000mg/day") < 3000</label>
-                                                </td><td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen >3000mg/day") > 3000</label>
-
-                    </td></tr>
-                   <!-- <tr>
-                        <td>Traditional NSAID</td>
-                        <td></td>
-                    </tr> -->
-                    <tr>
-                        <td class="indent">Aspirin (>300 mg)</td>
-                        <td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin < 3000") < 3000</label></td><td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin > 3000") > 3000</label>
-                    </td></tr>
-                    <tr>
-                        <td class="indent">Diclofenac</td>
-                        <td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 100") 100</label></td><td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 150mg/day") 150</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Diclofenac/misoprostol</td>
-                        <td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") 100 (diclofenac) </label></td><td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") 150 (diclofenac)</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Ibuprofen</td>
-                        <td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen < 1200mg/day") < 1200mg/day</label></td><td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen >= 1200mg/day") >= 1200mg/day</label>
-                    </td></tr>
-                    <tr>
-                        <td class="indent">Indomethacin</td>
-                        <td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin < 200") < 200</label></td><td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin >= 200") >= 200</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Meloxicam</td>
-                        <td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam < 15") < 15</label></td><td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam >= 15") >= 15</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Naproxen</td>
-                        <td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen < 1000") < 1000</label></td><td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen >= 1000") >= 1000</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Naproxen—PPI
-                        </td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI < 1000") < 1000 (naproxen)</label></td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI >= 1000") >= 1000 (naproxen)</label></td>
-                    </tr>
-                  <!--  <tr>
-                        <td>Coxibs</td>
-                        <td></td>
-                    </tr> -->
-                    <tr>
-                        <td class="indent">Celecoxib</td>
-                        <td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib < 200") < 200</label></td><td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib >= 200") >= 200</label></td>
-                    </tr>
-                   <!-- <tr>
-                        <td>Opioids/combinations</td>
-                        <td></td>
-                    </tr> -->
-                    <tr>
-                        <td class="indent">Acetaminophen/tramadol</td>
-                        <td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300") < 3000/300</label></td><td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol > 3000/300") > 3000/300</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Codeine (in combination with acetaminophen)</td>
-                        <td><label>@Html.RadioButton("Question9_Codeine", "Codeine < 360") < 360 (codeine)</label></td><td><label>@Html.RadioButton("Question9_Codeine", "Codeine > 360") > 360 (codeine)</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Tramadol</td>
-                        <td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol < 300") < 300</label></td><td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol > 300") > 300</label></td>
-                    </tr>
-                    <tr>
-                        <td class="indent">Other</td>
-                        <td>@Html.TextBox("Question9_Other")</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="submitButton">
-                <input type="button" id="Section2Button" value="Next ->" />
-            </div>
-        </div>
-    
-        <div id="Section3" class="hiddenSection horizontalSlide">
-    
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question10)*@
-                10. Which of the following other medication(s) is this patient currently taking? (Select all that apply)
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question10, "AnswerCheckboxes")
-                @Html.ValidationMessageFor(model => model.Question10)
-            </div>
-    
-    
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question11)*@
-                11. How would you categorize this patient’s GI risk?
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Question11, "AnswerOptions")
-                @Html.ValidationMessageFor(model => model.Question11)
-            </div>
-    
-
-            <div class="submitButton">
-                <input type="button" id="Section3Button" value="Next ->" />
-            </div>
-
-
-
-
-
-        </div>
-
-        <div id="Section4" class="hiddenSection horizontalSlide">
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question12)*@
-                12. Your patient’s GI risk: <h3 class="GIRisk"></h3>
-            </div>
-            <div class="editor-field">
-                @*Karim - This can be changed to show the results in pretty much anyway you want, just let me know.*@
-                @*@Html.EditorFor(model => model.Question12)*@
-                @Html.HiddenFor(model => model.Question12, new { @class = "GIRisk" })
-            </div>
-
-    
-    
-            <div class="editor-label">
-                @*@Html.LabelFor(model => model.Question13)*@
-                13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)
-            </div>
-            <div class="editor-field">
-                <table>
-                    <tr>
-                        <td>@Html.RadioButton("Ques13Radio", "No Change")</td>
-                        <td colspan="2">No Change</td>
-                    </tr>
-                    <tr>
-                        <td>@Html.RadioButton("Ques13Radio", "Switch to")</td>
-                        <td colspan="2">
-                            Switch to:<br />
-                            <table>
-                                
-                                <tr>
-                                    <th>Medication</th>
-                                    <th colspan="2">Dose (mg/day)</th>
-                                </tr>
-                                <tr>
-                                    <td>Acetaminophen</td>
-                                    <td><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen < 3000") < 3000</label></td><td><label>@Html.RadioButton("Question13_Acetaminophen", "Acetaminophen > 3000") > 3000</label>
-                                </td></tr>
-                              <!--  <tr>
-                                    <td>Traditional NSAID</td>
-                                    <td></td>
-                                </tr>-->
-                                <tr>
-                                    <td class="indent">Aspirin (>300 mg)</td>
-                                    <td><label>@Html.RadioButton("Question13_Aspirin", "Aspirin < 3000") < 3000</label></td><td><label>@Html.RadioButton("Question13_Aspirin", "Aspirin > 3000") > 3000</label>
-                                </td></tr>
-                                <tr>
-                                    <td class="indent">Diclofenac</td>
-                                    <td><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 100") 100</label></td><td><label>@Html.RadioButton("Question13_Diclofenac", "Diclofenac 150") 150</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Diclofenac/misoprostol</td>
-                                    <td><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 (diclofenac)") 100 (diclofenac) </label></td><td><label>@Html.RadioButton("Question13_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 (diclofenac)") 150 (diclofenac)</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Ibuprofen</td>
-                                    <td><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen < 1200") < 1200</label></td><td><label>@Html.RadioButton("Question13_Ibuprofen", "Ibuprofen >= 1200") >= 1200</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Indomethacin</td>
-                                    <td><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin < 200") < 200</label></td><td><label>@Html.RadioButton("Question13_Indomethacin", "Indomethacin >= 200") >= 200</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Meloxicam</td>
-                                    <td><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam < 15") < 15</label></td><td><label>@Html.RadioButton("Question13_Meloxicam", "Meloxicam >= 15") >= 15</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Naproxen</td>
-                                    <td><label>@Html.RadioButton("Question13_Naproxen", "Naproxen < 1000") < 1000</label></td><td><label>@Html.RadioButton("Question13_Naproxen", "Naproxen >= 1000") >= 1000</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Naproxen—PPI
-                                    </td><td><label>@Html.RadioButton("Question13_Naproxen—PPI", "Naproxen—PPI < 1000") < 1000 (naproxen)</label></td><td><label>@Html.RadioButton("Question13_Naproxen—PPI", "Naproxen—PPI >= 1000") >= 1000 (naproxen)</label></td>
-                                </tr>
-            <!--                    <tr>
-                                    <td>Coxibs</td>
-                                    <td></td>
-                                </tr>-->
-                                <tr>
-                                    <td class="indent">Celecoxib</td>
-                                    <td><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib < 200") < 200</label></td><td><label>@Html.RadioButton("Question13_Celecoxib", "Celecoxib >= 200") >= 200</label></td>
-                                </tr>
-            <!--                    <tr>
-                                    <td>Opioids/combinations</td>
-                                    <td></td>
-                                </tr>-->
-                                <tr>
-                                    <td class="indent">Acetaminophen/tramadol</td>
-                                    <td><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300") < 3000/300</label></td><td><label>@Html.RadioButton("Question13_Acetaminophen/tramadol", "Acetaminophen/tramadol > 3000/300") > 3000/300</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Codeine (in combination with acetaminophen)</td>
-                                    <td><label>@Html.RadioButton("Question13_Codeine", "Codeine < 360") < 360 (codeine)</label></td><td><label>@Html.RadioButton("Question13_Codeine", "Codeine > 360") > 360 (codeine)</label></td>
-                                </tr>
-                                <tr>
-                                    <td class="indent">Tramadol</td>
-                                    <td><label>@Html.RadioButton("Question13_Tramadol", "Tramadol < 300") < 300</label></td><td><label>@Html.RadioButton("Question13_Tramadol", "Tramadol > 300") > 300</label></td>
-                                </tr>
-								
-                            </table>
-                        </td>
-                    </tr>
-					<tr>
-                        <td>@Html.RadioButton("Question13_Gastro", "Add a gastroprotective agent")</td>
-                        <td>Add a gastroprotective agent</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>@Html.RadioButton("Ques13Radio", "Other")</td>
-                        <td>Other</td>
-                        <td>@Html.TextBox("Question13_Other")</td>
-                    </tr>
-                </table>
-                
-
-
-                @Html.ValidationMessageFor(model => model.Question13)
-
-
-                <div class="submitButton">
-                    <input type="submit" value="Submit" />
-                </div>
-
-            </div>
-        
-        </div>
-
-
-    </div>
 }
 </div>

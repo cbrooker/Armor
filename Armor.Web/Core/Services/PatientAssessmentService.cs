@@ -21,6 +21,10 @@ namespace Armor.Web {
 
             return base.GetRepository<PatientAssessment>().Add(entity);
         }
+        public PatientAssessment GetByID(int ID)
+        {
+            return db.PatientAssessments.Where(e => e.ID == ID).FirstOrDefault();
+        }
 
     }
 }

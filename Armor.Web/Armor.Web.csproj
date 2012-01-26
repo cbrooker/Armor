@@ -264,8 +264,10 @@
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.5.1.js" />
     <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
@@ -356,6 +358,9 @@
     <Content Include="Views\Assessment\ProgramEvaluatorStage32.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage33.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage34.cshtml" />
+    <Content Include="Views\Assessment\PatientAssessment2.cshtml" />
+    <Content Include="Views\Assessment\PatientAssessment4.cshtml" />
+    <Content Include="Views\Assessment\PatientAssessment3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -434,6 +439,7 @@
     <EmbeddedResource Include="Views\Emails\AccountEmails.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="!Database Creation Script\" />
     <Folder Include="Content\themes\base\images\" />
     <Folder Include="Resources\Views\Home\" />
   </ItemGroup>

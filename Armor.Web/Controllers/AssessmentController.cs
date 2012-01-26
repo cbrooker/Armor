@@ -34,11 +34,12 @@ namespace Armor.Web.Controllers
                 if (US.ProgramStage1Complete(CurrentUserID)) model.ProgramStage1State = AssessmentState.Complete; else model.ProgramStage1State = AssessmentState.Enabled;
             }
 
-            //Do for Stage 2
-
-
-
             if (model.ProgramStage1State == AssessmentState.Complete)
+            {
+                if (US.ProgramStage2Complete(CurrentUserID)) model.ProgramStage2State = AssessmentState.Complete; else model.ProgramStage2State = AssessmentState.Enabled;
+            }
+
+            if (model.ProgramStage2State == AssessmentState.Complete)
             {
                 //Only complete after 25 assessments
                 if (US.PatientAssessmentComplete(CurrentUserID)) model.PatientAssessmentState = AssessmentState.Complete; else model.PatientAssessmentState = AssessmentState.Enabled;
@@ -49,6 +50,11 @@ namespace Armor.Web.Controllers
             if (model.PatientAssessmentState == AssessmentState.Complete)
             {
                 //if (US.PatientAssessmentComplete(CurrentUserID)) model.PatientAssessmentState = AssessmentState.Complete; else model.PatientAssessmentState = AssessmentState.Enabled;
+            }
+
+            if (model.ProgramStage2State == AssessmentState.Complete)
+            {
+                if (US.ProgramStage3Complete(CurrentUserID)) model.ProgramStage3State = AssessmentState.Complete; else model.ProgramStage3State = AssessmentState.Enabled;
             }
 
             return View(model);
@@ -664,6 +670,24 @@ namespace Armor.Web.Controllers
             PatientAssessmentViewModel model = new PatientAssessmentViewModel();
             return View(model);
         }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult PatientAssessment2()
+        {
+            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
+            return View(model);
+        }
+        public ActionResult PatientAssessment3()
+        {
+            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
+            return View(model);
+        }
+        public ActionResult PatientAssessment4()
+        {
+            PatientAssessmentViewModel model = new PatientAssessmentViewModel();
+            return View(model);
+        }
+
+
 
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         [HttpPost]
@@ -671,7 +695,6 @@ namespace Armor.Web.Controllers
         {
             try
             {
-
                 PatientAssessmentService PAS = new PatientAssessmentService();
                 Data.PatientAssessment S1 = new Data.PatientAssessment();
 
@@ -680,9 +703,38 @@ namespace Armor.Web.Controllers
 
                 S1.Question1 = fc["Question1"];
                 S1.Question2 = fc["Question2"];
-                S1.Question3 = fc["Question3"];
+                int i=1;
+                foreach (AnswerModel item in model.Question3)
+                {
+                    if (fc.Get("Question3" + i) != "false")
+                    {
+                        S1.Question3 += item.Value + "; ";
+                    }
+                    i++;
+                }
+
                 S1.Question4 = fc["Question4"];
                 S1.Question5 = fc["Question5"];
+
+                PAS.Save(S1);
+
+                return RedirectToAction("PatientAssessment2", S1);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PatientAssessment2(PatientAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+                PatientAssessmentService PAS = new PatientAssessmentService();
+                Data.PatientAssessment S1 = PAS.GetByID(model.ID);
+
                 S1.Question6 = model.Question6.ToString();
                 S1.Question7 = fc["Question7"];
 
@@ -708,10 +760,28 @@ namespace Armor.Web.Controllers
                 OEM.Codeine = fc["Question9_Codeine"];
                 OEM.Tramadol = fc["Question9_Tramadol"];
                 OEM.Other = fc["Question9_Other"];
-				
+
 
                 S1.Question9 = JsonConvert.SerializeObject(OEM);
 
+                PAS.Save(S1);
+
+                return RedirectToAction("PatientAssessment3", S1);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PatientAssessment3(PatientAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+                PatientAssessmentService PAS = new PatientAssessmentService();
+                Data.PatientAssessment S1 = PAS.GetByID(model.ID);
 
                 int i = 1;
                 foreach (AnswerModel item in model.Question10)
@@ -724,9 +794,29 @@ namespace Armor.Web.Controllers
                 }
 
                 S1.Question11 = fc["Question11"];
+
+                PAS.Save(S1);
+
+                return RedirectToAction("PatientAssessment4", S1);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult PatientAssessment4(PatientAssessmentViewModel model, FormCollection fc)
+        {
+            try
+            {
+                PatientAssessmentService PAS = new PatientAssessmentService();
+                Data.PatientAssessment S1 = PAS.GetByID(model.ID);
+
                 S1.Question12 = model.Question12;
 
-                S1.Question13 = fc["Question13"];
+                S1.Question13 = fc["Ques13Radio"];
                 if (S1.Question13 == "Switch to")
                 {
                     OEMedicationMatrix OEM2 = new OEMedicationMatrix();
@@ -750,13 +840,15 @@ namespace Armor.Web.Controllers
 
                 PAS.Save(S1);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("index");
             }
             catch
             {
                 return View(model);
             }
         }
+
+
 
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult PreAssessment()

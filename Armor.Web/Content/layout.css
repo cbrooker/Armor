@@ -355,10 +355,12 @@ padding-bottom: 20px;
 	text-align: right;
 	padding-right: 15px;
 }
+
+/*
 .submitButton {
 text-align: right;
 width: 93%;
-}
+}*/
 #registationProfileButton{
 float: left;
 text-align: right;
@@ -438,11 +440,12 @@ float: left;
 width: 50%;
 margin-top:20px;
 }
-.evaluator .submitButton {
+/*.evaluator .submitButton {
 position: relative;
 top: 20px;
 float: left;
 }
+*/
 .evaluator form {
 padding-left: 2%;
 width: 98%;
@@ -944,10 +947,20 @@ padding-bottom: 20px;
 	text-align: right;
 	padding-right: 15px;
 }
+/*
 .submitButton {
 text-align: right;
 width: 93%;
+}*/
+
+
+
+.submitButton {
+    clear: both;
+    padding-top: 20px;
+    width: 100%;
 }
+
 #registationProfileButton{
 float: left;
 text-align: right;
@@ -1027,11 +1040,13 @@ float: left;
 width: 50%;
 margin-top:20px;
 }
-.evaluator .submitButton {
+
+/*.evaluator .submitButton {
 position: relative;
 top: 20px;
 float: left;
 }
+*/
 .evaluator form {
 padding-left: 2%;
 width: 98%;
