@@ -583,8 +583,7 @@ label, legend {
 }
 
 
-.horizontalSlide { width: 880px; }
-.hiddenSection { display: none; margin-left: 880px; }
+
 
 
 .green { color: Green; }
@@ -959,6 +958,7 @@ width: 93%;
     clear: both;
     padding-top: 20px;
     width: 100%;
+    text-align: right;
 }
 
 #registationProfileButton{
@@ -1204,8 +1204,6 @@ label, legend {
 }
 
 
-.horizontalSlide { width: 880px; }
-.hiddenSection { display: none; margin-left: 880px; }
 
 
 .green { color: #009900; }
