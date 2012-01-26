@@ -117,13 +117,33 @@ namespace Armor.Web.Controllers
         }
 
 
-
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult ProgramEvaluatorStage2()
         {
             ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
             return View(model);
         }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage22(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage23(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage24(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage25(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+
 
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult ProgramEvaluatorStage3()
@@ -131,6 +151,41 @@ namespace Armor.Web.Controllers
             ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
             return View(model);
         }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage32(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage33(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage34(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        public ActionResult ProgramEvaluatorStage35(ProgramEvaluator1ViewModel model)
+        {
+            return View(model);
+        }
+
+
+        //[RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        //public ActionResult ProgramEvaluatorStage2()
+        //{
+        //    ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
+        //    return View(model);
+        //}
+
+        //[RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        //public ActionResult ProgramEvaluatorStage3()
+        //{
+        //    ProgramEvaluator1ViewModel model = new ProgramEvaluator1ViewModel();
+        //    return View(model);
+        //}
 
 
 
@@ -285,6 +340,323 @@ namespace Armor.Web.Controllers
                 return View(model);
             }
         }
+
+
+
+
+
+
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage2(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage2Service Stage2 = new Stage2Service();
+                Data.ProgramEvaluatorStage2 S2 = new Data.ProgramEvaluatorStage2();
+
+                S2.UserID = CurrentUserID;
+                S2.DateTimeTakenUTC = DateTime.UtcNow;
+
+                S2.Question1 = model.Question1;
+                S2.Question2 = model.Question2;
+                S2.Question3 = model.Question3;
+
+                Stage2.Save(S2);
+
+                return RedirectToAction("ProgramEvaluatorStage22", S2);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage22(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+                Stage2Service Stage2 = new Stage2Service();
+                Data.ProgramEvaluatorStage2 S2 = Stage2.GetByID(model.ID);
+
+                S2.Question4 = model.Question4;
+                S2.Question5 = model.Question5;
+                S2.Question6 = model.Question6;
+                S2.Question7 = model.Question7;
+                S2.Question8 = model.Question8;
+                S2.Question9 = model.Question9;
+                S2.Question10 = model.Question10;
+                S2.Question11 = model.Question11;
+
+                Stage2.Save(S2);
+
+                return RedirectToAction("ProgramEvaluatorStage23", S2);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage23(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+                Stage2Service Stage2 = new Stage2Service();
+                Data.ProgramEvaluatorStage2 S2 = Stage2.GetByID(model.ID);
+
+                S2.Question12 = fc["Question12"];
+                S2.Question13 = fc["Question13"];
+
+                if (fc["Question14"].Contains("Other"))
+                    S2.Question14 = "Other: " + fc["Question14Other"];
+                else S2.Question14 = fc["Question14"];
+
+                if (fc["Question15"].Contains("Other"))
+                    S2.Question15 = "Other: " + fc["Question15Other"];
+                else S2.Question15 = fc["Question15"];
+
+                Stage2.Save(S2);
+
+                return RedirectToAction("ProgramEvaluatorStage24", S2);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage24(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage2Service Stage2 = new Stage2Service();
+                Data.ProgramEvaluatorStage2 S2 = Stage2.GetByID(model.ID);
+
+                S2.Question16 = fc["Question16"];
+
+                int i = 1;
+                foreach (AnswerModel item in model.Question17)
+                {
+                    if (fc.Get("Question17" + i) != "false")
+                    {
+                        S2.Question17 += item.Value + "; ";
+                    }
+                    i++;
+                }
+                if (fc["Question17Other"] != null)
+                {
+                    S2.Question17 += fc["Question17Other"];
+                }
+
+
+                if (fc["Question18"].Contains("Other"))
+                    S2.Question18 = "Other: " + fc["Question18Other"];
+                else S2.Question18 = fc["Question18"];
+
+                Stage2.Save(S2);
+
+                return RedirectToAction("ProgramEvaluatorStage25", S2);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage25(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage2Service Stage2 = new Stage2Service();
+                Data.ProgramEvaluatorStage2 S2 = Stage2.GetByID(model.ID);
+
+                S2.Question19 = "%" + model.Question19 + "%";
+                S2.Question20 = "Low: " + model.Question20Low + " Moderate: " + model.Question20Moderate + " High: " + model.Question20High;
+
+                Stage2.Save(S2);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+
+
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage3(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage3Service Stage3 = new Stage3Service();
+                Data.ProgramEvaluatorStage3 S3 = new Data.ProgramEvaluatorStage3();
+
+                S3.UserID = CurrentUserID;
+                S3.DateTimeTakenUTC = DateTime.UtcNow;
+
+                S3.Question1 = model.Question1;
+                S3.Question2 = model.Question2;
+                S3.Question3 = model.Question3;
+
+                Stage3.Save(S3);
+
+                return RedirectToAction("ProgramEvaluatorStage32", S3);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage32(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+                Stage3Service Stage3 = new Stage3Service();
+                Data.ProgramEvaluatorStage3 S3 = Stage3.GetByID(model.ID);
+
+                S3.Question4 = model.Question4;
+                S3.Question5 = model.Question5;
+                S3.Question6 = model.Question6;
+                S3.Question7 = model.Question7;
+                S3.Question8 = model.Question8;
+                S3.Question9 = model.Question9;
+                S3.Question10 = model.Question10;
+                S3.Question11 = model.Question11;
+
+                Stage3.Save(S3);
+
+                return RedirectToAction("ProgramEvaluatorStage33", S3);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage33(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+                Stage3Service Stage3 = new Stage3Service();
+                Data.ProgramEvaluatorStage3 S3 = Stage3.GetByID(model.ID);
+
+                S3.Question12 = fc["Question12"];
+                S3.Question13 = fc["Question13"];
+
+                if (fc["Question14"].Contains("Other"))
+                    S3.Question14 = "Other: " + fc["Question14Other"];
+                else S3.Question14 = fc["Question14"];
+
+                if (fc["Question15"].Contains("Other"))
+                    S3.Question15 = "Other: " + fc["Question15Other"];
+                else S3.Question15 = fc["Question15"];
+
+                Stage3.Save(S3);
+
+                return RedirectToAction("ProgramEvaluatorStage34", S3);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage34(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage3Service Stage3 = new Stage3Service();
+                Data.ProgramEvaluatorStage3 S3 = Stage3.GetByID(model.ID);
+
+                S3.Question16 = fc["Question16"];
+
+                int i = 1;
+                foreach (AnswerModel item in model.Question17)
+                {
+                    if (fc.Get("Question17" + i) != "false")
+                    {
+                        S3.Question17 += item.Value + "; ";
+                    }
+                    i++;
+                }
+                if (fc["Question17Other"] != null)
+                {
+                    S3.Question17 += fc["Question17Other"];
+                }
+
+
+                if (fc["Question18"].Contains("Other"))
+                    S3.Question18 = "Other: " + fc["Question18Other"];
+                else S3.Question18 = fc["Question18"];
+
+                Stage3.Save(S3);
+
+                return RedirectToAction("ProgramEvaluatorStage35", S3);
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+        [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
+        [HttpPost]
+        public ActionResult ProgramEvaluatorStage35(ProgramEvaluator1ViewModel model, FormCollection fc)
+        {
+            try
+            {
+
+                Stage3Service Stage3 = new Stage3Service();
+                Data.ProgramEvaluatorStage3 S3 = Stage3.GetByID(model.ID);
+
+                S3.Question19 = "%" + model.Question19 + "%";
+                S3.Question20 = "Low: " + model.Question20Low + " Moderate: " + model.Question20Moderate + " High: " + model.Question20High;
+
+                Stage3.Save(S3);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(model);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
         [RequiresAuthentication(ValidUserRole = UserRoleType.RegularUser, AccessDeniedMessage = "You must be logged in to complete assessments")]
         public ActionResult PatientAssessment()

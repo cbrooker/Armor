@@ -1,0 +1,62 @@
+﻿@model Armor.Web.Models.ProgramEvaluator1ViewModel
+
+@{
+    ViewBag.Title = "Armor - " + ViewRes.Assessment.ProgramEvaluatorStage1.Title3;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+
+<div class="evaluator padding">
+<h2>@ViewRes.Assessment.ProgramEvaluatorStage1.Title3</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+    <div style="overflow: hidden;">
+        
+        <div id="Section5" class="horizontalSlide">
+            <h3>Page 5 of 5</h3>
+            <h4>@ViewRes.Assessment.ProgramEvaluatorStage1.HeadingBefore19</h4>
+    
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question19)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question19
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question19)<div class="percentage">%</div>
+                @Html.ValidationMessageFor(model => model.Question19)
+                
+            </div>
+			<br style="clear:both;" />
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question20Low)*@
+                @Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.Question20)
+				@Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.Question20Bullets)
+            </div>
+            <div class="editor-field">
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question201 @Html.EditorFor(model => model.Question20Low)
+                @Html.ValidationMessageFor(model => model.Question20Low)
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question202 @Html.EditorFor(model => model.Question20Moderate)
+                @Html.ValidationMessageFor(model => model.Question20Moderate)
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question203 @Html.EditorFor(model => model.Question20High)
+                @Html.ValidationMessageFor(model => model.Question20High)
+            </div>
+
+
+            <div class="submitButton">
+                <input type="submit" value="Submit" class="green-action-button" />
+            </div>
+        </div>
+    </div>
+}
+</div>

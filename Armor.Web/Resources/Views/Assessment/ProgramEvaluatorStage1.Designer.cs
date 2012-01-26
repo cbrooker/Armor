@@ -79,7 +79,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please rate your familiarity with the following:.
+        ///   Looks up a localized string similar to Please rate your familiarity with the following &lt;p&gt; (1 = not familiar at all, 10 = very familiar):&lt;/p&gt;.
         /// </summary>
         public static string PleaseRate {
             get {
@@ -88,7 +88,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rate the following risk factors in terms of their importance in GI risk with NSAID use:.
+        ///   Looks up a localized string similar to Rate the following risk factors in terms of their importance in GI risk with NSAID use &lt;p&gt; (1 = low risk, 10 = high risk):&lt;/p&gt;.
         /// </summary>
         public static string PleaseRate2 {
             get {
@@ -232,7 +232,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class=&quot;underline&quot;&gt;moderate&lt;/span&gt; risk of GI adverse events with NSAIDs?.
+        ///   Looks up a localized string similar to 14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;strong&gt;&lt;span class=&quot;underline&quot;&gt;moderate risk&lt;/span&gt;&lt;/strong&gt; of GI adverse events with NSAIDs?.
         /// </summary>
         public static string Question14 {
             get {
@@ -250,7 +250,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Traditional NSAID + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist.
+        ///   Looks up a localized string similar to Traditional NSAID + H2 receptor antagonist.
         /// </summary>
         public static string Question142 {
             get {
@@ -277,7 +277,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist.
+        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
         /// </summary>
         public static string Question145 {
             get {
@@ -304,7 +304,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;span class&apos;underline&apos;&gt;high&lt;/span&gt; risk of GI adverse events with NSAIDs?.
+        ///   Looks up a localized string similar to 15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at &lt;strong&gt;&lt;span class&apos;underline&apos;&gt;high risk&lt;/span&gt;&lt;/strong&gt; of GI adverse events with NSAIDs?.
         /// </summary>
         public static string Question15 {
             get {
@@ -322,7 +322,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Traditional NSAID + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist.
+        ///   Looks up a localized string similar to Traditional NSAID + H2 receptor antagonist.
         /// </summary>
         public static string Question152 {
             get {
@@ -349,7 +349,7 @@ namespace ViewRes.Assessment {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Coxib + H&lt;sub&gt;2&lt;/sub&gt; receptor antagonist.
+        ///   Looks up a localized string similar to Coxib + H2 receptor antagonist.
         /// </summary>
         public static string Question155 {
             get {
@@ -658,6 +658,24 @@ namespace ViewRes.Assessment {
         public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Program Evaluator Stage 2.
+        /// </summary>
+        public static string Title2 {
+            get {
+                return ResourceManager.GetString("Title2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Program Evaluator Stage 3.
+        /// </summary>
+        public static string Title3 {
+            get {
+                return ResourceManager.GetString("Title3", resourceCulture);
             }
         }
     }

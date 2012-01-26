@@ -1,0 +1,72 @@
+﻿@model Armor.Web.Models.ProgramEvaluator1ViewModel
+
+@{
+    ViewBag.Title = "Armor - " + ViewRes.Assessment.ProgramEvaluatorStage1.Title3;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+
+<div class="evaluator padding">
+<h2>@ViewRes.Assessment.ProgramEvaluatorStage1.Title3</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+    <div style="overflow: hidden;">
+
+        <div id="Section3" class="horizontalSlide">
+            <h3>Page 3 of 5</h3>
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question12)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question12
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question12, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question12)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question13)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question13
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question13, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question13)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question14)*@
+                @Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.Question14)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question14, "AnswerOptions")
+                @Html.EditorFor(model => model.Question14Other)
+                @Html.ValidationMessageFor(model => model.Question14Other)
+                @Html.ValidationMessageFor(model => model.Question14)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question15)*@
+                @Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.Question15)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question15, "AnswerOptions")
+                @Html.EditorFor(model => model.Question15Other)
+                @Html.ValidationMessageFor(model => model.Question15Other)
+                @Html.ValidationMessageFor(model => model.Question15)
+            </div>
+            <div class="submitButton">
+                <input type="button"  onclick="$(form).submit();" value="Next ->" />
+            </div>
+        </div>
+    </div>
+}
+</div>

@@ -121,6 +121,8 @@
     <Compile Include="Core\Filters\LocalizationDisplayName.cs" />
     <Compile Include="Core\Filters\RequiresAuthentication.cs" />
     <Compile Include="Core\Helpers\PasswordHelpers.cs" />
+    <Compile Include="Core\Services\Stage3Service.cs" />
+    <Compile Include="Core\Services\Stage2Service.cs" />
     <Compile Include="Core\Services\PreAssessmentService.cs" />
     <Compile Include="Core\Services\PatientAssessmentService.cs" />
     <Compile Include="Core\Services\Stage1Service.cs" />
@@ -338,12 +340,22 @@
     <Content Include="Views\Assessment\Copy of PreAssessment.cshtml" />
     <Content Include="Views\Assessment\PreAssessment2.cshtml" />
     <Content Include="Views\Assessment\PreAssessment3.cshtml" />
-    <Content Include="Views\Assessment\ProgramEvaluatorStage2.cshtml" />
-    <Content Include="Views\Assessment\ProgramEvaluatorStage3.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage2Old.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage3Old.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage12.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage13.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage14.cshtml" />
     <Content Include="Views\Assessment\ProgramEvaluatorStage15.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage2.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage22.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage23.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage24.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage25.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage3.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage35.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage32.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage33.cshtml" />
+    <Content Include="Views\Assessment\ProgramEvaluatorStage34.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -423,7 +435,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\themes\base\images\" />
-    <Folder Include="Resources\Models\" />
     <Folder Include="Resources\Views\Home\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
