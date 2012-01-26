@@ -117,7 +117,306 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Question1" xml:space="preserve">
+    <value>1. Age</value>
+  </data>
+  <data name="Question10" xml:space="preserve">
+    <value>10. Which of the following other medication(s) is this patient currently taking? (Select all that apply)</value>
+  </data>
+  <data name="Question101" xml:space="preserve">
+    <value>Misoprostol</value>
+  </data>
+  <data name="Question102" xml:space="preserve">
+    <value>Proton pump inhibitor (eg, omeprazole, pantoprazole)</value>
+  </data>
+  <data name="Question103" xml:space="preserve">
+    <value>H2 receptor antagonist (eg, cimetadine, ranitidine)</value>
+  </data>
+  <data name="Question104" xml:space="preserve">
+    <value>Low-dose ASA (&lt;300 mg/day)</value>
+  </data>
+  <data name="Question105" xml:space="preserve">
+    <value>Selective serotonin reuptake inhibitor (eg, citalopram, paroxetine)</value>
+  </data>
+  <data name="Question106" xml:space="preserve">
+    <value>Anticoagulant (eg, warfarin)</value>
+  </data>
+  <data name="Question107" xml:space="preserve">
+    <value>Corticosteroid (eg, prednisone)</value>
+  </data>
+  <data name="Question108" xml:space="preserve">
+    <value>Antiplatelet medication</value>
+  </data>
+  <data name="Question11" xml:space="preserve">
+    <value>11. How would you categorize this patient’s GI risk?</value>
+  </data>
+  <data name="Question111" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Question112" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="Question113" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Question12" xml:space="preserve">
+    <value>12. Your patient’s GI risk:</value>
+  </data>
+  <data name="Question13" xml:space="preserve">
+    <value>13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)</value>
+  </data>
+  <data name="Question131" xml:space="preserve">
+    <value>Acetaminophen</value>
+  </data>
+  <data name="Question1310" xml:space="preserve">
+    <value>Celecoxib</value>
+  </data>
+  <data name="Question1311" xml:space="preserve">
+    <value>Acetaminophen/tramadol</value>
+  </data>
+  <data name="Question1312" xml:space="preserve">
+    <value>Codeine (in combination with acetaminophen)</value>
+  </data>
+  <data name="Question1312a" xml:space="preserve">
+    <value>&lt; 360 (codeine)</value>
+  </data>
+  <data name="Question1312b" xml:space="preserve">
+    <value>&gt; 360 (codeine)</value>
+  </data>
+  <data name="Question1313" xml:space="preserve">
+    <value>Tramadol</value>
+  </data>
+  <data name="Question132" xml:space="preserve">
+    <value>Aspirin (&gt;300 mg)</value>
+  </data>
+  <data name="Question133" xml:space="preserve">
+    <value>Diclofenac</value>
+  </data>
+  <data name="Question134" xml:space="preserve">
+    <value>Diclofenac/misoprostol</value>
+  </data>
+  <data name="Question134a" xml:space="preserve">
+    <value>100 (diclofenac)</value>
+  </data>
+  <data name="Question134b" xml:space="preserve">
+    <value>150 (diclofenac)</value>
+  </data>
+  <data name="Question135" xml:space="preserve">
+    <value>Ibuprofen</value>
+  </data>
+  <data name="Question135a" xml:space="preserve">
+    <value>&lt; 1200mg/day</value>
+  </data>
+  <data name="Question135b" xml:space="preserve">
+    <value>&gt;= 1200mg/day</value>
+  </data>
+  <data name="Question136" xml:space="preserve">
+    <value>Indomethacin</value>
+  </data>
+  <data name="Question137" xml:space="preserve">
+    <value>Meloxicam</value>
+  </data>
+  <data name="Question138" xml:space="preserve">
+    <value>Naproxen</value>
+  </data>
+  <data name="Question139" xml:space="preserve">
+    <value>Naproxen—PPI</value>
+  </data>
+  <data name="Question139a" xml:space="preserve">
+    <value>&lt; 1000 (naproxen)</value>
+  </data>
+  <data name="Question139b" xml:space="preserve">
+    <value>&gt;= 1000 (naproxen)</value>
+  </data>
+  <data name="Question13a" xml:space="preserve">
+    <value>No Change</value>
+  </data>
+  <data name="Question13b" xml:space="preserve">
+    <value>Switch to:</value>
+  </data>
+  <data name="Question13c" xml:space="preserve">
+    <value>Add a gastroprotective agent</value>
+  </data>
+  <data name="Question13Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Question13Title1" xml:space="preserve">
+    <value>Medication</value>
+  </data>
+  <data name="Question13Title2" xml:space="preserve">
+    <value>Dose (mg/day)</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>2. Sex</value>
+  </data>
+  <data name="Question21" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Question22" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>3. Type of OA (select all that apply)</value>
+  </data>
+  <data name="Question31" xml:space="preserve">
+    <value>Cervical</value>
+  </data>
+  <data name="Question32" xml:space="preserve">
+    <value>Dorsal</value>
+  </data>
+  <data name="Question33" xml:space="preserve">
+    <value>Lumbar</value>
+  </data>
+  <data name="Question34" xml:space="preserve">
+    <value>Hand</value>
+  </data>
+  <data name="Question35" xml:space="preserve">
+    <value>Hip</value>
+  </data>
+  <data name="Question36" xml:space="preserve">
+    <value>Knee</value>
+  </data>
+  <data name="Question4" xml:space="preserve">
+    <value>4. Is this patient overweight (ie, BMI &gt;25)</value>
+  </data>
+  <data name="Question41" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Question42" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Question5" xml:space="preserve">
+    <value>5. Smoking status</value>
+  </data>
+  <data name="Question51" xml:space="preserve">
+    <value>Active smoker</value>
+  </data>
+  <data name="Question52" xml:space="preserve">
+    <value>Ex-smoker (within the past 10 years)</value>
+  </data>
+  <data name="Question53" xml:space="preserve">
+    <value>Non-smoker</value>
+  </data>
+  <data name="Question6" xml:space="preserve">
+    <value>6. Average number of alcoholic drinks per week</value>
+  </data>
+  <data name="Question7" xml:space="preserve">
+    <value>7. Does this patient use illicit/recreational drugs?</value>
+  </data>
+  <data name="Question71" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Question72" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Question8" xml:space="preserve">
+    <value>8. History of</value>
+  </data>
+  <data name="Question81" xml:space="preserve">
+    <value>Uncomplicated peptic ulcer</value>
+  </data>
+  <data name="Question82" xml:space="preserve">
+    <value>Dyspepsia</value>
+  </data>
+  <data name="Question83" xml:space="preserve">
+    <value>GERD</value>
+  </data>
+  <data name="Question84" xml:space="preserve">
+    <value>Bleeding peptic ulcer</value>
+  </data>
+  <data name="Question85" xml:space="preserve">
+    <value>H pylori infection treated</value>
+  </data>
+  <data name="Question86" xml:space="preserve">
+    <value>H pylori infection untreated</value>
+  </data>
+  <data name="Question9" xml:space="preserve">
+    <value>9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)</value>
+  </data>
+  <data name="Question91" xml:space="preserve">
+    <value>Acetaminophen</value>
+  </data>
+  <data name="Question910" xml:space="preserve">
+    <value>Celecoxib</value>
+  </data>
+  <data name="Question911" xml:space="preserve">
+    <value>Acetaminophen/tramadol</value>
+  </data>
+  <data name="Question912" xml:space="preserve">
+    <value>Codeine (in combination with acetaminophen)</value>
+  </data>
+  <data name="Question912a" xml:space="preserve">
+    <value>&lt; 360 (codeine)</value>
+  </data>
+  <data name="Question912b" xml:space="preserve">
+    <value>&gt; 360 (codeine)</value>
+  </data>
+  <data name="Question913" xml:space="preserve">
+    <value>Tramadol</value>
+  </data>
+  <data name="Question92" xml:space="preserve">
+    <value>Aspirin (&gt;300 mg)</value>
+  </data>
+  <data name="Question93" xml:space="preserve">
+    <value>Diclofenac</value>
+  </data>
+  <data name="Question94" xml:space="preserve">
+    <value>Diclofenac/misoprostol</value>
+  </data>
+  <data name="Question94a" xml:space="preserve">
+    <value>100 (diclofenac)</value>
+  </data>
+  <data name="Question94b" xml:space="preserve">
+    <value>150 (diclofenac)</value>
+  </data>
+  <data name="Question95" xml:space="preserve">
+    <value>Ibuprofen</value>
+  </data>
+  <data name="Question95a" xml:space="preserve">
+    <value>&lt; 1200mg/day</value>
+  </data>
+  <data name="Question95b" xml:space="preserve">
+    <value>&gt;= 1200mg/day</value>
+  </data>
+  <data name="Question96" xml:space="preserve">
+    <value>Indomethacin</value>
+  </data>
+  <data name="Question97" xml:space="preserve">
+    <value>Meloxicam</value>
+  </data>
+  <data name="Question98" xml:space="preserve">
+    <value>Naproxen</value>
+  </data>
+  <data name="Question99" xml:space="preserve">
+    <value>Naproxen—PPI</value>
+  </data>
+  <data name="Question99a" xml:space="preserve">
+    <value>&lt; 1000 (naproxen)</value>
+  </data>
+  <data name="Question99b" xml:space="preserve">
+    <value>&gt;= 1000 (naproxen)</value>
+  </data>
+  <data name="Question9Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Question9Title1" xml:space="preserve">
+    <value>Medication</value>
+  </data>
+  <data name="Question9Title2" xml:space="preserve">
+    <value>Dose (mg/day)</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Patient Assessment</value>
+  </data>
+  <data name="TopTextBlur" xml:space="preserve">
+    <value>&lt;h3&gt;To be completed by physician for patients who meet the following criteria:&lt;/h3&gt;
+&lt;div class="criteria"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Diagnosis of osteoarthritis&lt;/li&gt;
+        &lt;li&gt;Aged 18 years or older&lt;/li&gt;
+        &lt;li&gt;Has pain that interferes with normal daily activities&lt;/li&gt;
+        &lt;li&gt;Has an indication for NSAID treatment&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</value>
   </data>
 </root>

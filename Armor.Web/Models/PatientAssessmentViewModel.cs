@@ -50,9 +50,9 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Female", Value = "Female" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question21, Value = ViewRes.Assessment.PatientAssessment.Question21 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Male", Value = "Male" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question22, Value = ViewRes.Assessment.PatientAssessment.Question22 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -65,17 +65,17 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Cervical", Value = "Cervical" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question31, Value = ViewRes.Assessment.PatientAssessment.Question31 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Dorsal", Value = "Dorsal" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question32, Value = ViewRes.Assessment.PatientAssessment.Question32 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Lumbar", Value = "Lumbar" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question33, Value = ViewRes.Assessment.PatientAssessment.Question33 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Hand", Value = "Hand" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question34, Value = ViewRes.Assessment.PatientAssessment.Question34 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Hip", Value = "Hip" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question35, Value = ViewRes.Assessment.PatientAssessment.Question35};
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Knee", Value = "Knee" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question36, Value = ViewRes.Assessment.PatientAssessment.Question36 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -90,9 +90,9 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Yes", Value = "Yes" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question41, Value = ViewRes.Assessment.PatientAssessment.Question41 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "No", Value = "No" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question42, Value = ViewRes.Assessment.PatientAssessment.Question42 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -106,11 +106,11 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Active smoker", Value = "Active smoker" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question51, Value = ViewRes.Assessment.PatientAssessment.Question51 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Ex-smoker (within the past 10 years)", Value = "Ex-smoker (within the past 10 years)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question52, Value = ViewRes.Assessment.PatientAssessment.Question52 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Non-smoker", Value = "Non-smoker" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question53, Value = ViewRes.Assessment.PatientAssessment.Question53 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -127,9 +127,9 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Yes", Value = "Yes" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question71, Value = ViewRes.Assessment.PatientAssessment.Question71 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "No", Value = "No" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question72, Value = ViewRes.Assessment.PatientAssessment.Question72 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -142,17 +142,17 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Uncomplicated peptic ulcer", Value = "Uncomplicated peptic ulcer" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question81, Value = ViewRes.Assessment.PatientAssessment.Question81 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Dyspepsia", Value = "Dyspepsia" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question82, Value = ViewRes.Assessment.PatientAssessment.Question82 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "GERD", Value = "GERD" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question83, Value = ViewRes.Assessment.PatientAssessment.Question83 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Bleeding peptic ulcer", Value = "Bleeding peptic ulcer" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question84, Value = ViewRes.Assessment.PatientAssessment.Question84 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "H pylori infection treated", Value = "H pylori infection treated" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question85, Value = ViewRes.Assessment.PatientAssessment.Question85 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "H pylori infection untreated", Value = "H pylori infection untreated" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question86, Value = ViewRes.Assessment.PatientAssessment.Question86 };
                 TheList.Add(model);
                 //List<object> TheList = new List<object>();
                 //AnswerModel model = new AnswerModel() { Text = "Uncomplicated peptic ulcer", Value = "Uncomplicated peptic ulcer" };
@@ -190,21 +190,21 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Misoprostol", Value = "Misoprostol" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question101, Value = ViewRes.Assessment.PatientAssessment.Question101 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Proton pump inhibitor (eg, omeprazole, pantoprazole)", Value = "Proton pump inhibitor (eg, omeprazole, pantoprazole)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question102, Value = ViewRes.Assessment.PatientAssessment.Question102 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "H2 receptor antagonist (eg, cimetadine, ranitidine)", Value = "H2 receptor antagonist (eg, cimetadine, ranitidine)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question103, Value = ViewRes.Assessment.PatientAssessment.Question103 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Low-dose ASA (<300 mg/day)", Value = "Low-dose ASA (<300 mg/day)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question104, Value = ViewRes.Assessment.PatientAssessment.Question104 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Selective serotonin reuptake inhibitor (eg, citalopram, paroxetine)", Value = "Selective serotonin reuptake inhibitor (eg, citalopram, paroxetine)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question105, Value = ViewRes.Assessment.PatientAssessment.Question105 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Anticoagulant (eg, warfarin)", Value = "Anticoagulant (eg, warfarin)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question106, Value = ViewRes.Assessment.PatientAssessment.Question106 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Corticosteroid (eg, prednisone)", Value = "Corticosteroid (eg, prednisone)" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question107, Value = ViewRes.Assessment.PatientAssessment.Question107 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Antiplatelet medication", Value = "Antiplatelet medication" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question108, Value = ViewRes.Assessment.PatientAssessment.Question108 };
                 TheList.Add(model);
                 return TheList;
             }
@@ -218,11 +218,11 @@ namespace Armor.Web.Models
             get
             {
                 List<AnswerModel> TheList = new List<AnswerModel>();
-                AnswerModel model = new AnswerModel() { Text = "Low", Value = "Low" };
+                AnswerModel model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question111, Value = ViewRes.Assessment.PatientAssessment.Question111 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "Moderate", Value = "Moderate" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question112, Value = ViewRes.Assessment.PatientAssessment.Question112 };
                 TheList.Add(model);
-                model = new AnswerModel() { Text = "High", Value = "High" };
+                model = new AnswerModel() { Text = ViewRes.Assessment.PatientAssessment.Question113, Value = ViewRes.Assessment.PatientAssessment.Question113 };
                 TheList.Add(model);
                 return TheList;
             }

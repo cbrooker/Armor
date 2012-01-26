@@ -118,17 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClickHere" xml:space="preserve">
-    <value>Click Here</value>
+    <value>cliquer ici</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>Email Address</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
-    <value>Forgot your password?</value>
+    <value>Mot de passe oublié?</value>
   </data>
-  <data name="ForgotPasswordBlurb" xml:space="preserve">
-    <value>If you have forgotten your password,
-Click here and your password will be emailed to you</value>
+  <data name="ForgotPasswordBlurb1" xml:space="preserve">
+    <value>Si vous avez oublié votre mot de passé, veuillez</value>
+  </data>
+  <data name="ForgotPasswordBlurb2" xml:space="preserve">
+    <value>cliquer ici et votre mot de passe vous sera envoyé par courriel</value>
   </data>
   <data name="HaveAnAccount" xml:space="preserve">
     <value>Déjà un compte ?</value>

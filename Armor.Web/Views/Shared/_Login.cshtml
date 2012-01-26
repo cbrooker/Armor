@@ -35,11 +35,14 @@
         </div>
 
        <div class="loginButton">
-            <input type="submit" value="Login" class="green-action-button" />
+            <input type="submit" value="@ViewRes.Account.Login.LoginWord" class="green-action-button" />
         </div>
 		<div class="lostPassword">
-		<strong>Forgot your password?</strong><br />
-        If you have forgotten your password,<br /> @Html.ActionLink("Click here", "ForgotPassword", "Account") and your password will be emailed to you
+		<strong>@ViewRes.Account.Login.ForgotPassword</strong><br />
+        @ViewRes.Account.Login.ForgotPasswordBlurb1<br />
+        @Html.ActionLink(ViewRes.Account.Login.ClickHere, "ForgotPassword", "Account") 
+        @ViewRes.Account.Login.ForgotPasswordBlurb2
+        
 		</div>
     </fieldset>
 }

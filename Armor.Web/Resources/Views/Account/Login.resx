@@ -126,9 +126,11 @@
   <data name="ForgotPassword" xml:space="preserve">
     <value>Forgot your password?</value>
   </data>
-  <data name="ForgotPasswordBlurb" xml:space="preserve">
-    <value>If you have forgotten your password,
-Click here and your password will be emailed to you</value>
+  <data name="ForgotPasswordBlurb1" xml:space="preserve">
+    <value>If you have forgotten your password,</value>
+  </data>
+  <data name="ForgotPasswordBlurb2" xml:space="preserve">
+    <value>and your password will be emailed to you</value>
   </data>
   <data name="HaveAnAccount" xml:space="preserve">
     <value>Already have an account?</value>

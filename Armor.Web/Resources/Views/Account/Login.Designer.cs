@@ -88,12 +88,20 @@ namespace ViewRes.Account {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you have forgotten your password,
-        ///Click here and your password will be emailed to you.
+        ///   Looks up a localized string similar to If you have forgotten your password,.
         /// </summary>
-        public static string ForgotPasswordBlurb {
+        public static string ForgotPasswordBlurb1 {
             get {
-                return ResourceManager.GetString("ForgotPasswordBlurb", resourceCulture);
+                return ResourceManager.GetString("ForgotPasswordBlurb1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to and your password will be emailed to you.
+        /// </summary>
+        public static string ForgotPasswordBlurb2 {
+            get {
+                return ResourceManager.GetString("ForgotPasswordBlurb2", resourceCulture);
             }
         }
         
