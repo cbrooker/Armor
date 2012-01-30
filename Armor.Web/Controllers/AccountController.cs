@@ -240,7 +240,7 @@ namespace Armor.Web.Controllers
                 User user = service.GetUserByEmail(model.EmailAddress.Trim());
                 if (user == null)
                 {
-                    ModelState.AddModelError("", "There is no account that uses that email address");
+                    ModelState.AddModelError("", "If the account exists, an e-mail has been sent.");
                     return View();
                 }
 
@@ -260,7 +260,7 @@ namespace Armor.Web.Controllers
                 string message = parser.Replace(AccountEmails.ForgotPassword, replacements);
 
                 EmailSender sender = new EmailSender();
-                sender.Send(App.MailConfiguration, model.EmailAddress, "", "Reset your password on epilogger.com", message);
+                sender.Send(App.MailConfiguration, model.EmailAddress, "", "Reset your password on Armor", message);
 
                 //this.StoreSuccess("We\\'ve emailed you instructions on how to reset your password.");
             }

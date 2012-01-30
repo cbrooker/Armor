@@ -26,13 +26,13 @@
             @Html.ValidationMessageFor(model => model.Password)
         </div>
 
-        <div class="editor-label">
+       @* <div class="editor-label">
             @Html.LabelFor(model => model.RememberMe)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.RememberMe)
             @Html.ValidationMessageFor(model => model.RememberMe)
-        </div>
+        </div>*@
 
        <div class="loginButton">
             <input type="submit" value="@ViewRes.Account.Login.LoginWord" class="green-action-button" />
