@@ -685,6 +685,7 @@ namespace Armor.Web.Controllers
         }
         public ActionResult PatientAssessment4(PatientAssessmentViewModel model)
         {
+            model.Question9 = model.Question9.Replace("\"", "\'");
             return View(model);
         }
 
@@ -761,7 +762,7 @@ namespace Armor.Web.Controllers
                 OEM.Indomethacin = fc["Question9_Indomethacin"];
                 OEM.Meloxicam = fc["Question9_Meloxicam"];
                 OEM.Naproxen = fc["Question9_Naproxen"];
-                OEM.NaproxenEsomeprazole = fc["Question9_Naproxen—esomeprazole"];
+                OEM.NaproxenEsomeprazole = fc["Question9_Naproxen—PPI"];
                 OEM.Celecoxib = fc["Question9_Celecoxib"];
                 OEM.AcetaminophenTramadol = fc["Question9_Acetaminophen/tramadol"];
                 OEM.Codeine = fc["Question9_Codeine"];
