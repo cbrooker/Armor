@@ -1,0 +1,8 @@
+C:\Projects\Armor\RichmondDay.Helpers\bin\Debug\RichmondDay.Helpers.dll
+C:\Projects\Armor\RichmondDay.Helpers\bin\Debug\RichmondDay.Helpers.pdb
+C:\Projects\Armor\RichmondDay.Helpers\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Armor\RichmondDay.Helpers\bin\Debug\Newtonsoft.Json.pdb
+C:\Projects\Armor\RichmondDay.Helpers\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Armor\RichmondDay.Helpers\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Armor\RichmondDay.Helpers\obj\Debug\RichmondDay.Helpers.dll
+C:\Projects\Armor\RichmondDay.Helpers\obj\Debug\RichmondDay.Helpers.pdb

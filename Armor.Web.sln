@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armor.Web", "Armor.Web\Armor.Web.csproj", "{FA93889B-C5DF-4274-85F3-57C740693B62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichmondDay.Helpers", "Richmond-Day-Helpers\RichmondDay.Helpers\RichmondDay.Helpers.csproj", "{01EDFD0E-3AE1-4CEC-BB0B-5DF030792075}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichmondDay.Helpers", "RichmondDay.Helpers\RichmondDay.Helpers.csproj", "{01EDFD0E-3AE1-4CEC-BB0B-5DF030792075}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
