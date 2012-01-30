@@ -9,25 +9,30 @@
   <RecentFiles>
     <RecentFiles>
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Layout.cshtml" caret="1537" fromTop="42" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AccountController.cs" caret="317" fromTop="12" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Assessment/f:PatientAssessment4.cshtml" caret="884" fromTop="24" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Models/f:PatientAssessmentViewModel.cs" caret="9460" fromTop="26" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Assessment/f:PatientAssessment2.cshtml" caret="6316" fromTop="30" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AssessmentController.cs" caret="28367" fromTop="37" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="8097" fromTop="30" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="427" fromTop="18" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AssessmentController.cs" caret="27115" fromTop="0" />
+      <File id="01EDFD0E-3AE1-4CEC-BB0B-5DF030792075/d:Helpers/f:CookieHelpers.cs" caret="3434" fromTop="40" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AccountController.cs" caret="2681" fromTop="21" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Login.cshtml" caret="1082" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Models/f:PatientAssessmentViewModel.cs" caret="9436" fromTop="29" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AssessmentController.cs" caret="25486" fromTop="20" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5586" fromTop="42" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5913" fromTop="48" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="6424" fromTop="46" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5665" fromTop="31" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="6502" fromTop="47" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5624" fromTop="42" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5951" fromTop="48" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="6462" fromTop="46" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5703" fromTop="31" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="6540" fromTop="47" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Controllers/f:AssessmentController.cs" caret="28438" fromTop="38" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5749" fromTop="30" />
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="7997" fromTop="29" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="5787" fromTop="30" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="8035" fromTop="29" />
+      <File id="01EDFD0E-3AE1-4CEC-BB0B-5DF030792075/d:Helpers/f:CookieHelpers.cs" caret="3271" fromTop="35" />
+      <File id="01EDFD0E-3AE1-4CEC-BB0B-5DF030792075/d:Helpers/f:CookieHelpers.cs" caret="3434" fromTop="40" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Login.cshtml" caret="1017" fromTop="24" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

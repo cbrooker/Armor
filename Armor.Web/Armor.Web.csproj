@@ -53,10 +53,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RichmondDay.Helpers, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\RichmondDay.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="SubSonic.Core">
       <HintPath>..\packages\SubSonic.3.0.0.4\lib\SubSonic.Core.dll</HintPath>
     </Reference>
@@ -446,6 +442,12 @@
   <ItemGroup>
     <Folder Include="Content\themes\base\images\" />
     <Folder Include="Resources\Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Richmond-Day-Helpers\RichmondDay.Helpers\RichmondDay.Helpers.csproj">
+      <Project>{01EDFD0E-3AE1-4CEC-BB0B-5DF030792075}</Project>
+      <Name>RichmondDay.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

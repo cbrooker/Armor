@@ -54,3 +54,8 @@ C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.Patie
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Assessment.PatientAssessment.fr.resources
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Registration.resources
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.Registration.fr.resources
+C:\Projects\Armor\Armor.Web\bin\RichmondDay.Helpers.dll
+C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.Net35.dll
+C:\Projects\Armor\Armor.Web\bin\RichmondDay.Helpers.pdb
+C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.Net35.pdb
+C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.Net35.xml
