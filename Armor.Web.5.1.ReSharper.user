@@ -8,7 +8,6 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Layout.cshtml" caret="1537" fromTop="42" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Assessment/f:PatientAssessment4.cshtml" caret="884" fromTop="24" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Models/f:PatientAssessmentViewModel.cs" caret="9460" fromTop="26" />
@@ -18,6 +17,7 @@
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Login.cshtml" caret="603" fromTop="13" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Assessment/f:PatientAssessment2.cshtml" caret="0" fromTop="0" />
       <File id="01EDFD0E-3AE1-4CEC-BB0B-5DF030792075/d:Helpers/f:CookieHelpers.cs" caret="3033" fromTop="39" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Layout.cshtml" caret="1137" fromTop="28" />
     </RecentFiles>
     <RecentEdits>
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Models/f:PatientAssessmentViewModel.cs" caret="9436" fromTop="29" />
@@ -32,6 +32,7 @@
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Scripts/f:PatientAssessment.js" caret="8035" fromTop="29" />
       <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Login.cshtml" caret="1017" fromTop="24" />
       <File id="01EDFD0E-3AE1-4CEC-BB0B-5DF030792075/d:Helpers/f:CookieHelpers.cs" caret="3271" fromTop="42" />
+      <File id="FA93889B-C5DF-4274-85F3-57C740693B62/d:Views/d:Shared/f:_Layout.cshtml" caret="1133" fromTop="28" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
