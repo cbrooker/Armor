@@ -180,7 +180,7 @@ namespace Armor.Web.Models
         //Big Question - Has to be done in HTML
         [Required(ErrorMessage = "Required")]
         [DisplayName("9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)")]
-        public int Question9 { get; set; }
+        public string Question9 { get; set; }
 
 
         [Required(ErrorMessage = "Required")]

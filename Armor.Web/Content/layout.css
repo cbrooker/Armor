@@ -14,7 +14,7 @@
 	#Page Styles
 	#Media Queries
 	#Font-Face */
-
+1
 /* #Site Styles
 ================================================== */
 
@@ -587,7 +587,7 @@ label, legend {
 
 
 .green { color: Green; }
-.yellow { color: Yellow; }
+.yellow { color: #e4cd0d; }
 .red { color: red; }
 
 

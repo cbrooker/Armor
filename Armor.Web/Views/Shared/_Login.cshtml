@@ -22,7 +22,7 @@
             @Html.LabelFor(model => model.Password)
         </div>
         <div class="editor-field">
-            @Html.PasswordFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { @autocomplete = "off" } )
             @Html.ValidationMessageFor(model => model.Password)
         </div>
 
