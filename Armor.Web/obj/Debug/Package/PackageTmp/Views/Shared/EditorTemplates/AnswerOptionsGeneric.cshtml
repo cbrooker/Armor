@@ -1,0 +1,37 @@
+﻿@using Armor.Web;
+@using Armor.Web.Models;
+
+@model List<object>
+
+@{
+    string prefix = ViewData.TemplateInfo.HtmlFieldPrefix;
+    int index = 0;
+    ViewData.TemplateInfo.HtmlFieldPrefix = string.Empty;
+    @: <ul>
+        foreach (object item in Model)
+        {
+            if (item.GetType() == typeof(AnswerModel))
+            {
+                @: <li>
+                    @*<label>@Html.RadioButton("AnswerOptions", ((AnswerModel)item).Value, false)@(((AnswerModel)item).Text)</label>*@
+                    string fieldName = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}_{1}", prefix, index++);
+                    @Html.RadioButton(prefix, ((AnswerModel)item).Value, false, new { @id = fieldName, @class = prefix }) 
+                    @Html.Label(fieldName, ((AnswerModel)item).Text)
+                @: </li>
+            }
+            else if (item.GetType() == typeof(List<AnswerModel>))
+            {
+        
+                foreach (AnswerModel item2 in (List<AnswerModel>)item)
+                {
+                    @*<li class="subOptions"><label>@Html.RadioButton("SubAnswerOptions", item2.Value, false)@item2.Text</label></li>*@
+                    string fieldName = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}_{1}", prefix, index++);
+                    @Html.RadioButton(prefix + "_2", item2.Value, false, new { @id = fieldName, @class = prefix.ToString() + "_2 subOptions" }) 
+                    @Html.Label(fieldName, item2.Text)
+                }
+            }
+        }
+    @: </ul>
+    ViewData.TemplateInfo.HtmlFieldPrefix = prefix;
+}
+

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ArmorConnectionString-Web.config Connection String" description="ArmorConnectionString Connection String used in web.config by the application to access the database." defaultvalue="Data Source=72.55.188.78;Initial Catalog=Armor;Persist Security Info=True;User ID=sa;Password=xea,87,21r" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects\\Armor\\Armor\.Web\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ArmorConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

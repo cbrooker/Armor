@@ -1,0 +1,107 @@
+﻿@model Armor.Web.Models.ProgramEvaluator1ViewModel
+
+@{
+    ViewBag.Title = "Armor - " + ViewRes.Assessment.ProgramEvaluatorStage1.Title3;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+
+<div class="evaluator padding">
+<h2>@ViewRes.Assessment.ProgramEvaluatorStage1.Title3</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+    <div style="overflow: hidden;">
+        
+        <div id="Section2" class="horizontalSlide" >
+            <h3>Page 2 of 5</h3>
+            <h4>@Html.Raw(ViewRes.Assessment.ProgramEvaluatorStage1.PleaseRate2)</h4>
+    
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question4)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question4
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question4, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question4)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question5)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question5
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question5, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question5)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question6)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question6
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question6, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question6)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question7)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question7
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question7, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question7)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question8)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question8
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question8, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question8)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question9)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question9
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question9, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question9)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question10)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question10
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question10, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question10)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question11)*@
+                @ViewRes.Assessment.ProgramEvaluatorStage1.Question11
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question11, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question11)
+            </div>
+
+            <div class="submitButton">
+                <input type="button"  onclick="$(form).submit();" value="Next ->" />
+            </div>
+        </div>
+    </div>
+}
+</div>

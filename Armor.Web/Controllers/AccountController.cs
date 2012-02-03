@@ -140,8 +140,20 @@ namespace Armor.Web.Controllers
                 
                 try
                 {
-                    //Armor.Data.User user = Mapper.Map<CreateAccountModel, Armor.Data.User>(model);
+                    //If there are no UserRoles in the Roles table shit breaks, Add them if not present
+                    UserRoleService URS = new UserRoleService();
+                    if (URS.GetCount() == 0)
+                    {
+                        UserRole UR = new UserRole();
+                        UR.Name = "Administrator";
+                        URS.Save(UR);
+                        UR = new UserRole();
+                        UR.Name = "User";
+                        URS.Save(UR);
+                    }
+                    
 
+                    //Armor.Data.User user = Mapper.Map<CreateAccountModel, Armor.Data.User>(model);
                     User Newuser = new User();
 
                     Newuser.Address = model.Address;
@@ -158,7 +170,7 @@ namespace Armor.Web.Controllers
                     Newuser.PhoneNumber = model.Phone;
                     Newuser.PostalCode = model.PostalCode;
                     Newuser.Province = model.Province;
-                    Newuser.RoleID = 2;
+                    Newuser.RoleID = URS.GetByRoleName("User").ID ;
                     
                     service.Save(Newuser);
 
@@ -183,7 +195,7 @@ namespace Armor.Web.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "There was a problem creating your account");
+                    ModelState.AddModelError("", "There was a problem creating your account" + " - " + ex.Message.ToString());
                     return View(model);
                 }
             }

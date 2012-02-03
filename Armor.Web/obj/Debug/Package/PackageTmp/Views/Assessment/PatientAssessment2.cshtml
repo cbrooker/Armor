@@ -1,0 +1,145 @@
+﻿@model Armor.Web.Models.PatientAssessmentViewModel
+
+@{
+    ViewBag.Title = "Armor - " + @ViewRes.Assessment.PatientAssessment.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/PatientAssessment.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+<div class="assessment padding">
+<h2>@ViewRes.Assessment.PatientAssessment.Title</h2>
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+        <div id="Section2" class="horizontalSlide" >
+            <h3>Page 2 of 4</h3>
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question6)*@
+                @ViewRes.Assessment.PatientAssessment.Question6
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question6)
+                @Html.ValidationMessageFor(model => model.Question6)
+            </div>
+    <div class="numbers">
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question7)*@
+                @ViewRes.Assessment.PatientAssessment.Question7
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question7, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question7)
+            </div>
+    </div>
+    <div class="question8">
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question8)*@
+                @ViewRes.Assessment.PatientAssessment.Question8
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question8, "AnswerCheckboxes")
+                @Html.ValidationMessageFor(model => model.Question8)
+            </div>
+    </div>
+        
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question9)*@
+                @ViewRes.Assessment.PatientAssessment.Question9
+            </div>
+            <div class="editor-field">
+   <table>
+                    <tr>
+                        <th>@ViewRes.Assessment.PatientAssessment.Question9Title1</th>
+                        <th colspan="2">@ViewRes.Assessment.PatientAssessment.Question9Title2</th>
+                    </tr>
+                    <tr>
+                        <td>@ViewRes.Assessment.PatientAssessment.Question91</td>
+                        <td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen < 3000mg/day") < 3000</label>
+                                                </td><td><label>@Html.RadioButton("Question9_Acetaminophen", "Acetaminophen >3000mg/day") > 3000</label>
+
+                    </td></tr>
+                   <!-- <tr>
+                        <td>Traditional NSAID</td>
+                        <td></td>
+                    </tr> -->
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question92</td>
+                        <td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin < 3000") < 3000</label></td><td><label>@Html.RadioButton("Question9_Aspirin", "Aspirin > 3000") > 3000</label>
+                    </td></tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question93</td>
+                        <td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 100") 100</label></td><td><label>@Html.RadioButton("Question9_Diclofenac", "Diclofenac 150mg/day") 150</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question94</td>
+                        <td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 100 mg diclofenac/day") @ViewRes.Assessment.PatientAssessment.Question94a </label></td><td><label>@Html.RadioButton("Question9_DiclofenacMisoprostol", "Diclofenac/Misoprostol 150 mg diclofenac/day") @ViewRes.Assessment.PatientAssessment.Question94b</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question95</td>
+                        <td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen < 1200mg/day") @ViewRes.Assessment.PatientAssessment.Question95a</label></td><td><label>@Html.RadioButton("Question9_Ibuprofen", "Ibuprofen >= 1200mg/day") @ViewRes.Assessment.PatientAssessment.Question95b</label>
+                    </td></tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question96</td>
+                        <td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin < 200") < 200</label></td><td><label>@Html.RadioButton("Question9_Indomethacin", "Indomethacin >= 200") >= 200</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question97</td>
+                        <td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam < 15") < 15</label></td><td><label>@Html.RadioButton("Question9_Meloxicam", "Meloxicam >= 15") >= 15</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question98</td>
+                        <td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen < 1000") < 1000</label></td><td><label>@Html.RadioButton("Question9_Naproxen", "Naproxen >= 1000") >= 1000</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question99
+                        </td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI < 1000") @ViewRes.Assessment.PatientAssessment.Question99a</label></td><td><label>@Html.RadioButton("Question9_Naproxen—PPI", "Naproxen—PPI >= 1000") @ViewRes.Assessment.PatientAssessment.Question99b</label></td>
+                    </tr>
+                  <!--  <tr>
+                        <td>Coxibs</td>
+                        <td></td>
+                    </tr> -->
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question910</td>
+                        <td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib < 200") < 200</label></td><td><label>@Html.RadioButton("Question9_Celecoxib", "Celecoxib >= 200") >= 200</label></td>
+                    </tr>
+                   <!-- <tr>
+                        <td>Opioids/combinations</td>
+                        <td></td>
+                    </tr> -->
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question911</td>
+                        <td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol < 3000/300") < 3000/300</label></td><td><label>@Html.RadioButton("Question9_Acetaminophen/tramadol", "Acetaminophen/tramadol > 3000/300") > 3000/300</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question912</td>
+                        <td><label>@Html.RadioButton("Question9_Codeine", "Codeine < 360") @ViewRes.Assessment.PatientAssessment.Question912a</label></td><td><label>@Html.RadioButton("Question9_Codeine", "Codeine > 360") @ViewRes.Assessment.PatientAssessment.Question912b</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question913</td>
+                        <td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol < 300") < 300</label></td><td><label>@Html.RadioButton("Question9_Tramadol", "Tramadol > 300") > 300</label></td>
+                    </tr>
+                    <tr>
+                        <td class="indent">@ViewRes.Assessment.PatientAssessment.Question9Other</td>
+                        <td>@Html.TextBox("Question9_Other")</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="submitButton">
+                <input type="button"  onclick="$(form).submit();" value="Next ->" />
+            </div>
+        </div>
+    
+    
+}
+</div>

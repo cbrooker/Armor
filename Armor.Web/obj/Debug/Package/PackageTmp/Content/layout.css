@@ -1,0 +1,1228 @@
+
+
+
+
+
+
+
+
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Custom Buttons
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+.container {
+	background: #fff;
+	background:url(images/containerbackground.png) repeat-y;
+	position: relative;
+	min-height: 750px;
+}
+.header {
+	background:url(images/headerbackground.png) repeat-y center;
+margin-bottom: 0px;
+padding-top: 10px;
+/*border-bottom: 1px #cecece dashed; */
+}
+.registerForm, #slidingPanel {
+	margin-top: 0px;
+	background:url(images/registrationbackground.png) no-repeat bottom center;
+}
+.padding {
+padding: 20px;
+padding-left: 30px;	
+}
+
+.fleft {
+float: left;
+}
+.field-validation-error {
+color: red;
+font-size: 10px;
+text-align: left;
+line-height: 100%;
+float: right;
+width: 222px;
+margin-right: 24px;
+margin-top: -17px;
+}
+
+.blue, .blue a {
+color: #2A63AF;
+text-decoration: none;
+}
+.blue a:hover {
+color: #333;
+}
+/* #Custom Buttons
+================================================== */
+
+	 a.green-action-button, input[type="submit"]
+	 {
+		background: green; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');	  
+
+border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.green-action-button:hover, input[type="submit"]:hover
+	{
+		color: #fff;
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');	  
+border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.green-action-button:active, , input[type="submit"]:active
+	 {
+		border: 1px solid #666;
+		background: #eee; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');		
+background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */ }
+
+ a.blue-action-button, input[type="button"]
+	 {
+		background: blue; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.6) 0%, rgba(27,67,119,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.6)), color-stop(100%,rgba(27,67,119,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');	  
+border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.blue-action-button:hover, input[type="button"]:hover
+	{
+		color: #fff;
+		background: blue; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.9) 0%, rgba(27,67,119,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.9)), color-stop(100%,rgba(27,67,119,.2))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.blue-action-button:active, input[type="button"]:active
+	 {
+		border: 1px solid #666;
+		background: blue; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+ a.red
+	 {
+		background: blue; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');
+		background: #eee -moz-linear-gradient(top, rgba(158, 13, 13,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(158, 13, 13,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(158, 13, 13,.6) 0%,rgba(109,10,10,.6) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.red:hover
+	{
+		color: #fff;
+		background: red; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');
+		background: #eee -moz-linear-gradient(top, rgba(109,10,10,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,10,10,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.red:active
+	 {
+		border: 1px solid #666;
+		background: red; /* Old browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#668b46', endColorstr='#4a6d2c');
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+
+
+
+
+/* #Page Styles
+================================================== */
+/* Header */
+.header {
+
+height: 130px;
+width: 100%;
+}
+#title {
+width: 50%;
+float: left;
+margin-left: 20px;
+margin-top: 15px;
+}
+#title h1 {
+font-size: 20px;
+}
+#logindisplay {
+float: right;
+
+}
+#logindisplay h2 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
+
+#forgotPasswordText {
+font-size: 10px;
+line-height:110%;	
+float: left;
+ margin-left: 20px;
+width: 210px;
+margin-right: 20px;
+}
+
+.signoffButton {
+margin-right: 20px;
+}
+/* Sliding Panel */
+#slidingPanel {
+padding: 20px;
+padding-top: 0;
+padding-bottom: 0;
+z-index: 5;
+
+/* Added this back in to make it work for now */
+display: none;
+margin-top: -4px;
+/*<<<<<<< HEAD
+display: none;
+=======
+margin-top: -4px;
+>>>>>>> 99385071754871994e938312aca5be2d64b8c410*/
+}
+#slidingPanel legend {
+display: none;
+}
+
+/*Sign In Form */
+
+.loginView {
+
+padding-left:10%;
+width: 80%;
+}
+
+.loginView label {
+float: left;
+width: 130px;
+text-align: right;
+}
+
+.loginView .loginButton{
+margin-top: 30px;
+margin-left: 35%;
+}
+#RememberMe {
+margin-top: 10px;
+}
+/* Registration Form */
+.leftColumn {
+width: 45%;
+float: left;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.rightColumn {
+width: 45%;
+float: right;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.descriptor {
+	font-size: 10px;
+	color:#666;
+	line-height:110%;
+	margin-bottom: 3px;
+	float: left;
+	clear: left;
+	width: 150px;
+	text-align:right;
+}
+.streetAddress .descriptor {
+	margin-left: 36px;
+	width: 320px;
+	text-align:left;
+	float: none;
+}
+.streetAddress label {
+	float: none;
+	display:block;
+}
+.streetAddress input {
+	width: 338px;
+	margin-left: 36px;
+}
+.formButton {
+	text-align: right;
+	padding-right: 15px;
+}
+
+/*
+.submitButton {
+text-align: right;
+width: 93%;
+}*/
+#registationProfileButton{
+float: left;
+text-align: right;
+margin-top: -35px;
+width: 95%;
+z-index: 1;
+}
+#slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: right;
+}
+.checkBoxes {
+width: 80%;
+padding-left: 3%;
+}
+
+.checkBoxes img {
+float: left;
+margin-top: -5px;
+}
+.checkBox {
+margin-bottom: 30px;
+padding-top: 10px;
+
+}
+
+.checkBox a {
+}
+
+/* Preassessment Forms */
+.preassessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.preassessment .editor-label {
+margin-top: 40px;
+}
+.preassessment label {
+margin-top: 20px;
+}
+th {
+font-weight: bold;
+padding: 10px;
+}
+td {
+padding: 3px;
+vertical-align: top;
+}
+.preassessment input[type="radio"] {
+margin-left: 40%;
+}
+.preassessment form {
+padding-left: 2%;
+width: 98%;
+}
+.percentage {
+margin-top: -50px;
+margin-left: 230px;
+}
+
+/* Evaluator Forms */
+
+
+.evaluator .editor-label.intQuestion{
+float: left;
+width: 40%;
+padding-right: 2%;
+margin-top: 20px;
+}
+.evaluator .editor-field.intQuestion {
+float: left;
+width: 50%;
+margin-top:20px;
+}
+/*.evaluator .submitButton {
+position: relative;
+top: 20px;
+float: left;
+}
+*/
+.evaluator form {
+padding-left: 2%;
+width: 98%;
+}
+.evaluator h4 {
+margin-top: 20px;
+}
+
+.evaluator td {
+text-align: center;
+}
+
+.evaluator li input[type="radio"] {
+margin: 10px;
+
+float: left;
+
+
+}
+.criteria ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+
+.evaluator label {
+margin-top: 20px;
+}
+
+.evaluator .percentage {
+margin-top: -10px;
+position: relative;
+top: 30px;
+margin-left: 230px;
+}
+
+/* Assessment Forms */
+
+.assessment form {
+padding-left: 2%;
+width: 98%;
+}
+.assessment h4 {
+margin-top: 20px;
+}
+
+.assessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.assessment form ul {
+list-style: none;
+padding-left: 0;
+margin-top: 0;
+}
+.assessment .numbers li label{
+float: left;
+width: 7%;
+}
+.assessment .numbers .editor-label {
+float: left;
+width: 100%;
+}
+.numbers {
+float: left;
+width: 100%;
+}
+.assessment li input[type="radio"], .question8 ul input[type="radio"] {
+margin: 10px;
+float: left;
+}
+
+.assessment li input[type="checkbox"] {
+margin-right: 10px;
+}
+.question8 {
+float: left;
+width: 100%;
+}
+
+
+
+/* #Media Queries
+================================================== */
+
+    /* Smaller than standard 960 (devices and browsers) */
+    @media only screen and (max-width: 959px) {}
+
+    /* Tablet Portrait size to standard 960 (devices and browsers) */
+    @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {}
+
+    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+    @media only screen and (min-width: 640px) and (max-width: 767px) {}
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    /*@media only screen and (max-width: 479px) {}*/
+	
+	/* iPhone 4 ----------- */
+    /*@media 
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {*/
+
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+
+.disabled  
+{
+    color: #C7C7C7;
+}
+
+label, legend {
+    float: none; display: block; width: 100%; text-align: left; margin-bottom: 10px;
+}
+
+
+
+
+
+.green { color: Green; }
+.yellow { color: Yellow; }
+.red { color: red; }
+
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Custom Buttons
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+.container {
+	background: #fff;
+	background:url(images/containerbackground.png) repeat-y;
+	position: relative;
+	min-height: 750px;
+}
+.header {
+	background:url(images/headerbackground.png) repeat-y center;
+margin-bottom: 0px;
+padding-top: 10px;
+/*border-bottom: 1px #cecece dashed; */
+}
+.registerForm, #slidingPanel {
+	margin-top: 0px;
+	background:url(images/registrationbackground.png) no-repeat bottom center;
+}
+.padding {
+padding: 20px;
+padding-left: 30px;	
+}
+
+.fleft {
+float: left;
+}
+.field-validation-error {
+color: red;
+font-size: 10px;
+text-align: left;
+line-height: 100%;
+float: right;
+width: 222px;
+margin-right: 24px;
+margin-top: -17px;
+}
+
+.blue, .blue a {
+color: #2A63AF;
+text-decoration: none;
+}
+.blue a:hover {
+color: #333;
+}
+/* #Custom Buttons
+================================================== */
+
+	 a.green-action-button, input[type="submit"]
+	 {
+		background: #006600; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#006600');
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.green-action-button:hover, input[type="submit"]:hover
+	{
+		color: #fff;
+		background: #006600; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006600', endColorstr='#006600');
+
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.green-action-button:active, , input[type="submit"]:active
+	 {
+		border: 1px solid #666;
+		background: #006600; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(0, 102, 0,.6) 0%, rgba(0,67,1,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 102, 0,.6)), color-stop(100%,rgba(0,67,1,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* IE10+ */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009900', endColorstr='#006600');
+
+		background: #eee linear-gradient(top, rgba(0, 102, 0,.6) 0%,rgba(0,67,1,.6) 100%); /* W3C */ }
+
+ a.blue-action-button, input[type="button"]
+	 {
+		background: #2B65B1; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.6) 0%, rgba(27,67,119,.6) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.6)), color-stop(100%,rgba(27,67,119,.6))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,,.6) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.6) 0%,rgba(27,67,119,.6) 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0099CC', endColorstr='#2B65B1');
+
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.blue-action-button:hover, input[type="button"]:hover
+	{
+		color: #fff;
+		background: #2B65B1; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(43, 101, 177,.9) 0%, rgba(27,67,119,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43, 101, 177,.9)), color-stop(100%,rgba(27,67,119,.2))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(43, 101, 177,.9) 0%,rgba(27,67,119,.9) 100%); /* W3C */
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2B65B1', endColorstr='#2B65B1');
+
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.blue-action-button:active, input[type="button"]:active
+	 {
+		border: 1px solid #666;
+		background: #2B65B1; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+                                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0099CC', endColorstr='#2B65B1');
+
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+ a.red
+	 {
+		background: #9E0D0D; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(158, 13, 13,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(158, 13, 13,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+                                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3300', endColorstr='#9E0D0D');
+
+		background: #eee -webkit-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(158, 13, 13,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(158, 13, 13,.6) 0%,rgba(109,10,10,.6) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  padding: 8px 24px;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #fff;
+	  display: inline-block;
+	  font-size: 16px;
+	  font-weight: normal;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: 21px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.red:hover
+	{
+		color: #fff;
+		background: #9E0D0D; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(109,10,10,.9) 0%, rgba(109,10,10,.9) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,10,10,.9)), color-stop(100%,rgba(109,10,10,.9))); /* Chrome,Safari4+ */
+                                                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9E0D0D', endColorstr='#9E0D0D');
+
+		background: #eee -webkit-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(109,10,10,.9) 0%,rgba(109,10,10,.9) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.red:active
+	 {
+		border: 1px solid #666;
+		background: #9E0D0D; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+                                                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3300', endColorstr='#9E0D0D');
+
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+
+
+
+
+/* #Page Styles
+================================================== */
+/* Header */
+.header {
+
+height: 130px;
+width: 100%;
+}
+#title {
+width: 50%;
+float: left;
+margin-left: 20px;
+margin-top: 15px;
+}
+#title h1 {
+font-size: 20px;
+}
+#logindisplay {
+float: right;
+
+}
+#logindisplay h2 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
+
+#forgotPasswordText {
+font-size: 10px;
+line-height:110%;	
+float: left;
+ margin-left: 20px;
+width: 210px;
+margin-right: 20px;
+}
+
+.signoffButton {
+margin-right: 20px;
+}
+/* Sliding Panel */
+#slidingPanel {
+padding: 20px;
+padding-top: 0;
+padding-bottom: 0;
+z-index: 5;
+
+/* Added this back in to make it work for now */
+display: none;
+margin-top: -4px;
+/*<<<<<<< HEAD
+display: none;
+=======
+margin-top: -4px;
+>>>>>>> 99385071754871994e938312aca5be2d64b8c410*/
+}
+#slidingPanel legend {
+display: none;
+}
+
+/*Sign In Form */
+
+.loginView {
+
+padding-left:10%;
+width: 80%;
+}
+
+.loginView label {
+float: left;
+width: 130px;
+text-align: right;
+}
+
+.loginView .loginButton{
+margin-top: 30px;
+margin-left: 35%;
+}
+#RememberMe {
+margin-top: 10px;
+}
+/* Registration Form */
+.leftColumn {
+width: 45%;
+float: left;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.rightColumn {
+width: 45%;
+float: right;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.descriptor {
+	font-size: 10px;
+	color:#666;
+	line-height:110%;
+	margin-bottom: 3px;
+	float: left;
+	clear: left;
+	width: 150px;
+	text-align:right;
+}
+.streetAddress .descriptor {
+	margin-left: 36px;
+	width: 320px;
+	text-align:left;
+	float: none;
+}
+.streetAddress label {
+	float: none;
+	display:block;
+}
+.streetAddress input {
+	width: 338px;
+	margin-left: 36px;
+}
+.formButton {
+	text-align: right;
+	padding-right: 15px;
+}
+/*
+.submitButton {
+text-align: right;
+width: 93%;
+}*/
+
+
+
+.submitButton {
+    clear: both;
+    padding-top: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+#registationProfileButton{
+float: left;
+text-align: right;
+margin-top: -35px;
+width: 95%;
+z-index: 1;
+}
+#slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: right;
+}
+.checkBoxes {
+width: 80%;
+padding-left: 3%;
+}
+
+.checkBoxes img {
+float: left;
+margin-top: -5px;
+}
+.checkBox {
+margin-bottom: 30px;
+padding-top: 10px;
+
+}
+
+.checkBox a {
+}
+
+/* Preassessment Forms */
+.preassessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.preassessment .editor-label {
+margin-top: 40px;
+}
+.preassessment label {
+margin-top: 20px;
+}
+th {
+font-weight: bold;
+padding: 10px;
+}
+td {
+padding: 3px;
+vertical-align: top;
+}
+.preassessment input[type="radio"] {
+margin-left: 40%;
+}
+.preassessment form {
+padding-left: 2%;
+width: 98%;
+}
+.percentage {
+margin-top: -50px;
+margin-left: 230px;
+}
+
+/* Evaluator Forms */
+
+
+.evaluator .editor-label.intQuestion{
+float: left;
+width: 40%;
+padding-right: 2%;
+margin-top: 20px;
+}
+.evaluator .editor-field.intQuestion {
+float: left;
+width: 50%;
+margin-top:20px;
+}
+
+/*.evaluator .submitButton {
+position: relative;
+top: 20px;
+float: left;
+}
+*/
+.evaluator form {
+padding-left: 2%;
+width: 98%;
+}
+.evaluator h4 {
+margin-top: 20px;
+}
+
+.evaluator td {
+text-align: center;
+}
+
+.evaluator li input[type="radio"] {
+margin: 10px;
+
+float: left;
+
+
+}
+.criteria ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+
+.evaluator label {
+margin-top: 20px;
+}
+
+.evaluator .percentage {
+margin-top: -10px;
+position: relative;
+top: 30px;
+margin-left: 230px;
+}
+
+/* Assessment Forms */
+
+.assessment form {
+padding-left: 2%;
+width: 98%;
+}
+.assessment h4 {
+margin-top: 20px;
+}
+
+.assessment ul {
+padding-left: 20px;
+list-style: disc;
+margin-top: 10px;
+}
+.assessment form ul {
+list-style: none;
+padding-left: 0;
+margin-top: 0;
+}
+.assessment .numbers li label{
+float: left;
+width: 7%;
+}
+.assessment .numbers .editor-label {
+float: left;
+width: 100%;
+}
+.numbers {
+float: left;
+width: 100%;
+}
+.assessment li input[type="radio"], .question8 ul input[type="radio"] {
+margin: 10px;
+float: left;
+}
+
+.assessment li input[type="checkbox"] {
+margin-right: 10px;
+}
+.question8 {
+float: left;
+width: 100%;
+}
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #slidingPanel .editor-label label {
+text-align: left;
+
+}
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+    /* Override some of the stuff in Base */
+    
+    #slidingPanel .editor-label {
+float: left;
+width: 155px;
+margin-right: 20px;
+}
+#slidingPanel .editor-label label {
+text-align: left;
+}
+.registerForm, #slidingPanel {
+	margin-top: 0px;
+	background:url(images/registrationbackground.png) repeat bottom center;
+}
+}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+
+.disabled  
+{
+    color: #C7C7C7;
+}
+
+label, legend {
+    float: none; display: block; width: 100%; text-align: left; margin-bottom: 10px;
+}
+
+
+
+
+.green { color: #009900; }
+.yellow { color: #FFFF66; }
+.red { color: #9E0D0D; }
+
+.field-validation-error {
+
+text-align: right;
+}
+.language a{
+font-size: 12px;
+text-decoration: none;
+}
+.language li {
+
+float: right;
+width: 100px;
+
+}
+
+

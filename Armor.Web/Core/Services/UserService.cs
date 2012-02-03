@@ -72,5 +72,7 @@ namespace Armor.Web {
             return db.PatientAssessments.Where(i => i.UserID == UserID).Count();
         }
 
+
+
     }
 }

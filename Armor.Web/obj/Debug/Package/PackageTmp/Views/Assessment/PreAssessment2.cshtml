@@ -1,0 +1,78 @@
+﻿@model Armor.Web.Models.PreAssessmentViewModel
+
+@{
+    ViewBag.Title = @ViewRes.PreAssessment.Title + " Page 2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/PreAssessment.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+<div class="preassessment padding">
+<h2>@ViewRes.PreAssessment.Title</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div style="overflow: hidden;">
+
+        <div id="Section2" class="horizontalSlide" >
+            <h3>Page 2 of 3</h3>
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question5ActiveSmoker)*@
+                @*5. What percentage of these patients are:*@
+                @ViewRes.PreAssessment.Question5
+            </div>
+            <div class="editor-field">
+            
+                <label>@ViewRes.PreAssessment.Question51 @Html.EditorFor(model => model.Question5ActiveSmoker)</label><div class="percentage">%</div>
+                @Html.ValidationMessageFor(model => model.Question5ActiveSmoker)
+                <label>@ViewRes.PreAssessment.Question52 @Html.EditorFor(model => model.Question5ExSmoker)</label><div class="percentage">%</div>
+                @Html.ValidationMessageFor(model => model.Question5ExSmoker)
+                <label>@ViewRes.PreAssessment.Question53 @Html.EditorFor(model => model.Question5NonSmoker)</label><div class="percentage">%</div>
+                @Html.ValidationMessageFor(model => model.Question5NonSmoker)
+            </div>
+        
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question6)*@
+                @*6. What percentage of these patients are taking low-dose ASA (<300 mg/day) for CV protection?*@
+                @ViewRes.PreAssessment.Question6
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question6)
+                @Html.ValidationMessageFor(model => model.Question6)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question7)*@
+                @*7. What percentage of these patients are taking a corticosteroid?*@
+                @ViewRes.PreAssessment.Question7
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question7)
+                @Html.ValidationMessageFor(model => model.Question7)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question8)*@
+                @*8. What percentage of these patients are taking an anticoagulant medication?*@
+                @ViewRes.PreAssessment.Question8
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question8)
+                @Html.ValidationMessageFor(model => model.Question8)
+            </div>
+        </div>
+
+
+    </div>
+    <div class="submitButton">
+        <input type="button" onclick="$(form).submit();" value="Next ->" />
+    </div>
+}
+</div>

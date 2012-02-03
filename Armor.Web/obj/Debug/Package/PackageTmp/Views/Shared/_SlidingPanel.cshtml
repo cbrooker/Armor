@@ -1,0 +1,10 @@
+﻿@model Armor.Web.Models.SlidingPanelViewModel
+
+@if (Model.EditUserModel == null)
+{
+    @Html.Partial("Create", new Armor.Web.Models.CreateAccountModel())
+}
+else
+{ 
+    @Html.Partial("Edit", Model.EditUserModel)
+}

@@ -1,0 +1,34 @@
+﻿@model Armor.Web.Models.AssessmentChecklistViewModel
+
+@{
+    ViewBag.Title = "Assessment Checklist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.blockUI.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+<div class="assessment padding">
+<h2>@Model.user.FirstName @Model.user.LastName, MD</h2>
+<h3>@Model.user.EmailAddress</h3>
+<div class="seperator"></div>
+<div class="spacer"></div>
+<div class="checkBoxes">
+    <div class="checkBox"><h4 class="blue">@Html.Partial("_Checkbox", Model.PreAssessmentState) @Html.ActionLink(ViewRes.Assessment.Index.PreAssessmentTitle, "PreAssessment", null, Model.PreAssessmentState == Armor.Web.Models.AssessmentState.Disabled ? new { @class = "disabled"} : null)</h4><h5 class="blue">@ViewRes.Assessment.Index.PreAssessmentText</h5></div>
+    <div class="checkBox"><h4 class="blue">@Html.Partial("_Checkbox", Model.ProgramStage1State) @Html.ActionLink(ViewRes.Assessment.Index.ProgramEvaluatorStage1Title, "ProgramEvaluatorStage1", null, Model.ProgramStage1State == Armor.Web.Models.AssessmentState.Disabled ? new { @class = "disabled" } : null)</h4><h5 class="blue">@ViewRes.Assessment.Index.ProgramEvaluatorStage1Text</h5></div>
+    <div class="checkBox"><h4 class="blue">@Html.Partial("_Checkbox", Model.ProgramStage2State) @Html.ActionLink(ViewRes.Assessment.Index.ProgramEvaluatorStage2Title, "ProgramEvaluatorStage2", null, Model.ProgramStage2State == Armor.Web.Models.AssessmentState.Disabled ? new { @class = "disabled" } : null)</h4><h5 class="blue">@ViewRes.Assessment.Index.ProgramEvaluatorStage2Text</h5></div>
+    <div class="checkBox"><h4 class="blue">@Html.Partial("_Checkbox", Model.PatientAssessmentState) @Html.ActionLink(ViewRes.Assessment.Index.PatientAssessmentsTitle, "PatientAssessment", null, Model.PatientAssessmentState == Armor.Web.Models.AssessmentState.Disabled ? new { @class = "disabled" } : null) (@( 25 - Model.PatientAssessmentCount) @ViewRes.Assessment.Index.PatientAssessmentsRemaining)</h4><h5 class="blue">@ViewRes.Assessment.Index.PatientAssessmentsText</h5></div>
+    <div class="checkBox"><h4 class="blue">@Html.Partial("_Checkbox", Model.ProgramStage3State) @Html.ActionLink(ViewRes.Assessment.Index.ProgramEvaluatorStage3Title, "ProgramEvaluatorStage3", null, Model.ProgramStage3State == Armor.Web.Models.AssessmentState.Disabled ? new { @class = "disabled" } : null)</h4><h5 class="blue">@ViewRes.Assessment.Index.ProgramEvaluatorStage3Text</h5></div>
+</div>
+<div class="spacer"></div>
+<div class="seperator"></div>
+</div>
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+        $(".disabled").parent().parent().block({ message: null, overlayCSS: { marginTop: 15, cursor: 'default'} });
+    });
+
+</script>

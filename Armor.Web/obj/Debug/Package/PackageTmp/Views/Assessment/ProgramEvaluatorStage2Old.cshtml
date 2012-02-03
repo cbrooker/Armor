@@ -1,0 +1,264 @@
+﻿@model Armor.Web.Models.ProgramEvaluator1ViewModel
+
+@{
+    ViewBag.Title = "Armor - Program Evaluator Stage 2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
+
+<div id="registationProfileButton">
+    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+</div>
+
+<div class="evaluator padding">
+<h2>Program Evaluator Stage 2</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+    <div style="overflow: hidden;">
+        <div id="Section1" class="horizontalSlide">
+    
+            <h4>Please rate your familiarity with the following:</h4>
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question1)*@
+                1. The LOGICA study (Lanas et al 2010)
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question1, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question1)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question2)*@
+                2. Screening for GI risk factors in patients with OA
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question2, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question2)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question3)*@
+                3. Treatment options for patients with OA who are at increased risk of GI adverse events associated with NSAID use
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question3, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question3)
+            </div>
+            <div class="submitButton">
+                <input type="button" id="Section1Button" value="Next ->" />
+            </div>
+        </div>
+
+        <div id="Section2" class="hiddenSection horizontalSlide" >
+            <h4>Rate the following risk factors in terms of their importance in GI risk with NSAID use:</h4>
+    
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question4)*@
+                4. Age 60 years or older
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question4, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question4)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question5)*@
+                5. History of dyspepsia
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question5, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question5)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question6)*@
+                6. High NSAID dose
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question6, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question6)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question7)*@
+                7. Concomitant use of ASA
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question7, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question7)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question8)*@
+                8. History of uncomplicated peptic ulcer
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question8, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question8)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question9)*@
+                9. Concomitant use of corticosteroids
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question9, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question9)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question10)*@
+                10. Concomitant use of oral anticoagulants
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question10, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question10)
+            </div>
+
+            <div class="editor-label intQuestion">
+                @*@Html.LabelFor(model => model.Question11)*@
+                11. History of bleeding peptic ulcer
+            </div>
+            <div class="editor-field intQuestion">
+                @Html.EditorFor(model => model.Question11, "OneToTenInt")
+                @Html.ValidationMessageFor(model => model.Question11)
+            </div>
+
+            <div class="submitButton">
+                <input type="button" id="Section2Button" value="Next ->" />
+            </div>
+        </div>
+
+        <div id="Section3" class="hiddenSection horizontalSlide">
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question12)*@
+                12. In the LOGICA study, what percentage of 3,293 patients were at increased risk of experiencing a GI adverse event with NSAID use?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question12, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question12)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question13)*@
+                13. What was the most common GI risk factor in the LOGICA study?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question13, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question13)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question14)*@
+                14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at <span class="underline">moderate</span> risk of GI adverse events with NSAIDs?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question14, "AnswerOptions")
+                @Html.EditorFor(model => model.Question14Other)
+                @Html.ValidationMessageFor(model => model.Question14Other)
+                @Html.ValidationMessageFor(model => model.Question14)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question15)*@
+                15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at <span class'underline'>high</span> risk of GI adverse events with NSAIDs?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question15, "AnswerOptions")
+                @Html.EditorFor(model => model.Question15Other)
+                @Html.ValidationMessageFor(model => model.Question15Other)
+                @Html.ValidationMessageFor(model => model.Question15)
+            </div>
+            <div class="submitButton">
+                <input type="button" id="Section3Button" value="Next ->" />
+            </div>
+        </div>
+            
+        <div id="Section4" class="hiddenSection horizontalSlide">
+            <h4>Patient Profiles</h4>
+    
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question16)*@
+                16. Gary is a 65-year-old man with osteoarthritis that was diagnosed 6 months ago. He has a history of uncomplicated peptic ulcer. Based on this information, how would you classify Gary’s risk of experiencing a GI adverse event with NSAIDs?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question16, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question16)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question17)*@
+                17. Mary is a 40-year-old woman with recently diagnosed OA and a history of dyspepsia. She has been taking acetaminophen 1,000 mg tid but her pain is still interfering with her daily activities. The only other medication that she takes regularly is fluticasone for asthma. How would you manage Mary’s ongoing OA pain? (Select all that apply)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question17, "AnswerCheckboxes")
+                @Html.ValidationMessageFor(model => model.Question17)
+                @Html.EditorFor(model => model.Question17Other)
+                @Html.ValidationMessageFor(model => model.Question17Other)
+            </div>
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question18)*@
+                18. Karen is a 40-year-old woman with OA that has been well managed with diclofenac 150 mg/day for the past three years. She recently experienced a DVT secondary to oral contraceptives and is taking daily warfarin. What change would you make to Karen’s pain medication?
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question18, "AnswerOptions")
+                @Html.ValidationMessageFor(model => model.Question18)
+            </div>
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question18Other)
+                @Html.ValidationMessageFor(model => model.Question18Other)
+            </div>
+            <div class="submitButton">
+                <input type="button" id="Section4Button" value="Next ->" />
+            </div>
+        </div>
+
+        <div id="Section5" class="hiddenSection horizontalSlide">
+            <h4>Based on your own practice:</h4>
+    
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question19)*@
+                19.For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?
+            </div><div class="percentage">%</div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Question19)
+                @Html.ValidationMessageFor(model => model.Question19)
+            </div>
+			
+
+            <div class="editor-label">
+                @*@Html.LabelFor(model => model.Question20Low)*@
+                20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)
+				<div class="criteria"><ul>
+                <li>Diagnosis of osteoarthritis</li>
+                <li>Aged 18 years or older</li>
+                <li>Pain that interferes with normal daily activities</li>
+                <li>Indication for NSAID treatment</li>
+            </ul>
+			</div>
+            </div>
+            <div class="editor-field">
+                Low @Html.EditorFor(model => model.Question20Low)
+                @Html.ValidationMessageFor(model => model.Question20Low)
+                Moderate @Html.EditorFor(model => model.Question20Moderate)
+                @Html.ValidationMessageFor(model => model.Question20Moderate)
+                High @Html.EditorFor(model => model.Question20High)
+                @Html.ValidationMessageFor(model => model.Question20High)
+            </div>
+
+
+            <div class="submitButton">
+                <input type="submit" value="Submit" class="green-action-button" />
+            </div>
+        </div>
+    </div>
+}
+</div>

@@ -1,0 +1,14 @@
+﻿@model Armor.Web.Models.AssessmentState
+
+@if (Model == Armor.Web.Models.AssessmentState.Complete)
+{
+    <img src="@Url.Content("~/Content/images/checkedbox.jpg")" alt="" />
+}
+else if (Model == Armor.Web.Models.AssessmentState.Enabled)
+{
+    <img src="@Url.Content("~/Content/images/checkbox.jpg")" alt="" />
+}
+else if (Model == Armor.Web.Models.AssessmentState.Disabled)
+{
+    <img src="@Url.Content("~/Content/images/checkbox.jpg")" class="disabled" alt="" />
+}
