@@ -61,6 +61,15 @@ namespace ViewRes {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Content/images/full_logo.png.
+        /// </summary>
+        public static string LogoFile {
+            get {
+                return ResourceManager.GetString("LogoFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Localized App.
         /// </summary>
         public static string Title {

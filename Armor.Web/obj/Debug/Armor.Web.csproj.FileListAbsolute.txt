@@ -27,7 +27,6 @@ C:\Projects\Armor\Armor.Web\bin\DataAnnotationsExtensions.dll
 C:\Projects\Armor\Armor.Web\bin\DevOne.Security.Cryptography.BCrypt.dll
 C:\Projects\Armor\Armor.Web\bin\EntityFramework.dll
 C:\Projects\Armor\Armor.Web\bin\Newtonsoft.Json.dll
-C:\Projects\Armor\Armor.Web\bin\RichmondDay.Helpers.dll
 C:\Projects\Armor\Armor.Web\bin\SubSonic.Core.dll
 C:\Projects\Armor\Armor.Web\bin\WebActivator.dll
 C:\Projects\Armor\Armor.Web\bin\RichmondDay.Helpers.pdb

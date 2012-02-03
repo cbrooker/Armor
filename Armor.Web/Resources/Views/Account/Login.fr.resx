@@ -121,7 +121,7 @@
     <value>cliquer ici</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
-    <value>Email Address</value>
+    <value>Adresse Courriel</value>
   </data>
   <data name="ForgotPassword" xml:space="preserve">
     <value>Mot de passe oublié?</value>
