@@ -419,4 +419,13 @@
     &lt;/ul&gt;
 &lt;/div&gt;</value>
   </data>
+  <data name="High" xml:space="preserve">
+    <value>High Risk</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Low Risk</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Moderate risk</value>
+  </data>
 </root>

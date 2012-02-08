@@ -61,6 +61,24 @@ namespace ViewRes.Account {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alberta.
+        /// </summary>
+        public static string Alberta {
+            get {
+                return ResourceManager.GetString("Alberta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to British Columbia.
+        /// </summary>
+        public static string BritishColumbia {
+            get {
+                return ResourceManager.GetString("BritishColumbia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         public static string City {
@@ -124,6 +142,69 @@ namespace ViewRes.Account {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manitoba.
+        /// </summary>
+        public static string Manitoba {
+            get {
+                return ResourceManager.GetString("Manitoba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Brunswick.
+        /// </summary>
+        public static string NewBrunswick {
+            get {
+                return ResourceManager.GetString("NewBrunswick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Newfoundland and Labrador.
+        /// </summary>
+        public static string NewfoundlandLabrador {
+            get {
+                return ResourceManager.GetString("NewfoundlandLabrador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Northwest Territories.
+        /// </summary>
+        public static string NorthwestTerritories {
+            get {
+                return ResourceManager.GetString("NorthwestTerritories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova Scotia.
+        /// </summary>
+        public static string NovaScotia {
+            get {
+                return ResourceManager.GetString("NovaScotia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nunavut.
+        /// </summary>
+        public static string Nunavut {
+            get {
+                return ResourceManager.GetString("Nunavut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ontario.
+        /// </summary>
+        public static string Ontario {
+            get {
+                return ResourceManager.GetString("Ontario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -151,11 +232,47 @@ namespace ViewRes.Account {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prince Edward Island.
+        /// </summary>
+        public static string PrinceEdwardIsland {
+            get {
+                return ResourceManager.GetString("PrinceEdwardIsland", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Province.
         /// </summary>
         public static string Province {
             get {
                 return ResourceManager.GetString("Province", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select your province.
+        /// </summary>
+        public static string ProvSelect {
+            get {
+                return ResourceManager.GetString("ProvSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quebec.
+        /// </summary>
+        public static string Quebec {
+            get {
+                return ResourceManager.GetString("Quebec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saskatchewan.
+        /// </summary>
+        public static string Saskatchewan {
+            get {
+                return ResourceManager.GetString("Saskatchewan", resourceCulture);
             }
         }
         
@@ -169,7 +286,7 @@ namespace ViewRes.Account {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registeration.
+        ///   Looks up a localized string similar to Registration.
         /// </summary>
         public static string Title {
             get {
@@ -179,7 +296,7 @@ namespace ViewRes.Account {
         
         /// <summary>
         ///   Looks up a localized string similar to Welcome to the ARMOR: Assessing Risk in the Management of 
-        ///OsteoaRthritis Personal Practise Assessment Program Registration..
+        ///OsteoaRthritis Personal Practice Assessment Program Registration..
         /// </summary>
         public static string TopBlurb1 {
             get {
@@ -193,6 +310,15 @@ namespace ViewRes.Account {
         public static string TopBlurb2 {
             get {
                 return ResourceManager.GetString("TopBlurb2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yukon.
+        /// </summary>
+        public static string Yukon {
+            get {
+                return ResourceManager.GetString("Yukon", resourceCulture);
             }
         }
     }

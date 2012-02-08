@@ -2,7 +2,7 @@
 
 @if(Model.UserLoggedIn) {
     @*<text>Welcome <strong>@Model.user.FirstName @Model.user.LastName</strong>*@
-   <div class="signoffButton">@Html.ActionLink("Sign Out", "LogOff", "Account", null, new { @class = "red" })</div>
+   <div class="signoffButton">@Html.ActionLink(ViewRes.SharedString.SignOut, "LogOff", "Account", null, new { @class = "red" })</div>
 }
 else {
   <!--  <h2>Already have an account?</h2>

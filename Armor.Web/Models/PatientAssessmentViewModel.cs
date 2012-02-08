@@ -11,8 +11,9 @@ namespace Armor.Web.Models
     public class PatientAssessmentViewModel
     {
         public int ID { get; set; }
+        string _ErrorMSG = ViewRes.SharedString.Required;
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("1. Age")]
         public List<AnswerModel> Question1
         {
@@ -43,7 +44,7 @@ namespace Armor.Web.Models
             }
         }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("2. Sex")]
         public List<AnswerModel> Question2
         {
@@ -58,7 +59,7 @@ namespace Armor.Web.Models
             }
         }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("3. Type of OA (select all that apply)")]
         public List<AnswerModel> Question3
         {
@@ -83,7 +84,7 @@ namespace Armor.Web.Models
 
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("4. Is this patient overweight (ie, BMI >25)")]
         public List<AnswerModel> Question4
         {
@@ -99,7 +100,7 @@ namespace Armor.Web.Models
         }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("5. Smoking status")]
         public List<AnswerModel> Question5
         {
@@ -116,11 +117,11 @@ namespace Armor.Web.Models
             }
         }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("6. Average number of alcoholic drinks per week")]
         public int Question6 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("7. Does this patient use illicit/recreational drugs?")]
         public List<AnswerModel> Question7
         {
@@ -135,7 +136,7 @@ namespace Armor.Web.Models
             }
         }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("8. History of")]
         public List<AnswerModel> Question8
         {
@@ -178,12 +179,12 @@ namespace Armor.Web.Models
         }
 
         //Big Question - Has to be done in HTML
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("9. Which of the following medication(s) is this patient currently taking to manage their OA symptoms? (Select all that apply)")]
         public string Question9 { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("10. Which of the following other medication(s) is this patient currently taking? (Select all that apply)")]
         public List<AnswerModel> Question10
         {
@@ -211,7 +212,7 @@ namespace Armor.Web.Models
         }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("11. How would you categorize this patient’s GI risk?")]
         public List<AnswerModel> Question11
         {
@@ -229,14 +230,14 @@ namespace Armor.Web.Models
         }
 
         //Done Programmatically
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("12. Your patient’s GI risk")]
         public string Question12 { get; set; }
 
 
 
         //Big Question
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("13. Knowing this patient’s level of GI risk, what changes will you make to their OA medication(s)? (Check all that apply)")]
         public List<AnswerModel> Question13
         {

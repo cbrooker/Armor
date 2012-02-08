@@ -5,10 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script language="javascript" type="text/javascript">
+    var LowRisk = "@ViewRes.Assessment.PatientAssessment.Low";
+    var ModerateRisk = "@ViewRes.Assessment.PatientAssessment.Medium";
+    var HighRisk = "@ViewRes.Assessment.PatientAssessment.High";
+</script>
 <script src="@Url.Content("~/Scripts/PatientAssessment.js")" type="text/javascript"></script>
 
 <div id="registationProfileButton">
-    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+    <input type="button" value="@ViewRes.SharedString.EditProfile" id="RegistrationButton" class="blue-action-button" />
 </div>
 <div class="assessment padding">
 <h2>@ViewRes.Assessment.PatientAssessment.Title</h2>
@@ -29,7 +34,7 @@
     
     
         <div id="Section4" class="horizontalSlide">
-            <h3>Page 4 of 4</h3>
+            <h3>@ViewRes.SharedString.Page 4 @ViewRes.SharedString.of 4</h3>
             <div class="editor-label">
                 @*@Html.LabelFor(model => model.Question12)*@
                 @ViewRes.Assessment.PatientAssessment.Question12 <h3 class="GIRisk"></h3>
@@ -143,7 +148,7 @@
                 @Html.ValidationMessageFor(model => model.Question13)
 
                 <div class="submitButton">
-                    <input type="submit" value="Submit" class="green-action-button" />
+                    <input type="submit" value="@ViewRes.SharedString.Submit" class="green-action-button" />
                 </div>
             </div>
         </div>

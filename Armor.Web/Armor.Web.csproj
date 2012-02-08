@@ -149,6 +149,16 @@
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\SlidingPanelViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Views\Account\ForgotPassword.fr.Designer.cs">
+      <DependentUpon>ForgotPassword.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Views\Account\ForgotPassword.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ForgotPassword.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\Account\Login.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -230,6 +240,7 @@
     <Content Include="Content\images\checkedbox.jpg" />
     <Content Include="Content\images\containerbackground.png" />
     <Content Include="Content\images\full_background.png" />
+    <Content Include="Content\images\full_logo-fr.png" />
     <Content Include="Content\images\full_logo.png" />
     <Content Include="Content\images\green_arrow.png" />
     <Content Include="Content\images\headerbackground.png" />
@@ -372,6 +383,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Views\Account\ForgotPassword.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ForgotPassword.fr.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Account</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account\ForgotPassword.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ForgotPassword.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes.Account</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Account\Login.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Login.fr.Designer.cs</LastGenOutput>
@@ -431,6 +452,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SharedString.Designer.cs</LastGenOutput>
       <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\Account\Registration.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

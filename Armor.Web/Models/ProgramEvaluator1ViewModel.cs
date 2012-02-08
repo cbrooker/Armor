@@ -13,52 +13,52 @@ namespace Armor.Web.Models
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("1. The LOGICA study (Lanas et al 2010)")]
         public int Question1 { get; set; }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("2. Screening for GI risk factors in patients with OA")]
         public int Question2 { get; set; }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("3. Treatment options for patients with OA who are at increased risk of GI adverse events associated with NSAID use")]
         public int Question3 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("4. Age 60 years or older")]
         public int Question4 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("5. History of dyspepsia")]
         public int Question5 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("6. High NSAID dose")]
         public int Question6 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("7. Concomitant use of ASA")]
         public int Question7 { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("8. History of uncomplicated peptic ulcer")]
         public int Question8 { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("9. Concomitant use of corticosteroids")]
         public int Question9 { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("10. Concomitant use of oral anticoagulants")]
         public int Question10 { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("11. History of bleeding peptic ulcer")]
         public int Question11 { get; set; }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("12. In the LOGICA study, what percentage of 3,293 patients were at increased risk of experiencing a GI adverse event with NSAID use?")]
         public List<AnswerModel> Question12 {
             get 
@@ -75,7 +75,7 @@ namespace Armor.Web.Models
                 return TheList;
             }
         }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("13. What was the most common GI risk factor in the LOGICA study?")]
         public List<AnswerModel> Question13
         {
@@ -103,7 +103,7 @@ namespace Armor.Web.Models
                 return TheList;
             }
         }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("14. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at <span class='underline'>moderate</span> risk of GI adverse events with NSAIDs?")]
         public List<AnswerModel> Question14
         {
@@ -131,7 +131,7 @@ namespace Armor.Web.Models
         }
         public String Question14Other { get; set; }
 
-        [Required(ErrorMessage = "Required")] 
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")] 
         [DisplayName("15. What is your preferred treatment strategy for patients with OA who do not respond to acetaminophen and are at <span class'underline'>high</span> risk of GI adverse events with NSAIDs?")]
         public List<AnswerModel> Question15
         {
@@ -158,7 +158,7 @@ namespace Armor.Web.Models
             }
         }
         public String Question15Other { get; set; }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("16. Gary is a 65-year-old man with osteoarthritis that was diagnosed 6 months ago. He has a history of uncomplicated peptic ulcer. Based on this information, how would you classify Gary’s risk of experiencing a GI adverse event with NSAIDs?")]
         public List<AnswerModel> Question16
         {
@@ -174,7 +174,7 @@ namespace Armor.Web.Models
                 return TheList;
             }
         }
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("17. Mary is a 40-year-old woman with recently diagnosed OA and a history of dyspepsia. She has been taking acetaminophen 1,000 mg tid but her pain is still interfering with her daily activities. The only other medication that she takes regularly is fluticasone for asthma. How would you manage Mary’s ongoing OA pain? (Select all that apply)")]
         public List<AnswerModel> Question17
         {
@@ -197,7 +197,7 @@ namespace Armor.Web.Models
         public String Question17Other { get; set; }
 
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("18. Karen is a 40-year-old woman with OA that has been well managed with diclofenac 150 mg/day for the past three years. She recently experienced a DVT secondary to oral contraceptives and is taking daily warfarin. What change would you make to Karen’s pain medication?")]
         public List<AnswerModel> Question18
         {
@@ -219,11 +219,11 @@ namespace Armor.Web.Models
         }
         public String Question18Other { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("19. For what % of your patients for whom you are prescribing NSAIDS do you take GI risk factors into considerations?")]
 		public String Question19 { get; set; }
 
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessageResourceType = typeof(ViewRes.SharedString), ErrorMessageResourceName = "Required")]
         [DisplayName("20. What percentage of your patients with the following criteria would you categorize as being at low, moderate, and high risk of GI complications with NSAID use? (Percentages should add up to 100%)")]
         public String Question20Low { get; set; }
         public String Question20Moderate { get; set; }

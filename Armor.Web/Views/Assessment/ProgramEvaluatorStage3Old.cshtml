@@ -8,7 +8,7 @@
 <script src="@Url.Content("~/Scripts/ProgramEvaluatorStage1.js")" type="text/javascript"></script>
 
 <div id="registationProfileButton">
-    <input type="button" value="Edit Profile" id="RegistrationButton" class="blue-action-button" />
+    <input type="button" value="@ViewRes.SharedString.EditProfile" id="RegistrationButton" class="blue-action-button" />
 </div>
 
 <div class="evaluator padding">
@@ -51,7 +51,7 @@
                 @Html.ValidationMessageFor(model => model.Question3)
             </div>
             <div class="submitButton">
-                <input type="button" id="Section1Button" value="Next ->" />
+                <input type="button" id="Section1Button" value="@ViewRes.SharedString.Next ->" />
             </div>
         </div>
 
@@ -131,7 +131,7 @@
             </div>
 
             <div class="submitButton">
-                <input type="button" id="Section2Button" value="Next ->" />
+                <input type="button" id="Section2Button" value="@ViewRes.SharedString.Next ->" />
             </div>
         </div>
 
@@ -176,7 +176,7 @@
                 @Html.ValidationMessageFor(model => model.Question15)
             </div>
             <div class="submitButton">
-                <input type="button" id="Section3Button" value="Next ->" />
+                <input type="button" id="Section3Button" value="@ViewRes.SharedString.Next ->" />
             </div>
         </div>
             
@@ -217,7 +217,7 @@
                 @Html.ValidationMessageFor(model => model.Question18Other)
             </div>
             <div class="submitButton">
-                <input type="button" id="Section4Button" value="Next ->" />
+                <input type="button" id="Section4Button" value="@ViewRes.SharedString.Next ->" />
             </div>
         </div>
 
@@ -256,7 +256,7 @@
 
 
             <div class="submitButton">
-                <input type="submit" value="Submit" class="green-action-button" />
+                <input type="submit" value="@ViewRes.SharedString.Submit" class="green-action-button" />
             </div>
         </div>
     </div>

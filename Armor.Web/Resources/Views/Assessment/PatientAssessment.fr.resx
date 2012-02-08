@@ -250,7 +250,7 @@
     <value>2. Sexe</value>
   </data>
   <data name="Question21" xml:space="preserve">
-    <value>M</value>
+    <value>H</value>
   </data>
   <data name="Question22" xml:space="preserve">
     <value>F</value>
@@ -419,5 +419,14 @@ des dix dernières années)</value>
         &lt;li&gt;Un traitement par un AINS est indiqué&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Élevé</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Faible</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Modéré</value>
   </data>
 </root>

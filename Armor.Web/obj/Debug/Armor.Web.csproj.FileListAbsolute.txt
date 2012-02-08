@@ -55,3 +55,5 @@ C:\Projects\Armor\Armor.Web\obj\Debug\GenerateResource.write.1.tlog
 C:\Projects\Armor\Armor.Web\obj\Debug\fr\Armor.Web.resources.dll
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.dll
 C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.pdb
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.ForgotPassword.resources
+C:\Projects\Armor\Armor.Web\obj\Debug\Armor.Web.Resources.Views.Account.ForgotPassword.fr.resources

@@ -195,7 +195,7 @@ namespace Armor.Web.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "There was a problem creating your account" + " - " + ex.Message.ToString());
+                    ModelState.AddModelError("", ViewRes.SharedString.CreateAccountProblem + " - " + ex.Message.ToString());
                     return View(model);
                 }
             }

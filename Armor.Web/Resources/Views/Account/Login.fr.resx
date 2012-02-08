@@ -127,10 +127,10 @@
     <value>Mot de passe oublié?</value>
   </data>
   <data name="ForgotPasswordBlurb1" xml:space="preserve">
-    <value>Si vous avez oublié votre mot de passé, veuillez</value>
+    <value>Si vous avez oublié votre mot de passe veuillez</value>
   </data>
   <data name="ForgotPasswordBlurb2" xml:space="preserve">
-    <value>cliquer ici et votre mot de passe vous sera envoyé par courriel</value>
+    <value> vous sera envoyé par courriel.</value>
   </data>
   <data name="HaveAnAccount" xml:space="preserve">
     <value>Déjà un compte ?</value>

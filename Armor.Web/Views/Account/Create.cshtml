@@ -93,7 +93,7 @@
             @ViewRes.Account.Registration.Province
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.Province, Model.Provinces, "Select your province")
+            @Html.DropDownListFor(model => model.Province, Model.Provinces, ViewRes.Account.Registration.ProvSelect)
             @Html.ValidationMessageFor(model => model.Provinces)
         </div>
 
@@ -113,7 +113,7 @@
             @Html.ValidationMessageFor(model => model.GSTInformation)
         </div>
 <div class="submitButton">
-            <input type="submit" value="Submit" class="green-action-button" />
+            <input type="submit" value="@ViewRes.SharedString.Submit" class="green-action-button" />
 			</div>
 		</div>
     </fieldset>

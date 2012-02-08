@@ -47,19 +47,19 @@ namespace Armor.Web.Models {
         public IEnumerable<SelectListItem> Provinces { 
             get {
                 Dictionary<string, string> Provinces = new Dictionary<string, string>();
-                Provinces.Add("Alberta", "Alberta");
-                Provinces.Add("British Columbia", "British Columbia");
-                Provinces.Add("Manitoba", "Manitoba");
-                Provinces.Add("New Brunswick", "New Brunswick");
-                Provinces.Add("Newfoundland and Labrador", "Newfoundland and Labrador");
-                Provinces.Add("Northwest Territories", "Northwest Territories");
-                Provinces.Add("Nova Scotia", "Nova Scotia");
-                Provinces.Add("Nunavut", "Nunavut");
-                Provinces.Add("Ontario", "Ontario");
-                Provinces.Add("Prince Edward Island", "Prince Edward Island");
-                Provinces.Add("Quebec", "Québec");
-                Provinces.Add("Saskatchewan", "Saskatchewan");
-                Provinces.Add("Yukon", "Yukon");
+                Provinces.Add(ViewRes.Account.Registration.Alberta, ViewRes.Account.Registration.Alberta);
+                Provinces.Add(ViewRes.Account.Registration.BritishColumbia, ViewRes.Account.Registration.BritishColumbia);
+                Provinces.Add(ViewRes.Account.Registration.Manitoba, ViewRes.Account.Registration.Manitoba);
+                Provinces.Add(ViewRes.Account.Registration.NewBrunswick, ViewRes.Account.Registration.NewBrunswick);
+                Provinces.Add(ViewRes.Account.Registration.NewfoundlandLabrador, ViewRes.Account.Registration.NewfoundlandLabrador);
+                Provinces.Add(ViewRes.Account.Registration.NorthwestTerritories, ViewRes.Account.Registration.NorthwestTerritories);
+                Provinces.Add(ViewRes.Account.Registration.NovaScotia, ViewRes.Account.Registration.NovaScotia);
+                Provinces.Add(ViewRes.Account.Registration.Nunavut, ViewRes.Account.Registration.Nunavut);
+                Provinces.Add(ViewRes.Account.Registration.Ontario, ViewRes.Account.Registration.Ontario);
+                Provinces.Add(ViewRes.Account.Registration.PrinceEdwardIsland, ViewRes.Account.Registration.PrinceEdwardIsland);
+                Provinces.Add(ViewRes.Account.Registration.Quebec, ViewRes.Account.Registration.Quebec);
+                Provinces.Add(ViewRes.Account.Registration.Saskatchewan, ViewRes.Account.Registration.Saskatchewan);
+                Provinces.Add(ViewRes.Account.Registration.Yukon, ViewRes.Account.Registration.Yukon);
 
                 return Provinces.Select(t => new SelectListItem() { Text = t.Value, Value = t.Key });
             }

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Alberta" xml:space="preserve">
+    <value>Alberta</value>
+  </data>
+  <data name="BritishColumbia" xml:space="preserve">
+    <value>Colombie-Britannique</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>Ville</value>
   </data>
@@ -133,10 +139,31 @@
     <value>Prénom</value>
   </data>
   <data name="GSTInformation" xml:space="preserve">
-    <value>GST Information</value>
+    <value>PST Information</value>
   </data>
   <data name="LastName" xml:space="preserve">
     <value>Nom</value>
+  </data>
+  <data name="Manitoba" xml:space="preserve">
+    <value>Manitoba</value>
+  </data>
+  <data name="NewBrunswick" xml:space="preserve">
+    <value>Nouveau-Brunswick</value>
+  </data>
+  <data name="NewfoundlandLabrador" xml:space="preserve">
+    <value>Terre-Neuve et Labrador</value>
+  </data>
+  <data name="NorthwestTerritories" xml:space="preserve">
+    <value>Territoires du Nord-Ouest</value>
+  </data>
+  <data name="NovaScotia" xml:space="preserve">
+    <value>Nouvelle- Écosse</value>
+  </data>
+  <data name="Nunavut" xml:space="preserve">
+    <value>Nunavut</value>
+  </data>
+  <data name="Ontario" xml:space="preserve">
+    <value>Ontario</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mot de passe</value>
@@ -147,8 +174,20 @@
   <data name="PostalCode" xml:space="preserve">
     <value>Code postal</value>
   </data>
+  <data name="PrinceEdwardIsland" xml:space="preserve">
+    <value>Île-du-Prince-Édouard</value>
+  </data>
   <data name="Province" xml:space="preserve">
     <value>Province</value>
+  </data>
+  <data name="ProvSelect" xml:space="preserve">
+    <value>à Sélectionner votre province</value>
+  </data>
+  <data name="Quebec" xml:space="preserve">
+    <value>Québec</value>
+  </data>
+  <data name="Saskatchewan" xml:space="preserve">
+    <value>Saskatchewan</value>
   </data>
   <data name="StreetAddress" xml:space="preserve">
     <value>Adresse municipale</value>
@@ -162,5 +201,8 @@
   <data name="TopBlurb2" xml:space="preserve">
     <value>Bienvenue au programme ARMURE : évAluation du Risque associé aux Méthodes de prise en charge de l’arthrose, évalUation de la pRatique pErsonnelle.
 Veuillez remplir les informations ci-dessous pour vous inscrire et obtenir un nom d’utilisateur et un mot de passe.</value>
+  </data>
+  <data name="Yukon" xml:space="preserve">
+    <value>Yukon</value>
   </data>
 </root>

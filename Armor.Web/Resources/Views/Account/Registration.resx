@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Alberta" xml:space="preserve">
+    <value>Alberta</value>
+  </data>
+  <data name="BritishColumbia" xml:space="preserve">
+    <value>British Columbia</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>City</value>
   </data>
@@ -138,6 +144,27 @@
   <data name="LastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="Manitoba" xml:space="preserve">
+    <value>Manitoba</value>
+  </data>
+  <data name="NewBrunswick" xml:space="preserve">
+    <value>New Brunswick</value>
+  </data>
+  <data name="NewfoundlandLabrador" xml:space="preserve">
+    <value>Newfoundland and Labrador</value>
+  </data>
+  <data name="NorthwestTerritories" xml:space="preserve">
+    <value>Northwest Territories</value>
+  </data>
+  <data name="NovaScotia" xml:space="preserve">
+    <value>Nova Scotia</value>
+  </data>
+  <data name="Nunavut" xml:space="preserve">
+    <value>Nunavut</value>
+  </data>
+  <data name="Ontario" xml:space="preserve">
+    <value>Ontario</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -147,8 +174,20 @@
   <data name="PostalCode" xml:space="preserve">
     <value>Postal Code</value>
   </data>
+  <data name="PrinceEdwardIsland" xml:space="preserve">
+    <value>Prince Edward Island</value>
+  </data>
   <data name="Province" xml:space="preserve">
     <value>Province</value>
+  </data>
+  <data name="ProvSelect" xml:space="preserve">
+    <value>Select your province</value>
+  </data>
+  <data name="Quebec" xml:space="preserve">
+    <value>Quebec</value>
+  </data>
+  <data name="Saskatchewan" xml:space="preserve">
+    <value>Saskatchewan</value>
   </data>
   <data name="StreetAddress" xml:space="preserve">
     <value>Street Address</value>
@@ -162,5 +201,8 @@ OsteoaRthritis Personal Practice Assessment Program Registration.</value>
   </data>
   <data name="TopBlurb2" xml:space="preserve">
     <value>Please complete the information below to register and obtain your username and password.</value>
+  </data>
+  <data name="Yukon" xml:space="preserve">
+    <value>Yukon</value>
   </data>
 </root>
