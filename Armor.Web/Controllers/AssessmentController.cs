@@ -825,7 +825,7 @@ namespace Armor.Web.Controllers
                 S1.Question12 = model.Question12;
 
                 S1.Question13 = fc["Ques13Radio"];
-                if (S1.Question13 == "Switch to")
+                if (S1.Question13 == "Switch to:")
                 {
                     OEMedicationMatrix OEM2 = new OEMedicationMatrix();
                     OEM2.Acetaminophen = fc["Question13_Acetaminophen"];
@@ -843,7 +843,7 @@ namespace Armor.Web.Controllers
                     OEM2.Tramadol = fc["Question13_Tramadol"];
                     OEM2.Other = fc["Question13_Other"];
 
-                    S1.Question13 = JsonConvert.SerializeObject(OEM2);
+                    S1.Question13 = "Switch to: " + JsonConvert.SerializeObject(OEM2);
                 }
 
                 PAS.Save(S1);
